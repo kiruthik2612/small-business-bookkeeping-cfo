@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans & Packages — Finora</title>
+  <meta name="description" content="Transparent, predictable monthly bookkeeping and fractional CFO pricing packages with no hidden fees or long-term contracts.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="logo-text">
+            <span class="logo-name">Finora</span>
+            <span class="logo-sub">Bookkeeping & CFO</span>
+          </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-menu">
+                <a href="index.html" class="dropdown-item"><i class="bi bi-calculator"></i> Home 1 - Bookkeeping Focus</a>
+                <a href="home-2.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Home 2 - Fractional CFO Focus</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="pricing.html" class="nav-link active">Pricing</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html" class="btn btn-outline btn-sm"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL"><span
+              style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+          <a href="contact.html" class="btn btn-accent btn-sm">Book a Consultation</a>
+          <button class="hamburger-btn" aria-label="Toggle Mobile Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo"><div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div><div class="logo-text"><span class="logo-name">Finora</span></div></div>
+      <button class="mobile-drawer-close btn-icon" aria-label="Close Navigation"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item" style="margin-bottom: 0.5rem;">
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn" aria-label="Toggle Theme" style="flex: 1;"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL" style="flex: 1;"><span style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home 1</a></li>
+      <li class="mobile-nav-item"><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link active">Pricing</a></li>
+      <li class="mobile-nav-item"><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content">
+    <!-- PAGE HERO & MONTHLY/ANNUAL TOGGLE -->
+    <section class="page-hero bg-surface-elevated text-center">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-subtitle"><i class="bi bi-check2-circle"></i> Transparent Pricing</div>
+        <h1 style="font-size: 3rem; margin-bottom: 1.25rem;">Simple, Scalable Financial Plans</h1>
+        <p class="section-desc" style="margin-bottom: 2rem;">No long-term contracts. Change or cancel anytime. All packages include a dedicated US accounting pod.</p>
+
+        <!-- Interactive Monthly / Annual Switcher -->
+        <div class="flex items-center justify-center gap-3" style="font-weight: 600;">
+          <span style="color: var(--text-main);">Monthly Billing</span>
+          <label style="position: relative; display: inline-block; width: 56px; height: 30px; cursor: pointer;">
+            <input type="checkbox" id="billing-toggle" style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; inset: 0; background-color: var(--border-color); border-radius: 30px; transition: 0.3s; border: 1px solid var(--border-color);" id="toggle-slider">
+              <span style="position: absolute; height: 22px; width: 22px; left: 4px; bottom: 3px; background-color: white; border-radius: 50%; transition: 0.3s;" id="toggle-knob"></span>
+            </span>
+          </label>
+          <span style="color: var(--text-main);">Annual Billing</span>
+          <span class="badge badge-accent"><i class="bi bi-stars"></i> Save 20%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING TIERS -->
+    <section class="section bg-surface">
+      <div class="container">
+        <div class="grid grid-4 gap-3">
+          
+          <!-- Plan 1: Starter -->
+          <div class="card clickable-card" data-card-href="contact.html?plan=starter" role="link" tabindex="0" aria-label="Choose Starter Plan" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="badge badge-accent" style="margin-bottom: 1rem;">Early Stage</span>
+              <h3 style="font-size: 1.45rem; margin-bottom: 0.5rem;">Starter Plan</h3>
+              <p style="font-size: 0.85rem;">Ideal for solopreneurs & small businesses with up to $25k monthly expenses.</p>
+              <div style="margin: 1.5rem 0;">
+                <span style="font-size: 2.5rem; font-family: var(--font-heading); font-weight: 800; color: var(--text-main);">$<span class="price-amount" data-monthly="299" data-annual="239">299</span></span>
+                <span class="billing-period-text" style="font-size: 0.85rem; color: var(--text-muted);">/month</span>
+              </div>
+              <ul style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">
+                <li><i class="bi bi-check2 text-accent"></i> Up to 2 Bank / Credit Accounts</li>
+                <li><i class="bi bi-check2 text-accent"></i> Monthly Reconciliations</li>
+                <li><i class="bi bi-check2 text-accent"></i> Income Statement & Balance Sheet</li>
+                <li><i class="bi bi-check2 text-accent"></i> QuickBooks / Xero Integration</li>
+                <li><i class="bi bi-check2 text-accent"></i> Email Support</li>
+              </ul>
+            </div>
+            <a href="contact.html?plan=starter" class="btn btn-outline" style="width: 100%; justify-content: center;">Choose Starter</a>
+          </div>
+
+          <!-- Plan 2: Growth (Recommended) -->
+          <div class="card clickable-card" data-card-href="contact.html?plan=growth" role="link" tabindex="0" aria-label="Get Growth Plan" style="border: 2px solid var(--secondary-color); display: flex; flex-direction: column; justify-content: space-between; transform: translateY(-8px); box-shadow: var(--shadow-lg);">
+            <div>
+              <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
+                <span class="badge badge-secondary">Most Popular</span>
+                <span class="badge badge-accent"><i class="bi bi-fire"></i> Best Value</span>
+              </div>
+              <h3 style="font-size: 1.45rem; margin-bottom: 0.5rem;">Growth Plan</h3>
+              <p style="font-size: 0.85rem;">For scaling businesses with up to $75k monthly expenses & multi-channel sales.</p>
+              <div style="margin: 1.5rem 0;">
+                <span style="font-size: 2.5rem; font-family: var(--font-heading); font-weight: 800; color: var(--secondary-color);">$<span class="price-amount" data-monthly="599" data-annual="479">599</span></span>
+                <span class="billing-period-text" style="font-size: 0.85rem; color: var(--text-muted);">/month</span>
+              </div>
+              <ul style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">
+                <li><i class="bi bi-check2 text-accent"></i> Up to 5 Bank / Credit Accounts</li>
+                <li><i class="bi bi-check2 text-accent"></i> Bi-Weekly Reconciliations</li>
+                <li><i class="bi bi-check2 text-accent"></i> 13-Week Cash Flow Forecast</li>
+                <li><i class="bi bi-check2 text-accent"></i> Accounts Payable & Bill.com Sync</li>
+                <li><i class="bi bi-check2 text-accent"></i> Priority Slack & Phone Support</li>
+              </ul>
+            </div>
+            <a href="contact.html?plan=growth" class="btn btn-secondary" style="width: 100%; justify-content: center;">Get Growth Plan</a>
+          </div>
+
+          <!-- Plan 3: Scale -->
+          <div class="card clickable-card" data-card-href="contact.html?plan=scale" role="link" tabindex="0" aria-label="Choose Scale Plan" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="badge badge-warning" style="margin-bottom: 1rem;">Rapid Scale</span>
+              <h3 style="font-size: 1.45rem; margin-bottom: 0.5rem;">Scale Plan</h3>
+              <p style="font-size: 0.85rem;">For companies with up to $200k monthly expenses requiring advanced analytics.</p>
+              <div style="margin: 1.5rem 0;">
+                <span style="font-size: 2.5rem; font-family: var(--font-heading); font-weight: 800; color: var(--text-main);">$<span class="price-amount" data-monthly="999" data-annual="799">999</span></span>
+                <span class="billing-period-text" style="font-size: 0.85rem; color: var(--text-muted);">/month</span>
+              </div>
+              <ul style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">
+                <li><i class="bi bi-check2 text-accent"></i> Unlimited Accounts & Multi-Entity</li>
+                <li><i class="bi bi-check2 text-accent"></i> Weekly Financial Close</li>
+                <li><i class="bi bi-check2 text-accent"></i> Departmental Budget Variance</li>
+                <li><i class="bi bi-check2 text-accent"></i> Full AP & AR Automation</li>
+                <li><i class="bi bi-check2 text-accent"></i> Dedicated Senior CPA Pod</li>
+              </ul>
+            </div>
+            <a href="contact.html?plan=scale" class="btn btn-outline" style="width: 100%; justify-content: center;">Choose Scale</a>
+          </div>
+
+          <!-- Plan 4: Fractional CFO -->
+          <div class="card clickable-card" data-card-href="contact.html?plan=cfo" role="link" tabindex="0" aria-label="Schedule CFO Strategy" style="background: var(--bg-surface-elevated); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="badge badge-accent" style="margin-bottom: 1rem;">Executive Advisory</span>
+              <h3 style="font-size: 1.45rem; margin-bottom: 0.5rem;">Fractional CFO</h3>
+              <p style="font-size: 0.85rem;">Executive leadership, 3-statement models, runway extension, and board guidance.</p>
+              <div style="margin: 1.5rem 0;">
+                <span style="font-size: 2.5rem; font-family: var(--font-heading); font-weight: 800; color: var(--text-main);">Custom</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">/tailored scope</span>
+              </div>
+              <ul style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">
+                <li><i class="bi bi-check2 text-accent"></i> Dedicated Executive Fractional CFO</li>
+                <li><i class="bi bi-check2 text-accent"></i> Dynamic 3-Statement Forecast Models</li>
+                <li><i class="bi bi-check2 text-accent"></i> Investor Data Room & Pitch Decks</li>
+                <li><i class="bi bi-check2 text-accent"></i> Monthly Executive Strategy Sessions</li>
+                <li><i class="bi bi-check2 text-accent"></i> M&A & Due Diligence Representation</li>
+              </ul>
+            </div>
+            <a href="contact.html?plan=cfo" class="btn btn-primary" style="width: 100%; justify-content: center;">Schedule CFO Strategy</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOM SCOPE BANNER -->
+    <section class="section bg-dark-hero text-center">
+      <div class="container" style="max-width: 780px;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #fff;">Need High-Volume Custom Accounting?</h2>
+        <p style="font-size: 1.15rem; margin-bottom: 2rem; color: var(--text-inverse-muted);">If your company manages high inventory turnover, complex multi-entity structures, or custom billing systems, we build tailored service scopes.</p>
+        <a href="contact.html" class="btn btn-accent btn-lg"><i class="bi bi-sliders"></i> Request Custom Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="grid grid-4">
+        <div>
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="logo-text"><span class="logo-name">Finora</span><span class="logo-sub" style="color: var(--secondary-light);">Bookkeeping & CFO</span></div>
+          </a>
+          <p class="footer-about">Reliable, modern financial infrastructure for fast-growing small businesses and startups.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=bookkeeping">Monthly Bookkeeping</a></li>
+            <li><a href="service-details.html?service=cfo">Fractional CFO</a></li>
+            <li><a href="service-details.html?service=cashflow">Cash Flow Forecasting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <p style="font-size: 0.9rem;">(800) 555-0199<br>advisory@finora.io</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex justify-between items-center">
+        <div>&copy; 2026 Finora Advisory LLC.</div>
+        <div class="footer-bottom-links">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+          <span>Client Portal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/validation.js" defer></script>
+  <script>
+    // Smooth custom toggle switch styling hook
+    const toggle = document.getElementById('billing-toggle');
+    const knob = document.getElementById('toggle-knob');
+    const slider = document.getElementById('toggle-slider');
+    if (toggle && knob && slider) {
+      toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+          knob.style.transform = 'translateX(26px)';
+          slider.style.backgroundColor = 'var(--secondary-color)';
+        } else {
+          knob.style.transform = 'translateX(0)';
+          slider.style.backgroundColor = 'var(--border-color)';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

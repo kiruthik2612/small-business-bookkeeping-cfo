@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Insights, Bookkeeping & CFO Blog — Finora</title>
+  <meta name="description" content="Expert insights on small business cash flow management, fractional CFO strategies, tax readiness, and unit economic optimization.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="logo-text">
+            <span class="logo-name">Finora</span>
+            <span class="logo-sub">Bookkeeping & CFO</span>
+          </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-menu">
+                <a href="index.html" class="dropdown-item"><i class="bi bi-calculator"></i> Home 1 - Bookkeeping Focus</a>
+                <a href="home-2.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Home 2 - Fractional CFO Focus</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html" class="btn btn-outline btn-sm"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL"><span
+              style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+          <a href="contact.html" class="btn btn-accent btn-sm">Book a Consultation</a>
+          <button class="hamburger-btn" aria-label="Toggle Mobile Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo"><div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div><div class="logo-text"><span class="logo-name">Finora</span></div></div>
+      <button class="mobile-drawer-close btn-icon" aria-label="Close Navigation"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item" style="margin-bottom: 0.5rem;">
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn" aria-label="Toggle Theme" style="flex: 1;"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL" style="flex: 1;"><span style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home 1</a></li>
+      <li class="mobile-nav-item"><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li class="mobile-nav-item"><a href="blog.html" class="mobile-nav-link active">Blog</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content">
+    <!-- PAGE HERO -->
+    <section class="page-hero bg-surface-elevated text-center">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-subtitle"><i class="bi bi-newspaper"></i> The Finora Ledger</div>
+        <h1 style="font-size: 3rem; margin-bottom: 1.25rem;">Financial Insights & Executive CFO Playbooks</h1>
+        <p class="section-desc">Actionable accounting tactics, cash runway frameworks, and CFO perspectives designed for small business leaders.</p>
+        
+        <!-- Live Instant Search Bar -->
+        <div style="margin-top: 2rem; max-width: 540px; margin-left: auto; margin-right: auto; position: relative;">
+          <input type="text" id="blog-search-input" class="form-control" placeholder="Search topics (e.g., cash flow, runway, taxes, margins)..." style="padding: 1rem 1.25rem 1rem 3rem; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);">
+          <i class="bi bi-search" style="position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1.1rem;"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG SECTION WITH FILTER PILLS & POST GRID -->
+    <section class="section bg-surface">
+      <div class="container">
+        <!-- Category Filter Buttons -->
+        <div class="flex items-center justify-center gap-2 flex-wrap" style="margin-bottom: 3rem;" id="category-filter-group">
+          <button class="btn btn-primary btn-sm category-btn active" data-category="all">All Articles (12)</button>
+          <button class="btn btn-outline btn-sm category-btn" data-category="cfo">Fractional CFO</button>
+          <button class="btn btn-outline btn-sm category-btn" data-category="cashflow">Cash Flow</button>
+          <button class="btn btn-outline btn-sm category-btn" data-category="bookkeeping">Bookkeeping</button>
+          <button class="btn btn-outline btn-sm category-btn" data-category="planning">Financial Planning</button>
+          <button class="btn btn-outline btn-sm category-btn" data-category="taxes">Taxes & Compliance</button>
+          <button class="btn btn-outline btn-sm category-btn" data-category="growth">Business Growth</button>
+        </div>
+
+        <!-- Featured Article Banner Container -->
+        <div id="featured-article-container" style="margin-bottom: 3.5rem;"></div>
+
+        <!-- Section Header for Grid -->
+        <div class="flex justify-between items-center flex-wrap gap-2" style="margin-bottom: 1.5rem;">
+          <h3 id="articles-heading" style="font-size: 1.5rem; margin: 0;">Latest Executive Playbooks</h3>
+          <span id="article-count-badge" class="badge badge-primary" style="font-size: 0.8rem;">Showing 6 of 12 Articles</span>
+        </div>
+
+        <!-- Regular Blog Cards Grid -->
+        <div class="grid grid-3 gap-3" id="blog-grid">
+          <!-- Dynamically populated from FINORA_ARTICLES -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="grid grid-4">
+        <div>
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="logo-text"><span class="logo-name">Finora</span><span class="logo-sub" style="color: var(--secondary-light);">Bookkeeping & CFO</span></div>
+          </a>
+          <p class="footer-about">Reliable, modern financial intelligence for founders and small business owners.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html?category=cfo">CFO Strategy</a></li>
+            <li><a href="blog.html?category=cashflow">Cash Flow Planning</a></li>
+            <li><a href="blog.html?category=bookkeeping">Bookkeeping Tips</a></li>
+            <li><a href="blog.html?category=planning">Financial Modeling</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Newsletter</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Join 12,000+ founders receiving bi-weekly finance tips.</p>
+          <div style="position: relative;">
+            <input type="email" class="form-control" placeholder="Your email address" style="padding-right: 2.5rem; font-size: 0.85rem;">
+            <button class="btn btn-accent btn-sm" style="position: absolute; right: 4px; top: 4px; bottom: 4px; padding: 0 0.75rem;"><i class="bi bi-send-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex justify-between items-center">
+        <div>&copy; 2026 Finora Advisory LLC. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+          <span>Client Portal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/blog-data.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/validation.js" defer></script>
+
+  <!-- Interactive Blog Grid Engine -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('blog-search-input');
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      const featuredContainer = document.getElementById('featured-article-container');
+      const blogGrid = document.getElementById('blog-grid');
+      const articleCountBadge = document.getElementById('article-count-badge');
+
+      let currentCategory = 'all';
+      let currentSearchQuery = '';
+
+      // Check URL params for category filter or search
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('category')) {
+        currentCategory = urlParams.get('category');
+        categoryButtons.forEach(btn => {
+          if (btn.getAttribute('data-category') === currentCategory) {
+            btn.classList.remove('btn-outline');
+            btn.classList.add('active', 'btn-primary');
+          } else {
+            btn.classList.remove('active', 'btn-primary');
+            btn.classList.add('btn-outline');
+          }
+        });
+      }
+
+      // Render Featured Article Banner (fully clickable)
+      const featuredArticle = FINORA_ARTICLES.find(a => a.featured) || FINORA_ARTICLES[0];
+      if (featuredContainer && featuredArticle) {
+        featuredContainer.innerHTML = `
+          <div class="card blog-card-premium clickable-card" data-card-href="blog-details.html?id=${featuredArticle.id}" role="link" tabindex="0" aria-label="Read ${featuredArticle.title}" style="padding: 2.25rem; border-color: var(--secondary-color); box-shadow: var(--shadow-md);">
+            <div class="grid grid-2 items-center gap-4">
+              <div>
+                <div class="flex items-center gap-2" style="margin-bottom: 0.75rem;">
+                  <span class="badge badge-accent"><i class="bi bi-star-fill"></i> Featured Analysis</span>
+                  <span class="badge ${featuredArticle.badgeClass}">${featuredArticle.categoryLabel}</span>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="bi bi-clock"></i> ${featuredArticle.readTime}</span>
+                </div>
+                <h2 style="font-size: 2rem; line-height: 1.25; margin-bottom: 1rem;">
+                  <a href="blog-details.html?id=${featuredArticle.id}" class="blog-title-link">${featuredArticle.title}</a>
+                </h2>
+                <p class="blog-excerpt" style="margin-bottom: 1.5rem; font-size: 0.95rem;">${featuredArticle.excerpt}</p>
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                  <div class="blog-footer-author">
+                    <div class="blog-author-avatar" style="background: ${featuredArticle.author.avatarBg};">${featuredArticle.author.avatar}</div>
+                    <div>
+                      <span style="font-size: 0.85rem; font-weight: 700; display: block; color: var(--text-main);">${featuredArticle.author.name}</span>
+                      <span style="font-size: 0.75rem; color: var(--text-muted);">${featuredArticle.author.role}</span>
+                    </div>
+                  </div>
+                  <a href="blog-details.html?id=${featuredArticle.id}" class="btn btn-secondary btn-sm">Read Article <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="blog-thumb-wrap" style="height: 280px;">
+                <img src="${featuredArticle.image}" alt="${featuredArticle.title}" class="blog-thumb-img" loading="lazy">
+                <div class="blog-badge-overlay">
+                  <span class="badge badge-accent"><i class="bi bi-lightning-charge-fill"></i> Trending</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function getFilteredArticles() {
+        return FINORA_ARTICLES.filter(article => {
+          const matchesCategory = (currentCategory === 'all' || article.category === currentCategory);
+          const q = currentSearchQuery.toLowerCase().trim();
+          const matchesSearch = !q || 
+            article.title.toLowerCase().includes(q) || 
+            article.excerpt.toLowerCase().includes(q) ||
+            article.categoryLabel.toLowerCase().includes(q) ||
+            article.author.name.toLowerCase().includes(q);
+
+          return matchesCategory && matchesSearch;
+        });
+      }
+
+      function renderGrid() {
+        const filtered = getFilteredArticles();
+
+        if (articleCountBadge) {
+          if (filtered.length === FINORA_ARTICLES.length) {
+            articleCountBadge.textContent = `Showing all ${filtered.length} Articles`;
+          } else {
+            articleCountBadge.textContent = `Showing ${filtered.length} of ${FINORA_ARTICLES.length} Articles`;
+          }
+        }
+
+        if (filtered.length === 0) {
+          blogGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; background: var(--bg-surface-elevated); border-radius: var(--radius-lg); border: 1px dashed var(--border-color);">
+              <i class="bi bi-search" style="font-size: 3rem; color: var(--text-muted); margin-bottom: 1rem; display: block;"></i>
+              <h3 style="margin-bottom: 0.5rem;">No matching articles found</h3>
+              <p style="color: var(--text-muted); max-width: 420px; margin: 0 auto 1.5rem;">We couldn't find any financial insights matching "${currentSearchQuery}". Try clearing search or choosing another category.</p>
+              <button class="btn btn-outline btn-sm" id="reset-filter-btn"><i class="bi bi-arrow-counterclockwise"></i> Reset Filters</button>
+            </div>
+          `;
+          const resetBtn = document.getElementById('reset-filter-btn');
+          if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+              currentSearchQuery = '';
+              currentCategory = 'all';
+              if (searchInput) searchInput.value = '';
+              categoryButtons.forEach(b => {
+                b.classList.remove('active', 'btn-primary');
+                b.classList.add('btn-outline');
+                if (b.getAttribute('data-category') === 'all') {
+                  b.classList.add('active', 'btn-primary');
+                  b.classList.remove('btn-outline');
+                }
+              });
+              renderGrid();
+            });
+          }
+          return;
+        }
+
+        blogGrid.innerHTML = filtered.map(article => `
+          <article class="card blog-card-premium clickable-card" data-card-href="blog-details.html?id=${article.id}" data-category="${article.category}" role="link" tabindex="0" aria-label="Read ${article.title}">
+            <div class="blog-thumb-wrap">
+              <img src="${article.image}" alt="${article.title}" class="blog-thumb-img" loading="lazy">
+              <div class="blog-badge-overlay">
+                <span class="badge ${article.badgeClass}">${article.categoryLabel}</span>
+              </div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta-top">
+                <span><i class="bi bi-calendar3"></i> ${article.date}</span>
+                <span><i class="bi bi-clock"></i> ${article.readTime}</span>
+              </div>
+              <h3 class="blog-title" style="font-size: 1.18rem; line-height: 1.35; margin-bottom: 0.75rem;">
+                <a href="blog-details.html?id=${article.id}" class="blog-title-link">${article.title}</a>
+              </h3>
+              <p class="blog-excerpt">${article.excerpt}</p>
+              <div class="blog-card-footer">
+                <div class="blog-footer-author">
+                  <div class="blog-author-avatar" style="background: ${article.author.avatarBg};">${article.author.avatar}</div>
+                  <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">${article.author.name}</span>
+                </div>
+                <a href="blog-details.html?id=${article.id}" class="blog-read-btn" aria-label="Read ${article.title}">Read <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      // Live search input
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearchQuery = e.target.value;
+          renderGrid();
+        });
+      }
+
+      // Category filters
+      categoryButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          categoryButtons.forEach(b => {
+            b.classList.remove('active', 'btn-primary');
+            b.classList.add('btn-outline');
+          });
+          btn.classList.remove('btn-outline');
+          btn.classList.add('active', 'btn-primary');
+          currentCategory = btn.getAttribute('data-category');
+          renderGrid();
+        });
+      });
+
+      // Initial Render: shows all 12 articles cleanly on the page
+      renderGrid();
+    });
+  </script>
+</body>
+</html>

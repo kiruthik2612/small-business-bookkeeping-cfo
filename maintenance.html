@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheduled Security Maintenance — Finora</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-body);">
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="logo-text">
+            <span class="logo-name">Finora</span>
+            <span class="logo-sub">System Status</span>
+          </div>
+        </a>
+        <div class="header-actions">
+          <a href="login.html" class="btn btn-outline btn-sm"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL"><span
+              style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+          <a href="contact.html" class="btn btn-accent btn-sm">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAINTENANCE CONTENT -->
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem; text-align: center;">
+    <div class="container" style="max-width: 600px;">
+      <div class="stat-icon warning" style="width: 4.5rem; height: 4.5rem; font-size: 2.25rem; margin: 0 auto 1.5rem; border-radius: var(--radius-lg);">
+        <i class="bi bi-wrench-adjustable-circle-fill"></i>
+      </div>
+      
+      <span class="badge badge-warning" style="margin-bottom: 1rem; padding: 0.35rem 0.85rem;">
+        <i class="bi bi-clock-history"></i> Scheduled Maintenance
+      </span>
+      
+      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Upgrading Bank Encryption Gateways</h1>
+      <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 2rem;">We are performing routine security and SOC-2 database optimizations. The client portal and real-time bank sync will resume shortly.</p>
+
+      <!-- Progress Meter -->
+      <div class="card" style="padding: 1.5rem; margin-bottom: 2rem; background: var(--bg-surface-elevated); text-align: left;">
+        <div class="flex justify-between items-center" style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;">
+          <span>System Migration Progress</span>
+          <span style="color: var(--accent-color);">78% Complete</span>
+        </div>
+        <div style="height: 8px; border-radius: 4px; background: var(--border-color); overflow: hidden;">
+          <div style="width: 78%; height: 100%; background: var(--accent-color); border-radius: 4px;"></div>
+        </div>
+        <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 0.5rem;">Estimated completion: 35 minutes</span>
+      </div>
+
+      <div class="flex justify-center gap-3">
+        <a href="contact.html" class="btn btn-outline"><i class="bi bi-envelope"></i> Contact Emergency Support</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="padding: 1.5rem 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.85rem; color: var(--text-muted); background: var(--bg-surface);">
+    <div class="container flex justify-between items-center flex-wrap gap-2">
+      <div>&copy; 2026 Finora Advisory LLC. Direct Support: (800) 555-0199</div>
+      <div class="footer-bottom-links">
+        <span>Privacy Policy</span>
+        <span>Terms of Service</span>
+        <span>Client Portal</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

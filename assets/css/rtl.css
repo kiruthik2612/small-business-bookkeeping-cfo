@@ -1,0 +1,129 @@
+/* ==========================================================================
+   FINORA - Right-to-Left (RTL) Layout Engine
+   Stylesheet: assets/css/rtl.css
+   Arabic / Hebrew Language Compatibility
+   ========================================================================== */
+
+[dir="rtl"] {
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  text-align: right;
+}
+
+[dir="rtl"] .text-left { text-align: right; }
+[dir="rtl"] .text-right { text-align: left; }
+
+/* Header & Dropdowns */
+[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .mobile-nav-drawer {
+  right: auto;
+  left: -320px;
+  transition: left var(--transition-normal);
+}
+[dir="rtl"] .mobile-nav-drawer.active {
+  left: 0;
+  right: auto;
+}
+
+[dir="rtl"] .mobile-submenu {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+/* Footer & Lists */
+[dir="rtl"] .footer-title::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-4px);
+}
+
+/* Form Controls */
+[dir="rtl"] .form-check {
+  flex-direction: row;
+}
+
+/* Stat Cards & Icons */
+[dir="rtl"] .stat-card .stat-header,
+[dir="rtl"] .fin-dashboard-header {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 576px) {
+  [dir="rtl"] .fin-dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  [dir="rtl"] .fin-dashboard-badge {
+    align-self: flex-start;
+  }
+  [dir="rtl"] .fin-mini-metric > .badge {
+    justify-self: start;
+  }
+}
+
+[dir="rtl"] .btn i {
+  transform: scaleX(-1);
+}
+
+/* FAQ Accordion RTL */
+[dir="rtl"] .faq-header {
+  text-align: right;
+}
+
+/* Contact Page & Office Map RTL */
+[dir="rtl"] .contact-column-header {
+  text-align: right;
+}
+[dir="rtl"] .map-card-header {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .map-card-header a i {
+  transform: scaleX(-1);
+}
+
+/* Dashboard Sidebar RTL */
+[dir="rtl"] .dashboard-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+}
+
+@media (max-width: 992px) {
+  [dir="rtl"] .dashboard-sidebar {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  [dir="rtl"] .dashboard-sidebar.active {
+    transform: translateX(0);
+  }
+}
+
+/* Dashboard Header User Widget RTL */
+[dir="rtl"] .user-profile-widget {
+  border-left: none;
+  border-right: 1px solid var(--border-color);
+  padding-left: 0;
+  padding-right: 0.75rem;
+}
+
+@media (max-width: 992px) {
+  [dir="rtl"] .user-profile-widget {
+    padding-left: 0 !important;
+    padding-right: 0.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  [dir="rtl"] .user-profile-widget {
+    padding-left: 0 !important;
+    padding-right: 0.35rem !important;
+  }
+}
+

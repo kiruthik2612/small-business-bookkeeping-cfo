@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finora — Small Business Bookkeeping & Fractional CFO Services</title>
+  <meta name="description"
+    content="Professional bookkeeping and fractional CFO services that give small businesses financial clarity, cash flow confidence, and strategic growth.">
+  <meta name="keywords"
+    content="bookkeeping, fractional CFO, small business finance, cash flow forecasting, accounting services">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z'/></svg>">
+
+  <!-- Google Fonts & Bootstrap Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="logo-text">
+            <span class="logo-name">Finora</span>
+            <span class="logo-sub">Bookkeeping & CFO</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">Home <i class="bi bi-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-menu">
+                <a href="index.html" class="dropdown-item active"><i class="bi bi-calculator"></i> Home 1 - Bookkeeping
+                  Focus</a>
+                <a href="home-2.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Home 2 - Fractional CFO
+                  Focus</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header CTAs & Toggles -->
+        <div class="header-actions">
+          <a href="login.html" class="btn btn-outline btn-sm"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL"><span
+              style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+          <a href="contact.html" class="btn btn-accent btn-sm">Book a Consultation</a>
+          <button class="hamburger-btn" aria-label="Toggle Mobile Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+        <div class="logo-text">
+          <span class="logo-name">Finora</span>
+        </div>
+      </div>
+      <button class="mobile-drawer-close btn-icon" aria-label="Close Navigation"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item" style="margin-bottom: 0.5rem;">
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn" aria-label="Toggle Theme" style="flex: 1;"><i
+              class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL" style="flex: 1;"><span
+              style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+        </div>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link mobile-dropdown-toggle">Home Variations <i
+            class="bi bi-chevron-down"></i></a>
+        <div class="mobile-submenu">
+          <div class="mobile-submenu-item"><a href="index.html" class="active">Bookkeeping Focus</a></div>
+          <div class="mobile-submenu-item"><a href="home-2.html">Fractional CFO Focus</a></div>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing Plans</a></li>
+      <li class="mobile-nav-item"><a href="blog.html" class="mobile-nav-link">Blog & News</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      <li class="mobile-nav-item" style="margin-top: 1rem;">
+        <a href="login.html" class="btn btn-outline" style="width: 100%; justify-content: center;"><i
+            class="bi bi-box-arrow-in-right"></i> Login</a>
+      </li>
+      <li class="mobile-nav-item" style="margin-top: 0.5rem;">
+        <a href="contact.html" class="btn btn-accent" style="width: 100%; justify-content: center;">Book
+          Consultation</a>
+      </li>
+    </ul>
+  </div>
+
+  <main id="main-content">
+    <!-- HERO SECTION (HOME 1: Bookkeeping & Financial Clarity) -->
+    <section class="hero-section bg-surface">
+      <div class="container">
+        <div class="grid grid-2 hero-grid items-center gap-4">
+          <div>
+            <div class="section-subtitle"><i class="bi bi-shield-check"></i> Trusted Financial Partner for Small
+              Businesses</div>
+            <h1 style="font-size: 3.25rem; line-height: 1.15; margin-bottom: 1.25rem;">Know Your Numbers. Grow With
+              Confidence.</h1>
+            <p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem;">Professional bookkeeping and
+              fractional CFO services that give small businesses the accurate numbers, clear reporting, and executive
+              guidance they need to scale sustainably.</p>
+            <div class="flex items-center gap-3 hero-cta-group" style="margin-bottom: 2.5rem;">
+              <a href="contact.html" class="btn btn-accent btn-lg"><i class="bi bi-calendar-check"></i> Book a Free
+                Consultation</a>
+              <a href="services.html" class="btn btn-outline btn-lg"><i class="bi bi-arrow-right-circle"></i> Explore
+                Services</a>
+            </div>
+            <!-- Trust Proof Badges -->
+            <div class="flex items-center gap-4 flex-wrap"
+              style="padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+              <div class="flex items-center gap-2">
+                <i class="bi bi-patch-check-fill text-accent" style="font-size: 1.25rem;"></i>
+                <span style="font-size: 0.85rem; font-weight: 600;">QuickBooks ProAdvisor</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="bi bi-patch-check-fill text-secondary" style="font-size: 1.25rem;"></i>
+                <span style="font-size: 0.85rem; font-weight: 600;">Xero Platinum Partner</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="bi bi-patch-check-fill text-accent" style="font-size: 1.25rem;"></i>
+                <span style="font-size: 0.85rem; font-weight: 600;">100% GAAP Compliant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Live Financial Dashboard Graphic -->
+          <div class="fin-dashboard-mockup">
+            <div class="fin-dashboard-header">
+              <div class="fin-dashboard-title-wrap">
+                <div class="fin-dashboard-dots" aria-hidden="true">
+                  <span class="fin-dot fin-dot-red"></span>
+                  <span class="fin-dot fin-dot-amber"></span>
+                  <span class="fin-dot fin-dot-green"></span>
+                </div>
+                <span class="fin-dashboard-title">FINANCIAL INTELLIGENCE OVERVIEW</span>
+              </div>
+              <span class="badge badge-accent fin-dashboard-badge"><i class="bi bi-broadcast"></i> Live
+                Reconciled</span>
+            </div>
+            <div class="fin-dashboard-grid">
+              <div class="fin-mini-metric">
+                <span class="fin-metric-label">Monthly Revenue</span>
+                <strong>$128,450</strong>
+                <span class="badge badge-accent"><i class="bi bi-arrow-up-short"></i> +14.2%</span>
+              </div>
+              <div class="fin-mini-metric">
+                <span class="fin-metric-label">Operating Expenses</span>
+                <strong>$74,200</strong>
+                <span class="badge badge-warning"><i class="bi bi-dash"></i> Budget On-track</span>
+              </div>
+              <div class="fin-mini-metric">
+                <span class="fin-metric-label">Net Margin</span>
+                <strong>42.2%</strong>
+                <span class="badge badge-accent"><i class="bi bi-arrow-up-short"></i> +4.8%</span>
+              </div>
+            </div>
+            <!-- Financial Trend Chart Preview Box -->
+            <div class="fin-dashboard-chart-box">
+              <div class="fin-chart-header">
+                <span class="fin-chart-title">Cash Flow & Runway Health</span>
+                <span class="fin-chart-stat">8.5 Months Runway</span>
+              </div>
+              <div class="fin-chart-bars">
+                <div style="height: 45%; background: var(--secondary-light);"></div>
+                <div style="height: 60%; background: var(--secondary-light);"></div>
+                <div style="height: 50%; background: var(--secondary-light);"></div>
+                <div style="height: 75%; background: var(--secondary-light);"></div>
+                <div style="height: 68%; background: var(--secondary-light);"></div>
+                <div style="height: 92%; background: var(--accent-color);"></div>
+              </div>
+              <div class="fin-chart-labels">
+                <span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span><span>SEP</span><span
+                  style="color: var(--accent-color); font-weight: 700;">OCT (EST)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY FINANCIAL METRICS STATS BAR -->
+    <section class="section-sm bg-surface-elevated">
+      <div class="container">
+        <div class="grid grid-4">
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Client Businesses</span>
+              <div class="stat-icon primary"><i class="bi bi-buildings"></i></div>
+            </div>
+            <div class="stat-value counter-value" data-target="500" data-suffix="+">500+</div>
+            <div class="stat-footer"><i class="bi bi-check-circle-fill text-accent"></i> Across 18 Industries</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Transactions Managed</span>
+              <div class="stat-icon accent"><i class="bi bi-currency-dollar"></i></div>
+            </div>
+            <div class="stat-value counter-value" data-target="25" data-prefix="$" data-suffix="M+">$25M+</div>
+            <div class="stat-footer"><i class="bi bi-shield-check text-accent"></i> Reconciled Accurately</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Client Retention</span>
+              <div class="stat-icon warning"><i class="bi bi-heart-pulse"></i></div>
+            </div>
+            <div class="stat-value counter-value" data-target="98" data-suffix="%">98%</div>
+            <div class="stat-footer"><i class="bi bi-arrow-up-right text-accent"></i> Long-Term Partnerships</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Advisory Experience</span>
+              <div class="stat-icon secondary"><i class="bi bi-award"></i></div>
+            </div>
+            <div class="stat-value counter-value" data-target="10" data-suffix="+ Years">10+ Years</div>
+            <div class="stat-footer"><i class="bi bi-star-fill text-warning"></i> Certified CPAs & CFOs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE SERVICES OVERVIEW -->
+    <section class="section bg-surface">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-subtitle">Full-Suite Financial Solutions</div>
+          <h2 class="section-title">Built for Modern Small Businesses</h2>
+          <p class="section-desc">From clean monthly reconciliations to strategic CFO forecasting, we provide
+            comprehensive financial infrastructure tailored to your stage of growth.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Service 1 -->
+          <div class="card clickable-card" data-card-href="service-details.html?service=bookkeeping" role="link"
+            tabindex="0" aria-label="Learn More about Monthly Bookkeeping"
+            style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+            <div class="card-media-wrap">
+              <img src="assets/images/home/bookkeeping.jpg" alt="Professional Monthly Bookkeeping Services"
+                class="card-media-img" loading="lazy">
+            </div>
+            <div style="padding: 1.75rem; display: flex; flex-direction: column; flex: 1;">
+              <div class="stat-icon accent" style="margin-bottom: 1rem;"><i class="bi bi-journal-check"></i></div>
+              <h3>Monthly Bookkeeping</h3>
+              <p>Accurate transaction categorization, bank reconciliations, and audit-ready monthly close delivered like
+                clockwork.</p>
+              <ul
+                style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                <li><i class="bi bi-check2 text-accent"></i> P&L, Balance Sheet & Cash Flow</li>
+                <li><i class="bi bi-check2 text-accent"></i> General Ledger Management</li>
+              </ul>
+              <div style="margin-top: auto;">
+                <a href="service-details.html?service=bookkeeping" class="btn btn-outline btn-sm">Learn More <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="card clickable-card" data-card-href="service-details.html?service=cfo" role="link" tabindex="0"
+            aria-label="Learn More about Fractional CFO Advisory"
+            style="border-color: var(--secondary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+            <div class="card-media-wrap">
+              <img src="assets/images/home/fractional-cfo.jpg" alt="Executive Fractional CFO Advisory Services"
+                class="card-media-img" loading="lazy">
+            </div>
+            <div style="padding: 1.75rem; display: flex; flex-direction: column; flex: 1;">
+              <div class="stat-icon secondary" style="margin-bottom: 1rem;"><i class="bi bi-person-workspace"></i></div>
+              <h3>Fractional CFO Advisory</h3>
+              <p>Executive financial strategy, cash runway extension, unit economics optimization, and board-ready
+                reporting.</p>
+              <ul
+                style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                <li><i class="bi bi-check2 text-accent"></i> Scenario Modeling & Budgets</li>
+                <li><i class="bi bi-check2 text-accent"></i> Strategic Capital Allocation</li>
+              </ul>
+              <div style="margin-top: auto;">
+                <a href="service-details.html?service=cfo" class="btn btn-secondary btn-sm">Learn More <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="card clickable-card" data-card-href="service-details.html?service=cashflow" role="link"
+            tabindex="0" aria-label="Learn More about Cash Flow Management"
+            style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+            <div class="card-media-wrap">
+              <img src="assets/images/home/cash-flow.jpg" alt="Cash Flow Management and Runway Forecasting"
+                class="card-media-img" loading="lazy">
+            </div>
+            <div style="padding: 1.75rem; display: flex; flex-direction: column; flex: 1;">
+              <div class="stat-icon warning" style="margin-bottom: 1rem;"><i class="bi bi-cash-stack"></i></div>
+              <h3>Cash Flow Management</h3>
+              <p>13-week rolling cash flow forecasts to eliminate financial surprises and optimize working capital
+                cycles.</p>
+              <ul
+                style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                <li><i class="bi bi-check2 text-accent"></i> AP/AR Timing Optimization</li>
+                <li><i class="bi bi-check2 text-accent"></i> Burn Rate & Runway Tracking</li>
+              </ul>
+              <div style="margin-top: auto;">
+                <a href="service-details.html?service=cashflow" class="btn btn-outline btn-sm">Learn More <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="services.html" class="btn btn-primary">View All 12 Financial Services <i class="bi bi-grid"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US / THE FINORA ADVANTAGE (WITH HIGH-QUALITY IMAGE) -->
+    <section class="section bg-surface-elevated" id="why-partner">
+      <div class="container">
+        <div class="grid grid-2 items-start gap-4 why-choose-grid">
+          <div class="why-choose-content">
+            <div class="section-subtitle">The Finora Standard</div>
+            <h2 class="section-title">Why Fast-Growing Businesses Partner With Us</h2>
+            <p class="section-desc">Traditional accountants look backward once a year at tax time. We partner with you
+              year-round with forward-looking intelligence to accelerate your bottom-line profitability.</p>
+
+            <div class="why-choose-features"
+              style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;">
+              <div class="flex items-start gap-3">
+                <div class="stat-icon accent" style="flex-shrink: 0;"><i class="bi bi-lightning-charge"></i></div>
+                <div>
+                  <h4 style="margin-bottom: 0.25rem;">Always On-Time Monthly Close</h4>
+                  <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">Books closed by
+                    the 10th of every month with comprehensive
+                    management dashboards delivered straight to your inbox.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="stat-icon secondary" style="flex-shrink: 0;"><i class="bi bi-shield-lock"></i></div>
+                <div>
+                  <h4 style="margin-bottom: 0.25rem;">Dedicated Senior Finance Team</h4>
+                  <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">You get a
+                    dedicated US-trained bookkeeper and fractional CFO
+                    who understand your business model inside out.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="stat-icon warning" style="flex-shrink: 0;"><i class="bi bi-sliders"></i></div>
+                <div>
+                  <h4 style="margin-bottom: 0.25rem;">Seamless Cloud Stack Integration</h4>
+                  <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">Direct
+                    integration with QuickBooks, Xero, Stripe, Gusto,
+                    Bill.com, and Shopify for zero-friction data pipelines.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Growth Feature Media Frame & Interactive Process Graphic -->
+          <div class="why-choose-media">
+            <div class="feature-media-frame" style="margin-bottom: 1.5rem;">
+              <img src="assets/images/home/business-growth.jpg"
+                alt="Finora Client Business Scaling & Financial Milestone Achievement" loading="lazy">
+              <div class="feature-media-badge">
+                <div class="flex items-center gap-2">
+                  <i class="bi bi-graph-up-arrow text-accent" style="font-size: 1.25rem;"></i>
+                  <div>
+                    <strong style="display: block; font-size: 0.95rem;">150% YoY Client Revenue Velocity</strong>
+                    <span style="font-size: 0.8rem; opacity: 0.85;">Driven by audit-ready books & active CFO runway
+                      planning</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="padding: 2rem;">
+              <h3 style="margin-bottom: 1.25rem; font-size: 1.25rem;">How It Works: 3 Simple Steps</h3>
+              <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                <div class="flex items-start gap-3">
+                  <span
+                    style="width: 2rem; height: 2rem; border-radius: 50%; background: var(--primary-color); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">1</span>
+                  <div>
+                    <h4 style="margin-bottom: 0.2rem; font-size: 1rem;">Seamless Onboarding & System Sync</h4>
+                    <p style="margin: 0; font-size: 0.875rem;">We securely connect to bank feeds and software without
+                      disruption.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span
+                    style="width: 2rem; height: 2rem; border-radius: 50%; background: var(--secondary-color); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">2</span>
+                  <div>
+                    <h4 style="margin-bottom: 0.2rem; font-size: 1rem;">Historical Cleanup & Standardizing</h4>
+                    <p style="margin: 0; font-size: 0.875rem;">We reconcile past records and optimize your chart of
+                      accounts.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span
+                    style="width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent-color); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">3</span>
+                  <div>
+                    <h4 style="margin-bottom: 0.2rem; font-size: 1rem;">Continuous Advisory & Monthly Close</h4>
+                    <p style="margin: 0; font-size: 0.875rem;">Timely monthly reports, cash models, and executive
+                      advisory sessions.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET THE SENIOR ADVISORY TEAM (NEW RICH SECTION FOR HOME 1) -->
+    <section class="section bg-surface">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-subtitle"><i class="bi bi-people-fill"></i> Financial Leadership</div>
+          <h2 class="section-title">Meet Our Senior Advisory Team</h2>
+          <p class="section-desc">Experienced CPAs, Fractional CFOs, and financial analysts dedicated to your company's
+            sustainable growth.</p>
+        </div>
+
+        <div class="grid grid-4 gap-3">
+          <!-- Team Member 1 -->
+          <div class="card text-center" style="padding: 2rem 1.25rem;">
+            <div class="team-avatar-photo-wrap">
+              <img src="assets/images/team/alexander.jpg" alt="Alexander Knight, CPA - Managing Partner"
+                class="avatar-photo" loading="lazy">
+            </div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Alexander Knight, CPA</h3>
+            <span class="badge badge-accent" style="margin-bottom: 0.75rem;">Managing Partner</span>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">Former Big-4
+              Senior Manager advising high-growth companies on financial architecture.</p>
+            <div class="footer-socials justify-center">
+              <a href="#" class="social-link" aria-label="Alexander Knight LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-link" aria-label="Alexander Knight Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="card text-center" style="padding: 2rem 1.25rem;">
+            <div class="team-avatar-photo-wrap">
+              <img src="assets/images/team/elena.jpg" alt="Elena Chen, MBA - Head of Fractional CFO Advisory"
+                class="avatar-photo" loading="lazy">
+            </div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Elena Chen, MBA</h3>
+            <span class="badge badge-secondary" style="margin-bottom: 0.75rem;">Head of CFO Advisory</span>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">Former VP of
+              Finance specialized in 13-week runway models and capital raises.</p>
+            <div class="footer-socials justify-center">
+              <a href="#" class="social-link" aria-label="Elena Chen LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-link" aria-label="Elena Chen Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="card text-center" style="padding: 2rem 1.25rem;">
+            <div class="team-avatar-photo-wrap">
+              <img src="assets/images/team/david.jpg" alt="David Sterling, CPA - Head of Bookkeeping Practice"
+                class="avatar-photo" loading="lazy">
+            </div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.25rem;">David Sterling, CPA</h3>
+            <span class="badge badge-warning" style="margin-bottom: 0.75rem;">Head of Bookkeeping</span>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">Specialist
+              in general ledger systems, multi-entity reconciliation, and tax workpapers.</p>
+            <div class="footer-socials justify-center">
+              <a href="#" class="social-link" aria-label="David Sterling LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-link" aria-label="David Sterling Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="card text-center" style="padding: 2rem 1.25rem;">
+            <div class="team-avatar-photo-wrap">
+              <img src="assets/images/team/sophia.jpg" alt="Sophia O'Connor - Senior Financial Analyst"
+                class="avatar-photo" loading="lazy">
+            </div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Sophia O'Connor</h3>
+            <span class="badge badge-info" style="margin-bottom: 0.75rem;">Senior Financial Analyst</span>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">Expert in
+              budget variance analysis, unit-economic modeling, and live KPI dashboards.</p>
+            <div class="footer-socials justify-center">
+              <a href="#" class="social-link" aria-label="Sophia O'Connor LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-link" aria-label="Sophia O'Connor Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SOCIAL PROOF (WITH HIGH-QUALITY PORTRAITS) -->
+    <section class="section bg-surface-elevated">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-subtitle">Client Success Stories</div>
+          <h2 class="section-title">Trusted by Founders and CEOs</h2>
+          <p class="section-desc">See how our bookkeeping precision and CFO strategy transformed businesses across
+            industries.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="flex items-center gap-1" style="color: #f59e0b; margin-bottom: 1rem;">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.7;">"Finora completely overhauled our
+                chaotic bookkeeping. We finally understand our true gross margins, and our fractional CFO helped us
+                extend our runway by 5 months during our Series A."</p>
+            </div>
+            <div class="flex items-center gap-3" style="border-top: 1px solid var(--border-color); padding-top: 1rem;">
+              <div class="avatar-photo-wrap">
+                <img src="assets/images/testimonials/marcus.jpg" alt="Marcus Reynolds - Founder & CEO, CloudScale Tech"
+                  class="avatar-photo" loading="lazy">
+              </div>
+              <div>
+                <h5 style="margin: 0; font-size: 1rem;">Marcus Reynolds</h5>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Founder & CEO, CloudScale Tech</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card"
+            style="display: flex; flex-direction: column; justify-content: space-between; border-color: var(--secondary-color);">
+            <div>
+              <div class="flex items-center gap-1" style="color: #f59e0b; margin-bottom: 1rem;">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.7;">"Having our monthly close ready on
+                the 5th of every month has eliminated tax-season stress entirely. Their cash flow forecast model is our
+                single most valuable strategic tool."</p>
+            </div>
+            <div class="flex items-center gap-3" style="border-top: 1px solid var(--border-color); padding-top: 1rem;">
+              <div class="avatar-photo-wrap">
+                <img src="assets/images/testimonials/sarah.jpg" alt="Sarah Lin - Co-Founder, Apex Logistics"
+                  class="avatar-photo" loading="lazy">
+              </div>
+              <div>
+                <h5 style="margin: 0; font-size: 1rem;">Sarah Lin</h5>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Co-Founder, Apex Logistics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="flex items-center gap-1" style="color: #f59e0b; margin-bottom: 1rem;">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.7;">"The ROI is incredible. Hiring a
+                full-time CFO would have cost us $250k+. Finora delivers the exact same executive caliber for a fraction
+                of the cost."</p>
+            </div>
+            <div class="flex items-center gap-3" style="border-top: 1px solid var(--border-color); padding-top: 1rem;">
+              <div class="avatar-photo-wrap">
+                <img src="assets/images/testimonials/david.jpg"
+                  alt="David Torres - Managing Partner, Torres Architecture" class="avatar-photo" loading="lazy">
+              </div>
+              <div>
+                <h5 style="margin: 0; font-size: 1rem;">David Torres</h5>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Managing Partner, Torres Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST FINANCIAL ARTICLES & INSIGHTS (NEW RICH SECTION FOR HOME 1) -->
+    <section class="section bg-surface">
+      <div class="container">
+        <div class="flex justify-between items-end flex-wrap gap-3" style="margin-bottom: 2.5rem;">
+          <div>
+            <div class="section-subtitle"><i class="bi bi-journal-text"></i> Financial Intelligence</div>
+            <h2 class="section-title" style="margin-bottom: 0.5rem;">Latest Advisory Articles</h2>
+            <p class="section-desc" style="margin: 0;">Practical bookkeeping techniques, cash flow forecasts, and
+              executive CFO strategies.</p>
+          </div>
+          <a href="blog.html" class="btn btn-outline">Explore All Articles <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="grid grid-3 gap-3">
+          <!-- Article 1: Cash Flow Model -->
+          <article class="card blog-card-premium clickable-card" data-card-href="blog-details.html?id=cashflow-model"
+            role="link" tabindex="0" aria-label="Read The 13-Week Cash Flow Model">
+            <div class="blog-thumb-wrap">
+              <img src="assets/images/blog/cashflow-model.jpg" alt="The 13-Week Cash Flow Model" class="blog-thumb-img"
+                loading="lazy">
+              <div class="blog-badge-overlay">
+                <span class="badge badge-accent">Cash Flow Strategy</span>
+              </div>
+            </div>
+            <div class="blog-content-body">
+              <div>
+                <div class="blog-meta-top">
+                  <span><i class="bi bi-calendar3"></i> October 2026</span>
+                  <span>•</span>
+                  <span><i class="bi bi-clock"></i> 7 min read</span>
+                </div>
+                <h3 style="font-size: 1.15rem; line-height: 1.35; margin-bottom: 0.75rem;">
+                  <a href="blog-details.html?id=cashflow-model" class="blog-title-link">The 13-Week Cash Flow Model: Why
+                    It Is Non-Negotiable</a>
+                </h3>
+                <p class="blog-excerpt">Discover why static yearly budgets fail during rapid growth and how rolling
+                  forecasts provide true liquidity control.</p>
+              </div>
+              <div class="blog-footer-author">
+                <div class="blog-author-meta">
+                  <div class="avatar-photo-wrap" style="width: 2rem; height: 2rem;">
+                    <img src="assets/images/team/elena.jpg" alt="Elena Chen" class="avatar-photo">
+                  </div>
+                  <div>
+                    <div class="blog-author-name">Elena Chen, MBA</div>
+                    <div class="blog-author-role">Head of CFO Advisory</div>
+                  </div>
+                </div>
+                <a href="blog-details.html?id=cashflow-model" class="blog-read-btn">Read <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2: Bookkeeping Automation -->
+          <article class="card blog-card-premium clickable-card"
+            data-card-href="blog-details.html?id=bookkeeping-ai-workflows" role="link" tabindex="0"
+            aria-label="Read How AI & Automation Eliminate Month-End Close Headaches">
+            <div class="blog-thumb-wrap">
+              <img src="assets/images/blog/bookkeeping-ai.jpg" alt="AI & Modern Bookkeeping" class="blog-thumb-img"
+                loading="lazy">
+              <div class="blog-badge-overlay">
+                <span class="badge badge-primary">Bookkeeping</span>
+              </div>
+            </div>
+            <div class="blog-content-body">
+              <div>
+                <div class="blog-meta-top">
+                  <span><i class="bi bi-calendar3"></i> October 2026</span>
+                  <span>•</span>
+                  <span><i class="bi bi-clock"></i> 5 min read</span>
+                </div>
+                <h3 style="font-size: 1.15rem; line-height: 1.35; margin-bottom: 0.75rem;">
+                  <a href="blog-details.html?id=bookkeeping-ai-workflows" class="blog-title-link">How AI & Automation
+                    Eliminate Month-End Close Headaches</a>
+                </h3>
+                <p class="blog-excerpt">Explore how modern cloud pipelines transform manual receipt tracking into
+                  instantaneous GAAP reconciliations.</p>
+              </div>
+              <div class="blog-footer-author">
+                <div class="blog-author-meta">
+                  <div class="avatar-photo-wrap" style="width: 2rem; height: 2rem;">
+                    <img src="assets/images/team/david.jpg" alt="David Sterling" class="avatar-photo">
+                  </div>
+                  <div>
+                    <div class="blog-author-name">David Sterling, CPA</div>
+                    <div class="blog-author-role">Head of Bookkeeping</div>
+                  </div>
+                </div>
+                <a href="blog-details.html?id=bookkeeping-ai-workflows" class="blog-read-btn">Read <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3: Financial Modeling -->
+          <article class="card blog-card-premium clickable-card"
+            data-card-href="blog-details.html?id=scenario-planning-guide" role="link" tabindex="0"
+            aria-label="Read Scenario Planning: Modeling Best, Expected, and Downside Cases">
+            <div class="blog-thumb-wrap">
+              <img src="assets/images/blog/financial-planning.jpg" alt="Scenario Planning & Financial Modeling"
+                class="blog-thumb-img" loading="lazy">
+              <div class="blog-badge-overlay">
+                <span class="badge badge-secondary">Financial Planning</span>
+              </div>
+            </div>
+            <div class="blog-content-body">
+              <div>
+                <div class="blog-meta-top">
+                  <span><i class="bi bi-calendar3"></i> October 2026</span>
+                  <span>•</span>
+                  <span><i class="bi bi-clock"></i> 8 min read</span>
+                </div>
+                <h3 style="font-size: 1.15rem; line-height: 1.35; margin-bottom: 0.75rem;">
+                  <a href="blog-details.html?id=scenario-planning-guide" class="blog-title-link">Scenario Planning:
+                    Modeling Best, Expected, and Downside Cases</a>
+                </h3>
+                <p class="blog-excerpt">Learn how dynamic 3-statement sensitivity forecasts protect cash reserves
+                  against volatile market shifts.</p>
+              </div>
+              <div class="blog-footer-author">
+                <div class="blog-author-meta">
+                  <div class="avatar-photo-wrap" style="width: 2rem; height: 2rem;">
+                    <img src="assets/images/team/alexander.jpg" alt="Alexander Knight" class="avatar-photo">
+                  </div>
+                  <div>
+                    <div class="blog-author-name">Alexander Knight, CPA</div>
+                    <div class="blog-author-role">Managing Partner</div>
+                  </div>
+                </div>
+                <a href="blog-details.html?id=scenario-planning-guide" class="blog-read-btn">Read <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section bg-surface-elevated" id="faq">
+      <div class="container" style="max-width: 840px;">
+        <div class="section-header text-center">
+          <div class="section-subtitle"><i class="bi bi-question-circle"></i> Frequently Asked Questions</div>
+          <h2 class="section-title">Answers to Common Questions</h2>
+          <p class="section-desc" style="margin-left: auto; margin-right: auto; max-width: 620px;">
+            Clear, upfront answers about our monthly bookkeeping packages, fractional CFO advisory, transparent pricing,
+            and rapid onboarding.
+          </p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- 1. Services Offered -->
+          <div class="faq-item active">
+            <button class="faq-header" type="button" aria-expanded="true" aria-controls="faq-ans-1">
+              <span>What is the difference between your bookkeeping and Fractional CFO services?</span>
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="faq-body" id="faq-ans-1">
+              <p>
+                <strong>Bookkeeping is backward-looking:</strong> our specialists accurately track daily transactions,
+                reconcile bank and merchant accounts, manage accounts payable/receivable, and deliver compliant monthly
+                financial statements.
+              </p>
+              <p>
+                <strong>A Fractional CFO is forward-looking:</strong> your executive CFO translates historical numbers
+                into proactive strategy—building 13-week cash flow forecasts, optimizing unit economics, analyzing gross
+                margins, and steering capital decisions for a predictable monthly fee.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Pricing -->
+          <div class="faq-item">
+            <button class="faq-header" type="button" aria-expanded="false" aria-controls="faq-ans-2">
+              <span>How does your pricing work, and are there long-term contracts?</span>
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="faq-body" id="faq-ans-2">
+              <p>
+                We operate on clear, predictable flat-monthly pricing with zero hidden fees or surprise hourly billings.
+                Bookkeeping plans start at <strong>$299/month</strong>, while Fractional CFO strategic advisory starts
+                at <strong>$1,250/month</strong>. All plans are month-to-month—you are never locked into rigid annual
+                contracts, giving you complete flexibility to scale services as your company grows.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. Onboarding -->
+          <div class="faq-item">
+            <button class="faq-header" type="button" aria-expanded="false" aria-controls="faq-ans-3">
+              <span>How does onboarding work, and how quickly can we start?</span>
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="faq-body" id="faq-ans-3">
+              <p>
+                Our structured onboarding takes just <strong>3 to 7 business days</strong>. We begin with a
+                comprehensive diagnostic review of your chart of accounts and past records, establish secure view-only
+                bank access, integrate with your existing software (QuickBooks Online or Xero), and assign your
+                dedicated bookkeeping lead and senior CFO advisor. You'll have immediate visibility into your closing
+                calendar and workflow.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. Business Suitability -->
+          <div class="faq-item">
+            <button class="faq-header" type="button" aria-expanded="false" aria-controls="faq-ans-4">
+              <span>Is my business the right size or fit for Finora's services?</span>
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="faq-body" id="faq-ans-4">
+              <p>
+                Finora is tailored for growing small-to-midsize businesses, startups, professional service firms, and
+                e-commerce companies generating between <strong>$200K and $25M in annual revenue</strong>. Whether you
+                have outgrown DIY spreadsheets, need reliable numbers for bank loans and investors, or require executive
+                guidance to accelerate profitability, our services adapt directly to your business model.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="section bg-dark-hero text-center">
+      <div class="container" style="max-width: 780px;">
+        <h2 style="font-size: 2.75rem; margin-bottom: 1rem; color: #ffffff; font-weight: 800; letter-spacing: -0.02em;">
+          Ready for Crystal-Clear Financial Visibility?</h2>
+        <p style="font-size: 1.15rem; margin-bottom: 2rem; color: #e2e8f0; line-height: 1.7;">Schedule a free 30-minute
+          financial diagnostic session with
+          one of our principal CFOs. No obligations.</p>
+        <div class="flex justify-center gap-3 flex-wrap">
+          <a href="contact.html" class="btn btn-accent btn-lg"><i class="bi bi-calendar-event"></i> Schedule Free
+            Consultation</a>
+          <a href="pricing.html" class="btn btn-outline-white btn-lg"><i class="bi bi-tags"></i> View Transparent
+            Pricing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="grid grid-4">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="logo-text">
+              <span class="logo-name">Finora</span>
+              <span class="logo-sub" style="color: var(--secondary-light);">Bookkeeping & CFO</span>
+            </div>
+          </a>
+          <p class="footer-about">Empowering small businesses, founders, and startups with audit-ready bookkeeping and
+            executive fractional CFO guidance.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home 1 (Bookkeeping)</a></li>
+            <li><a href="home-2.html"><i class="bi bi-chevron-right"></i> Home 2 (Fractional CFO)</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Our Team</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing Packages</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Financial Insights Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact & Consult</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services Directory -->
+        <div>
+          <h4 class="footer-title">Core Services</h4>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=bookkeeping"><i class="bi bi-chevron-right"></i> Monthly
+                Bookkeeping</a></li>
+            <li><a href="service-details.html?service=cfo"><i class="bi bi-chevron-right"></i> Fractional CFO
+                Advisory</a></li>
+            <li><a href="service-details.html?service=cashflow"><i class="bi bi-chevron-right"></i> Cash Flow
+                Forecasting</a></li>
+            <li><a href="service-details.html?service=cleanup"><i class="bi bi-chevron-right"></i> Catch-Up &
+                Cleanups</a></li>
+            <li><a href="service-details.html?service=reporting"><i class="bi bi-chevron-right"></i> KPI & Board
+                Reporting</a></li>
+            <li><a href="service-details.html?service=tax"><i class="bi bi-chevron-right"></i> Tax Readiness Support</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="footer-title">Financial Intelligence</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to our bi-weekly CFO newsletter for cash flow
+            strategies, tax readiness tips, and financial KPIs.</p>
+          <form id="newsletter-form" class="newsletter-form flex flex-col gap-2" action="javascript:void(0);"
+            method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Newsletter Subscription">
+            <div class="form-group" style="margin-bottom: 0;">
+              <input type="email" id="newsletter-email" name="email" class="form-control"
+                placeholder="Enter your business email" required style="padding: 0.65rem 1rem;">
+            </div>
+            <button type="submit" id="newsletter-submit-btn" class="btn btn-accent btn-sm"
+              style="width: 100%;">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container flex justify-between items-center">
+        <div>&copy; 2026 Finora Advisory LLC. All rights reserved. AICPA & GAAP Compliant.</div>
+        <div class="footer-bottom-links">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+          <span>Security Protocols</span>
+          <span>Client Portal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/validation.js" defer></script>
+</body>
+
+</html>

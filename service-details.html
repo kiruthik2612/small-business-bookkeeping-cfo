@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details — Finora Financial Advisory</title>
+  <meta name="description" content="Detailed overview of our financial, bookkeeping, and fractional CFO capabilities, process, deliverables, and pricing.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="logo-text">
+            <span class="logo-name">Finora</span>
+            <span class="logo-sub">Bookkeeping & CFO</span>
+          </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-menu">
+                <a href="index.html" class="dropdown-item"><i class="bi bi-calculator"></i> Home 1 - Bookkeeping Focus</a>
+                <a href="home-2.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Home 2 - Fractional CFO Focus</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html" class="btn btn-outline btn-sm"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL"><span
+              style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+          <a href="contact.html" class="btn btn-accent btn-sm">Book a Consultation</a>
+          <button class="hamburger-btn" aria-label="Toggle Mobile Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo"><div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div><div class="logo-text"><span class="logo-name">Finora</span></div></div>
+      <button class="mobile-drawer-close btn-icon" aria-label="Close Navigation"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item" style="margin-bottom: 0.5rem;">
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn" aria-label="Toggle Theme" style="flex: 1;"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL" style="flex: 1;"><span style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home 1</a></li>
+      <li class="mobile-nav-item"><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link active">Services</a></li>
+      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li class="mobile-nav-item"><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content">
+    <!-- BREADCRUMB & HEADER -->
+    <section class="page-hero bg-surface-elevated">
+      <div class="container">
+        <div class="flex items-center gap-2" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+          <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i>
+          <a href="services.html">Services</a> <i class="bi bi-chevron-right"></i>
+          <span id="service-breadcrumb" style="color: var(--text-main); font-weight: 600;">Monthly Bookkeeping</span>
+        </div>
+        <div class="section-subtitle" id="service-badge"><i class="bi bi-journal-bookmark-fill"></i> Core Accounting</div>
+        <h1 id="service-title" style="font-size: 2.75rem; margin-bottom: 1rem;">Monthly Bookkeeping & Reconciliations</h1>
+        <p class="section-desc" id="service-tagline" style="max-width: 780px;">Audit-ready general ledger maintenance, accurate categorization, and timely monthly closes delivered straight to your executive dashboard.</p>
+      </div>
+    </section>
+
+    <!-- SERVICE CONTENT LAYOUT -->
+    <section class="section bg-surface">
+      <div class="container">
+        <div class="grid grid-12 gap-4">
+          <!-- Main Content (8 cols) -->
+          <div style="grid-column: span 8;">
+            <div style="margin-bottom: 2.5rem;">
+              <h2 style="font-size: 1.85rem; margin-bottom: 1rem;">The Challenge Small Businesses Face</h2>
+              <p id="service-challenge">Managing bookkeeping in-house often leads to costly categorization errors, commingled expenses, missed tax deductions, and delayed financial visibility. Without a streamlined monthly close, business leaders cannot confidently evaluate profitability, manage cash reserves, or prepare for tax season.</p>
+            </div>
+
+            <div style="margin-bottom: 2.5rem;">
+              <h2 style="font-size: 1.85rem; margin-bottom: 1rem;">The Finora Solution</h2>
+              <p id="service-solution">We pair your business with a dedicated US-trained accounting pod. We integrate directly with QuickBooks Online or Xero, automatically pull and reconcile bank and credit feeds, manage accounts payable/receivable, and deliver audited financial packages by the 10th of every month.</p>
+              
+              <div class="grid grid-2 gap-2" style="margin-top: 1.5rem;">
+                <div class="card" style="padding: 1.5rem;">
+                  <i class="bi bi-check-circle-fill text-accent" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                  <h4 id="service-feature1-title" style="margin-bottom: 0.25rem;">100% Tax & GAAP Ready</h4>
+                  <p id="service-feature1-desc" style="font-size: 0.85rem; margin: 0;">Complete workpapers and reconciled ledgers ready for seamless handoff to your tax CPA.</p>
+                </div>
+                <div class="card" style="padding: 1.5rem;">
+                  <i class="bi bi-clock-history text-secondary" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                  <h4 id="service-feature2-title" style="margin-bottom: 0.25rem;">On-Time Monthly Close</h4>
+                  <p id="service-feature2-desc" style="font-size: 0.85rem; margin: 0;">Guaranteed delivery of Income Statement, Balance Sheet, and Cash Flow by the 10th.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Deliverables List -->
+            <div style="margin-bottom: 2.5rem;">
+              <h2 style="font-size: 1.85rem; margin-bottom: 1rem;">What You Receive Every Month</h2>
+              <ul id="service-deliverables" style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 1rem; color: var(--text-muted);">
+                <li><i class="bi bi-check-square-fill text-accent"></i> <strong>P&L, Balance Sheet & Cash Flow Statement</strong> tailored with custom departmental tracking.</li>
+                <li><i class="bi bi-check-square-fill text-accent"></i> <strong>Bank, Credit Card & Merchant Account Reconciliations</strong> (Stripe, PayPal, Shopify, Square).</li>
+                <li><i class="bi bi-check-square-fill text-accent"></i> <strong>Executive Summary Dashboard</strong> highlighting month-over-month revenue, gross margins, and burn rate.</li>
+                <li><i class="bi bi-check-square-fill text-accent"></i> <strong>Dedicated Slack/Email Support</strong> with response times under 24 business hours.</li>
+              </ul>
+            </div>
+
+            <!-- 4-Step Process -->
+            <div>
+              <h2 style="font-size: 1.85rem; margin-bottom: 1.5rem;">Our 4-Step Execution Process</h2>
+              <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                <div class="card" style="padding: 1.25rem 1.5rem;">
+                  <div class="flex items-center gap-3">
+                    <span style="font-weight: 800; font-size: 1.25rem; color: var(--secondary-color);">01</span>
+                    <div>
+                      <h4 style="margin: 0; font-size: 1.05rem;">Connect & Sync Software</h4>
+                      <p style="margin: 0; font-size: 0.85rem;">Establish view-only bank access and sync with QuickBooks Online or Xero.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" style="padding: 1.25rem 1.5rem;">
+                  <div class="flex items-center gap-3">
+                    <span style="font-weight: 800; font-size: 1.25rem; color: var(--secondary-color);">02</span>
+                    <div>
+                      <h4 style="margin: 0; font-size: 1.05rem;">Clean & Structure Chart of Accounts</h4>
+                      <p style="margin: 0; font-size: 0.85rem;">Customize your account hierarchy to reflect your specific business model.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" style="padding: 1.25rem 1.5rem;">
+                  <div class="flex items-center gap-3">
+                    <span style="font-weight: 800; font-size: 1.25rem; color: var(--secondary-color);">03</span>
+                    <div>
+                      <h4 style="margin: 0; font-size: 1.05rem;">Monthly Reconciliation & Quality Audit</h4>
+                      <p style="margin: 0; font-size: 0.85rem;">A senior CPA audits all reconciliations before final package generation.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" style="padding: 1.25rem 1.5rem;">
+                  <div class="flex items-center gap-3">
+                    <span style="font-weight: 800; font-size: 1.25rem; color: var(--secondary-color);">04</span>
+                    <div>
+                      <h4 style="margin: 0; font-size: 1.05rem;">Deliver Financial Intelligence</h4>
+                      <p style="margin: 0; font-size: 0.85rem;">Receive monthly reports, video walkthroughs, and proactive financial observations.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar (4 cols) -->
+          <div style="grid-column: span 4;">
+            <div class="card" style="padding: 2rem; margin-bottom: 2rem; border-color: var(--secondary-color);">
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Ready to Get Started?</h3>
+              <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Schedule a free 30-minute diagnostic session with our principal accounting team.</p>
+              <a href="contact.html" class="btn btn-accent" style="width: 100%; justify-content: center; margin-bottom: 1rem;"><i class="bi bi-calendar-check"></i> Book Consultation</a>
+              <a href="pricing.html" class="btn btn-outline" style="width: 100%; justify-content: center;"><i class="bi bi-tags"></i> View Pricing</a>
+            </div>
+
+            <!-- Service Quick Navigation Sidebar -->
+            <div class="card" style="padding: 1.5rem;">
+              <h4 style="font-size: 1.1rem; margin-bottom: 1rem;">Explore Other Services</h4>
+              <ul class="footer-links">
+                <li><a href="service-details.html?service=bookkeeping" style="color: var(--text-main);"><i class="bi bi-chevron-right"></i> Monthly Bookkeeping</a></li>
+                <li><a href="service-details.html?service=cfo" style="color: var(--text-main);"><i class="bi bi-chevron-right"></i> Fractional CFO Advisory</a></li>
+                <li><a href="service-details.html?service=cashflow" style="color: var(--text-main);"><i class="bi bi-chevron-right"></i> Cash Flow Forecasting</a></li>
+                <li><a href="service-details.html?service=reporting" style="color: var(--text-main);"><i class="bi bi-chevron-right"></i> Financial Reporting</a></li>
+                <li><a href="service-details.html?service=cleanup" style="color: var(--text-main);"><i class="bi bi-chevron-right"></i> Historical Catch-Up Cleanup</a></li>
+                <li><a href="service-details.html?service=tax" style="color: var(--text-main);"><i class="bi bi-chevron-right"></i> Tax Readiness Support</a></li>
+                <li><a href="service-details.html?service=budgeting" style="color: var(--text-main);"><i class="bi bi-chevron-right"></i> Budgeting & Scenario Modeling</a></li>
+                <li><a href="service-details.html?service=kpi" style="color: var(--text-main);"><i class="bi bi-chevron-right"></i> KPI & Executive Dashboard</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="grid grid-4">
+        <div>
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="logo-text"><span class="logo-name">Finora</span><span class="logo-sub" style="color: var(--secondary-light);">Bookkeeping & CFO</span></div>
+          </a>
+          <p class="footer-about">Reliable, modern financial infrastructure for fast-growing small businesses and startups.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=bookkeeping">Monthly Bookkeeping</a></li>
+            <li><a href="service-details.html?service=cfo">Fractional CFO</a></li>
+            <li><a href="service-details.html?service=cashflow">Cash Flow Forecasting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <p style="font-size: 0.9rem;">(800) 555-0199<br>advisory@finora.io</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex justify-between items-center">
+        <div>&copy; 2026 Finora Advisory LLC.</div>
+        <div class="footer-bottom-links">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+          <span>Client Portal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/validation.js" defer></script>
+
+  <!-- Dynamic Service Query Param Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceKey = urlParams.get('service');
+
+      const servicesData = {
+        'bookkeeping': {
+          title: 'Monthly Bookkeeping & Reconciliations',
+          tagline: 'Audit-ready general ledger maintenance, accurate categorization, and timely monthly closes delivered straight to your executive dashboard.',
+          badge: '<i class="bi bi-journal-bookmark-fill"></i> Core Accounting',
+          breadcrumb: 'Monthly Bookkeeping',
+          challenge: 'Managing bookkeeping in-house often leads to costly categorization errors, commingled expenses, missed tax deductions, and delayed financial visibility. Without a streamlined monthly close, business leaders cannot confidently evaluate profitability, manage cash reserves, or prepare for tax season.',
+          solution: 'We pair your business with a dedicated US-trained accounting pod. We integrate directly with QuickBooks Online or Xero, automatically pull and reconcile bank and credit feeds, manage accounts payable/receivable, and deliver audited financial packages by the 10th of every month.',
+          feat1Title: '100% Tax & GAAP Ready',
+          feat1Desc: 'Complete workpapers and reconciled ledgers ready for seamless handoff to your tax CPA.',
+          feat2Title: 'On-Time Monthly Close',
+          feat2Desc: 'Guaranteed delivery of Income Statement, Balance Sheet, and Cash Flow by the 10th.',
+          deliverables: [
+            '<strong>P&L, Balance Sheet & Cash Flow Statement</strong> tailored with custom departmental tracking.',
+            '<strong>Bank, Credit Card & Merchant Account Reconciliations</strong> (Stripe, PayPal, Shopify, Square).',
+            '<strong>Executive Summary Dashboard</strong> highlighting month-over-month revenue, gross margins, and burn rate.',
+            '<strong>Dedicated Slack/Email Support</strong> with response times under 24 business hours.'
+          ]
+        },
+        'cfo': {
+          title: 'Fractional CFO & Strategic Advisory',
+          tagline: 'High-impact executive financial leadership, runway models, unit economics, and board-ready financial strategy.',
+          badge: '<i class="bi bi-person-workspace"></i> Executive Advisory',
+          breadcrumb: 'Fractional CFO',
+          challenge: 'Fast-growing companies between $1M and $15M ARR face complex capital constraints, margin compression, and strategic inflection points, but cannot justify a $350k/yr full-time CFO salary and equity package.',
+          solution: 'Our Fractional CFOs act as your strategic co-pilot. We build robust 3-statement forecast models, optimize unit economics (CAC, LTV, payback), run scenario stress tests, and lead board and investor financial presentations.',
+          feat1Title: 'Institutional-Grade Modeling',
+          feat1Desc: 'Dynamic hiring plans, CapEx forecasting, and valuation sensitivity models that update in real time.',
+          feat2Title: 'Board & Investor Ready',
+          feat2Desc: 'Executive board decks, pitch deck financials, and credible guidance during fundraising or debt negotiation.',
+          deliverables: [
+            '<strong>Rolling 3-Statement Forecast Models</strong> (P&L, Balance Sheet, Cash Flow) connected directly to your general ledger.',
+            '<strong>Unit Economics & Margin Optimization</strong> breakdown by product, channel, and customer cohort.',
+            '<strong>Monthly Executive Strategy Session</strong> with your dedicated Partner-level Fractional CFO.',
+            '<strong>Fundraising & Bank Credit Readiness</strong> with automated investor updates and diligence data rooms.'
+          ]
+        },
+        'cashflow': {
+          title: 'Cash Flow Management & Forecasting',
+          tagline: '13-week rolling cash flow projections to prevent liquidity bottlenecks and optimize working capital.',
+          badge: '<i class="bi bi-cash-stack"></i> Liquidity & Runway',
+          breadcrumb: 'Cash Flow',
+          challenge: 'Paper profits do not guarantee bank cash. Delayed receivables, front-loaded inventory payments, and sudden tax deadlines cause unexpected cash crunches that threaten operational survival.',
+          solution: 'We construct an institutional 13-week rolling cash flow model that tracks every dollar entering and exiting your accounts weekly, giving you complete clarity over payroll runway and liquidity buffers.',
+          feat1Title: 'No Cash Surprises',
+          feat1Desc: 'Spot cash deficits 6 to 10 weeks before they occur and take preventive tactical action.',
+          feat2Title: 'Working Capital Optimization',
+          feat2Desc: 'Optimize vendor payment terms and accelerate customer collections to maximize free cash flow.',
+          deliverables: [
+            '<strong>13-Week Rolling Cash Forecast Model</strong> updated weekly with live reconciled bank balances.',
+            '<strong>Cash Runway & Burn Rate Analysis</strong> tailored for leadership and board reporting.',
+            '<strong>Accounts Receivable Acceleration Strategies</strong> to compress collection cycles.',
+            '<strong>Weekly Liquidity Advisory Sync</strong> to review scheduled outflows and cash reserve thresholds.'
+          ]
+        },
+        'reporting': {
+          title: 'Financial Reporting & KPI Intelligence',
+          tagline: 'Custom GAAP-compliant financial packages, trend analysis, and custom executive reporting suites.',
+          badge: '<i class="bi bi-file-earmark-bar-graph"></i> Reporting',
+          breadcrumb: 'Financial Reporting',
+          challenge: 'Raw QuickBooks reports fail to provide actionable executive insights. Founders struggle to decipher trends, gross margin variances, and overhead creep across expanding business units.',
+          solution: 'We translate raw accounting figures into clear, high-impact executive reporting dashboards with GAAP compliance, comparative trend lines, and automated KPI visualizations.',
+          feat1Title: 'Actionable Insights',
+          feat1Desc: 'Visual KPI dashboards highlight profitability trends, overhead benchmarks, and department burn.',
+          feat2Title: 'GAAP-Compliant Statements',
+          feat2Desc: 'Fully vetted Balance Sheets and P&Ls ready for auditors, lenders, and institutional investors.',
+          deliverables: [
+            '<strong>Monthly Executive Reporting Deck</strong> with variance analysis versus budget and prior year.',
+            '<strong>Departmental & Product Margin Scorecards</strong> to pinpoint revenue drivers and cost leaks.',
+            '<strong>Balance Sheet & Working Capital Reconciliation</strong> reviewed by a senior CPA.',
+            '<strong>Lender & Covenant Compliance Reports</strong> formatted specifically for banking partners.'
+          ]
+        },
+        'cleanup': {
+          title: 'Historical Financial Catch-Up & Cleanup',
+          tagline: 'Rapid remediation and reconciliation of past messy records to bring your company audit and tax-ready.',
+          badge: '<i class="bi bi-wrench-adjustable"></i> Remediation',
+          breadcrumb: 'Cleanup',
+          challenge: 'Months or years of neglected bookkeeping, commingled personal expenses, un-reconciled bank feeds, and duplicate entries stall loan applications, invite IRS audits, and block growth.',
+          solution: 'Our specialized cleanup squad forensicly untangles your general ledger, accurately classifies historical transactions, rebuilds accurate bank balances, and brings your books 100% current.',
+          feat1Title: 'Rapid Forensic Resolution',
+          feat1Desc: 'Dedicated team of bookkeepers and CPAs dedicated exclusively to rapid retrospective reconciliation.',
+          feat2Title: 'Tax & Audit Defense',
+          feat2Desc: 'Transform chaotic accounts into clean, defensible workpapers ready for immediate CPA filing.',
+          deliverables: [
+            '<strong>Complete Historical Bank & Credit Card Reconciliations</strong> across all past periods.',
+            '<strong>Chart of Accounts Reclassification & Cleanup</strong> to eliminate bloated or duplicated categories.',
+            '<strong>Clean Beginning Balance Balance Sheet</strong> established for current fiscal year operations.',
+            '<strong>Formal CPA Handoff Package</strong> with complete backup schedules and 1099 vendor audit.'
+          ]
+        },
+        'tax': {
+          title: 'Tax Readiness & Year-End Support',
+          tagline: 'Year-round tax preparation workpapers, deduction maximization, and flawless financial coordination for your CPA.',
+          badge: '<i class="bi bi-file-earmark-check"></i> Tax Support',
+          breadcrumb: 'Tax Readiness',
+          challenge: 'Tax preparation is often a stressful scramble in March or April, resulting in missed write-offs, delayed filing extensions, penalty notices, and inflated CPA billing fees.',
+          solution: 'We maintain your books with proactive year-round tax readiness, maximizing legitimate tax deductions, organizing depreciation schedules, and handing off clean workpapers directly to your CPA.',
+          feat1Title: 'Zero Tax Scramble',
+          feat1Desc: 'Your books are locked and reconciled within 10 days of year-end, eliminating extension stress.',
+          feat2Title: 'Deduction Maximization',
+          feat2Desc: 'Systematic tracking of R&D tax credits, Section 179 equipment deductions, and travel write-offs.',
+          deliverables: [
+            '<strong>Year-End CPA Tax Workpaper Package</strong> with full general ledger schedules and balance sheet substantiation.',
+            '<strong>1099-NEC & 1099-MISC Contractor Filing Support</strong> and W-9 collection tracking.',
+            '<strong>Sales & Use Tax Reconciliation Support</strong> across state and local jurisdictions.',
+            '<strong>Direct Tax CPA Liaison</strong> so your tax preparer gets immediate answers to all queries.'
+          ]
+        },
+        'ap': {
+          title: 'Accounts Payable (AP) & Bill Automation',
+          tagline: 'Seamless vendor bill approvals, 1099 tracking, and optimized payment schedules.',
+          badge: '<i class="bi bi-credit-card"></i> Payables',
+          breadcrumb: 'Accounts Payable',
+          challenge: 'Manual bill entry, lost invoices, duplicate payments, and uncoordinated vendor payments waste leadership hours and strain vendor trust.',
+          solution: 'We implement automated bill payment workflows using Bill.com or Melio, enforcing multi-level approval hierarchies, preventing duplicate payments, and optimizing payment timing.',
+          feat1Title: 'Fraud & Duplicate Protection',
+          feat1Desc: 'Automated 2-way and 3-way matching safeguards against duplicate billing and unauthorized payments.',
+          feat2Title: 'Preserved Working Capital',
+          feat2Desc: 'Schedule payments strategically to optimize vendor discounts and protect bank balances.',
+          deliverables: [
+            '<strong>Automated Bill Capture & Coding</strong> directly into your accounting software.',
+            '<strong>Multi-Tier Approval Routing</strong> ensuring founder or manager sign-off prior to disbursement.',
+            '<strong>Vendor Inquiries & 1099 Collection</strong> managed by your dedicated pod.',
+            '<strong>Weekly AP Aging & Disbursement Run</strong> scheduled to align with cash flow projections.'
+          ]
+        },
+        'ar': {
+          title: 'Accounts Receivable (AR) & Invoicing',
+          tagline: 'Accelerate cash collections, automate customer invoicing, and compress days sales outstanding (DSO).',
+          badge: '<i class="bi bi-receipt-cutoff"></i> Receivables',
+          breadcrumb: 'Accounts Receivable',
+          challenge: 'Delayed invoicing, lack of follow-up on overdue bills, and friction in customer payment methods cause ballooning receivables and liquidity strain.',
+          solution: 'We manage your end-to-end invoicing lifecycle, setting up automated recurring billing, digital payment links, courteous automated reminders, and clear aging reports.',
+          feat1Title: 'Faster Cash Collection',
+          feat1Desc: 'Compress Days Sales Outstanding (DSO) by an average of 14 days with integrated payment portals.',
+          feat2Title: 'Automated Chasing',
+          feat2Desc: 'Polite, automated reminder sequences keep customer accounts current without straining client relationships.',
+          deliverables: [
+            '<strong>Custom Invoicing Creation & Dispatch</strong> within 24 hours of milestone completion.',
+            '<strong>Automated Credit Card & ACH Payment Gateways</strong> setup via Stripe or QuickBooks Payments.',
+            '<strong>Weekly AR Aging Analysis & Collections Cadence</strong> to minimize bad debt exposure.',
+            '<strong>Customer Retainer & Prepaid Income Amortization</strong> tracked accurately on the balance sheet.'
+          ]
+        },
+        'reconciliation': {
+          title: 'Bank & Credit Card Reconciliation',
+          tagline: 'Multi-account bank feed synchronization, fee matching, and zero-leakage accounting assurance.',
+          badge: '<i class="bi bi-bank"></i> Reconciliations',
+          breadcrumb: 'Reconciliations',
+          challenge: 'Unmatched transactions, mystery credit card charges, hidden merchant processor fees, and bank feed disconnects distort financial statements.',
+          solution: 'We perform rigorous line-by-line reconciliation of every bank account, credit card, line of credit, and merchant processor account (Stripe, Shopify, PayPal, Square).',
+          feat1Title: 'Zero Cash Leakage',
+          feat1Desc: 'Every penny on your bank statements is accounted for and matched against verified ledger entries.',
+          feat2Title: 'Merchant Fee Transparency',
+          feat2Desc: 'Accurately separate net sales revenues from payment processor swipe fees and chargebacks.',
+          deliverables: [
+            '<strong>Daily & Weekly Feed Reconciliations</strong> across all commercial checking and savings accounts.',
+            '<strong>Corporate Credit Card Expense Auditing</strong> with automated receipt matching.',
+            '<strong>Merchant Processor Fee Reconciliation</strong> (Stripe, Square, PayPal, Shopify, Amazon).',
+            '<strong>Month-End Bank Reconciliation Statements</strong> signed off by senior accountants.'
+          ]
+        },
+        'budgeting': {
+          title: 'Budgeting & Scenario Modeling',
+          tagline: 'Departmental budget frameworks, hiring plan stress tests, and best/worst case scenario modeling.',
+          badge: '<i class="bi bi-sliders"></i> Budgeting',
+          breadcrumb: 'Budgeting',
+          challenge: 'Operating without a dynamic operational budget leaves leadership guessing whether they can afford key hires, office expansions, or product investments.',
+          solution: 'We design flexible, driver-based financial budgets with monthly variance tracking, empowering you to model hiring decisions, pricing changes, and capital expenditures with confidence.',
+          feat1Title: 'Driver-Based Forecasting',
+          feat1Desc: 'Link budget assumptions directly to real-world operational KPIs like customer volume and headcount.',
+          feat2Title: 'Scenario Stress Testing',
+          feat2Desc: 'Compare Conservative, Base, and Aggressive growth scenarios to safeguard cash reserves.',
+          deliverables: [
+            '<strong>Annual Operating Budget & Dynamic Model</strong> tailored to your fiscal year.',
+            '<strong>Monthly Budget vs. Actual (BvA) Variance Review</strong> with corrective action guidance.',
+            '<strong>Hiring & Capacity Cost Calculators</strong> factoring payroll taxes, benefits, and equipment.',
+            '<strong>Capital Expenditure (CapEx) Planning</strong> to optimize equipment and software investments.'
+          ]
+        },
+        'advisory': {
+          title: 'Strategic Business Advisory & M&A',
+          tagline: 'Entity structuring, M&A due diligence, debt refinancing, and executive financial counsel.',
+          badge: '<i class="bi bi-briefcase"></i> Business Advisory',
+          breadcrumb: 'Business Advisory',
+          challenge: 'High-stakes events such as acquisitions, bank debt financing, partner buyouts, or shareholder restructuring require sophisticated CFO guidance.',
+          solution: 'Our veteran finance partners provide specialized advisory services, guiding you through term sheet negotiations, due diligence preparations, and capital restructuring.',
+          feat1Title: 'M&A Due Diligence Prep',
+          feat1Desc: 'Structure clean historical financials and data rooms that withstand the scrutiny of institutional buyers.',
+          feat2Title: 'Commercial Debt Advisory',
+          feat2Desc: 'Package financials for SBA loans, commercial lines of credit, or venture debt on favorable terms.',
+          deliverables: [
+            '<strong>Quality of Earnings (QofE) Support</strong> and historical EBITDA adjustment schedules.',
+            '<strong>Investor & Lender Financial Packaging</strong> with debt service coverage ratio (DSCR) modeling.',
+            '<strong>Partner Buyout & Shareholder Valuation</strong> financial modeling and terms analysis.',
+            '<strong>Corporate Entity Financial Consolidation</strong> across multi-entity holding structures.'
+          ]
+        },
+        'kpi': {
+          title: 'KPI & Executive Financial Dashboard',
+          tagline: 'Custom cloud dashboards visualizing unit economics, burn rate, and real-time profitability.',
+          badge: '<i class="bi bi-speedometer"></i> KPI Dashboards',
+          breadcrumb: 'KPI Dashboard',
+          challenge: 'Key business metrics are scattered across disparate software platforms, leaving leadership with delayed or contradictory performance indicators.',
+          solution: 'We build unified executive dashboards integrating financial metrics from your accounting ledger with operational numbers from CRM, Stripe, and billing platforms.',
+          feat1Title: 'Live Real-Time Sync',
+          feat1Desc: 'Visual gauges and graphs update automatically to display current cash, MRR, and margin trends.',
+          feat2Title: 'Cross-Functional Metrics',
+          feat2Desc: 'Combine marketing CAC with finance LTV to track customer profitability cohorts accurately.',
+          deliverables: [
+            '<strong>Custom Cloud Financial Dashboard</strong> accessible on desktop and mobile 24/7.',
+            '<strong>Real-Time Cash Runway & Daily Burn Tracker</strong> with warning alerts for threshold drops.',
+            '<strong>Gross Margin & Net Profit Heatmaps</strong> by product line, sales channel, or service package.',
+            '<strong>Executive Summary Scorecard</strong> delivered to your inbox every Monday morning.'
+          ]
+        },
+        'forecasting': {
+          title: '3-Statement Financial Modeling',
+          tagline: 'Fully integrated Income Statement, Balance Sheet, and Cash Flow financial forecast models.',
+          badge: '<i class="bi bi-graph-up"></i> Forecasting',
+          breadcrumb: '3-Statement Modeling',
+          challenge: 'Simple revenue projections fail to capture working capital lags, depreciation schedules, and debt amortizations.',
+          solution: 'We engineer dynamic, institutional-grade 3-statement models where changes on the P&L immediately cascade through the Balance Sheet and Cash Flow.',
+          feat1Title: 'Dynamic Balance Sheet Linkage',
+          feat1Desc: 'Accurately model accounts receivable lag, inventory holding costs, and deferred revenues.',
+          feat2Title: 'Investor & Bank Credibility',
+          feat2Desc: 'Financial projections formatted to Wall Street and institutional private equity standards.',
+          deliverables: [
+            '<strong>Comprehensive 3-Statement Forecast Model</strong> built in Excel or Google Sheets with live formulas.',
+            '<strong>Scenario Selector Toggles</strong> (Base, Bull, Bear) for board presentations.',
+            '<strong>Cap Table & Equity Dilution Schedule</strong> modeling convertible notes and future equity rounds.',
+            '<strong>Quarterly Model Audit & Calibration</strong> to reflect real-world actual performance.'
+          ]
+        },
+        'unit-economics': {
+          title: 'Unit Economics & Margin Optimization',
+          tagline: 'Granular Customer Acquisition Cost (CAC), Lifetime Value (LTV), and product gross margin analysis.',
+          badge: '<i class="bi bi-pie-chart"></i> Unit Economics',
+          breadcrumb: 'Unit Economics',
+          challenge: 'Scaling revenue without understanding unit margins causes companies to burn cash faster as they grow.',
+          solution: 'We dissect your revenue streams down to unit economics, identifying unprofitable customer cohorts, sub-optimal pricing models, and hidden fulfillment costs.',
+          feat1Title: 'Cohort Profitability',
+          feat1Desc: 'Identify exactly which client segments generate 80% of your real free cash flow.',
+          feat2Title: 'Pricing Power Strategy',
+          feat2Desc: 'Model the profit impact of price increases, tier restructurings, and discount caps.',
+          deliverables: [
+            '<strong>Blended & Paid CAC Analysis</strong> across marketing channels with payback period models.',
+            '<strong>Customer Lifetime Value (LTV) & Retention Decay</strong> cohorts mapped over 36 months.',
+            '<strong>SKU & Service Line Gross Margin Audits</strong> factoring direct labor and merchant swipe fees.',
+            '<strong>Strategic Pricing Recommendations Report</strong> designed to expand gross margins by 4–8%.'
+          ]
+        },
+        'capital': {
+          title: 'Capital Strategy & Fundraise Prep',
+          tagline: 'Venture capital readiness, banking lines of credit, and due diligence representation.',
+          badge: '<i class="bi bi-bank"></i> Capital Strategy',
+          breadcrumb: 'Capital Strategy',
+          challenge: 'Founders entering capital raises or debt discussions without institutional financial workpapers face depressed valuations or rejected loan applications.',
+          solution: 'Our CFOs prepare your entire financial narrative, from pitch deck financial charts to secure due diligence data rooms, standing beside you in negotiations.',
+          feat1Title: 'Investor-Ready Financials',
+          feat1Desc: 'Build clean, coherent projections that inspire investor trust and defend premium valuations.',
+          feat2Title: 'Non-Dilutive Financing',
+          feat2Desc: 'Structure lines of credit, term loans, and venture debt to fuel growth without giving up equity.',
+          deliverables: [
+            '<strong>Due Diligence Data Room Architecture</strong> with structured audit workpapers.',
+            '<strong>Financial Slides & Cohort Graphics</strong> tailored for investor pitch decks.',
+            '<strong>Debt Service Capacity & Covenant Modeling</strong> for commercial lenders and banks.',
+            '<strong>CFO Representation</strong> during investor diligence calls and partner Q&A sessions.'
+          ]
+        }
+      };
+
+      // Handle query param with canonical aliases
+      let activeKey = serviceKey;
+      if (activeKey === 'fractional-cfo') activeKey = 'cfo';
+      if (activeKey === 'cash-flow') activeKey = 'cashflow';
+      if (activeKey === 'financial-reporting') activeKey = 'reporting';
+
+      if (activeKey && servicesData[activeKey]) {
+        const data = servicesData[activeKey];
+        
+        // Header & Meta
+        const titleEl = document.getElementById('service-title');
+        const taglineEl = document.getElementById('service-tagline');
+        const badgeEl = document.getElementById('service-badge');
+        const bcEl = document.getElementById('service-breadcrumb');
+        
+        if (titleEl) titleEl.textContent = data.title;
+        if (taglineEl) taglineEl.textContent = data.tagline;
+        if (badgeEl) badgeEl.innerHTML = data.badge;
+        if (bcEl) bcEl.textContent = data.breadcrumb;
+        document.title = `${data.title} — Finora`;
+
+        // Content
+        const challengeEl = document.getElementById('service-challenge');
+        const solutionEl = document.getElementById('service-solution');
+        const feat1TitleEl = document.getElementById('service-feature1-title');
+        const feat1DescEl = document.getElementById('service-feature1-desc');
+        const feat2TitleEl = document.getElementById('service-feature2-title');
+        const feat2DescEl = document.getElementById('service-feature2-desc');
+        const deliverablesEl = document.getElementById('service-deliverables');
+
+        if (challengeEl && data.challenge) challengeEl.textContent = data.challenge;
+        if (solutionEl && data.solution) solutionEl.textContent = data.solution;
+        if (feat1TitleEl && data.feat1Title) feat1TitleEl.textContent = data.feat1Title;
+        if (feat1DescEl && data.feat1Desc) feat1DescEl.textContent = data.feat1Desc;
+        if (feat2TitleEl && data.feat2Title) feat2TitleEl.textContent = data.feat2Title;
+        if (feat2DescEl && data.feat2Desc) feat2DescEl.textContent = data.feat2Desc;
+
+        if (deliverablesEl && data.deliverables && data.deliverables.length) {
+          deliverablesEl.innerHTML = data.deliverables
+            .map(item => `<li><i class="bi bi-check-square-fill text-accent"></i> ${item}</li>`)
+            .join('');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

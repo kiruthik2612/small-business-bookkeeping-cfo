@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Financial Portal & Overview — Finora</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="background: var(--bg-body); min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- DASHBOARD TOPBAR NAV -->
+  <header class="site-header" style="background: var(--bg-surface); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000;">
+    <div class="container-fluid dashboard-header-inner">
+      <div class="dashboard-header-left">
+        <!-- Mobile Sidebar Toggle -->
+        <button class="dashboard-toggle-btn" aria-label="Toggle Dashboard Menu">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="logo-text">
+            <span class="logo-name" style="font-size: 1.25rem;">Finora</span>
+            <span class="logo-sub">Client Portal</span>
+          </div>
+        </a>
+        <span class="badge badge-accent dashboard-header-status-badge"><i class="bi bi-check-circle-fill"></i> Books Closed: Oct 2026</span>
+      </div>
+
+      <div class="dashboard-header-right">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL"><span style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+        
+        <!-- User Profile Dropdown Simulator -->
+        <div class="user-profile-widget">
+          <div class="user-profile-avatar" style="width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--secondary-color); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">
+            JD
+          </div>
+          <div class="user-profile-details">
+            <span style="font-size: 0.85rem; font-weight: 700; line-height: 1.1; white-space: nowrap;">John Doe</span>
+            <span style="font-size: 0.7rem; color: var(--text-muted); white-space: nowrap;">Acme Corp LLC</span>
+          </div>
+          <a href="login.html" class="btn btn-outline btn-sm logout-btn" title="Log Out" style="padding: 0.4rem 0.6rem; flex-shrink: 0;"><i class="bi bi-box-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar Overlay Backdrop -->
+  <div class="dashboard-sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- DASHBOARD BODY: SIDEBAR + MAIN CONTENT -->
+  <div class="container-fluid dashboard-layout" style="padding-left: 0; padding-right: 0;">
+    
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="dashboard-sidebar">
+      <div class="flex items-center justify-between" style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);">
+        <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">Navigation</span>
+        <button class="dashboard-sidebar-close" aria-label="Close Sidebar"><i class="bi bi-x-lg"></i></button>
+      </div>
+
+      <ul style="display: flex; flex-direction: column; gap: 0.25rem;">
+        <li><a href="#overview" class="nav-link active"><i class="bi bi-speedometer2"></i> Overview</a></li>
+        <li><a href="#financials" class="nav-link"><i class="bi bi-cash-stack"></i> Cash Flow & Runway</a></li>
+        <li><a href="#reports" class="nav-link"><i class="bi bi-file-earmark-bar-graph"></i> Monthly Reports</a></li>
+        <li><a href="#invoices" class="nav-link"><i class="bi bi-receipt"></i> Invoices & Bills</a></li>
+        <li><a href="#messages" class="nav-link"><i class="bi bi-chat-left-dots"></i> CFO Advisory Chat</a></li>
+        <li><a href="admin-dashboard.html" class="nav-link" style="color: var(--secondary-color); font-weight: 700;"><i class="bi bi-shield-shaded"></i> Admin Portal</a></li>
+        <li style="margin-top: 2rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+          <a href="index.html" class="nav-link"><i class="bi bi-arrow-left"></i> Return to Site</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- DASHBOARD VIEWPORT -->
+    <main class="dashboard-main" id="dashboard-main">
+      
+      <!-- Top Overview Welcome Banner -->
+      <div id="overview" class="flex justify-between items-center dashboard-title-banner" style="margin-bottom: 2rem;">
+        <div>
+          <h1 style="font-size: 1.75rem; margin-bottom: 0.25rem;">Financial Overview: Acme Corp LLC</h1>
+          <span style="font-size: 0.875rem; color: var(--text-muted);">Reconciled through October 8, 2026 • Lead CFO: Elena Chen, MBA</span>
+        </div>
+        <div class="flex gap-2 dashboard-action-btns">
+          <button type="button" id="export-pdf-btn" class="btn btn-outline btn-sm"><i class="bi bi-file-earmark-pdf-fill"></i> Export P&L (PDF)</button>
+          <a href="#messages" class="btn btn-accent btn-sm"><i class="bi bi-chat-dots-fill"></i> Message CFO</a>
+        </div>
+      </div>
+
+      <!-- 4 KEY FINANCIAL METRICS -->
+      <div class="grid grid-4 gap-3" style="margin-bottom: 2rem;">
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Cash in Bank</span>
+            <div class="stat-icon primary"><i class="bi bi-bank"></i></div>
+          </div>
+          <div class="stat-value">$342,800</div>
+          <div class="stat-footer"><i class="bi bi-check-circle-fill text-accent"></i> 8.5 Months Runway</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Oct Revenue</span>
+            <div class="stat-icon accent"><i class="bi bi-graph-up"></i></div>
+          </div>
+          <div class="stat-value">$128,450</div>
+          <div class="stat-footer"><i class="bi bi-arrow-up-right text-accent"></i> +14.2% vs. Sep</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Oct Expenses</span>
+            <div class="stat-icon secondary"><i class="bi bi-receipt-cutoff"></i></div>
+          </div>
+          <div class="stat-value">$74,200</div>
+          <div class="stat-footer"><i class="bi bi-shield-check text-secondary"></i> On Budget</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Net Operating Profit</span>
+            <div class="stat-icon warning"><i class="bi bi-trophy"></i></div>
+          </div>
+          <div class="stat-value">$54,250</div>
+          <div class="stat-footer"><i class="bi bi-arrow-up text-accent"></i> 42.2% Net Margin</div>
+        </div>
+      </div>
+
+      <!-- REVENUE VS EXPENSES CHART & EXPENSE BREAKDOWN -->
+      <div class="grid grid-12 gap-3" style="margin-bottom: 2.5rem;" id="financials">
+        <!-- Area Chart (8 cols) -->
+        <div class="card chart-card" style="grid-column: span 8;">
+          <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
+            <h3 style="font-size: 1.15rem; margin: 0;">Revenue vs Operating Expenses (Last 6 Months)</h3>
+            <span class="badge badge-accent"><i class="bi bi-lightning-charge"></i> Live Sync</span>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="clientRevenueChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Doughnut Breakdown (4 cols) -->
+        <div class="card chart-card" style="grid-column: span 4;">
+          <h3 style="font-size: 1.15rem; margin-bottom: 1rem;">October Expense Breakdown</h3>
+          <div class="chart-wrapper">
+            <canvas id="clientExpenseDoughnut"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- MONTHLY FINANCIAL REPORTS & STATEMENTS PACKAGE -->
+      <div class="card" style="margin-bottom: 2.5rem;" id="reports">
+        <div class="flex justify-between items-center" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div class="flex items-center gap-2" style="margin-bottom: 0.25rem;">
+              <h3 style="font-size: 1.25rem; margin: 0;">Monthly Financial Packages & Workpapers</h3>
+              <span class="badge badge-accent"><i class="bi bi-shield-check"></i> CPA Reviewed</span>
+            </div>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Verified GAAP financial statements, balance sheets, and tax workpapers prepared by your dedicated CFO team</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" class="btn btn-outline btn-sm" onclick="alert('All 2026 packages archived and synced with your cloud vault.');"><i class="bi bi-cloud-arrow-down"></i> Download All (ZIP)</button>
+          </div>
+        </div>
+
+        <div class="table-responsive-container">
+          <table style="width: 100%; min-width: 640px; border-collapse: collapse; font-size: 0.9rem;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color); text-align: left; color: var(--text-muted); white-space: nowrap;">
+                <th style="padding: 0.75rem;">Reporting Period</th>
+                <th style="padding: 0.75rem;">Package Description</th>
+                <th style="padding: 0.75rem;">Close Date</th>
+                <th style="padding: 0.75rem;">CFO Sign-off</th>
+                <th style="padding: 0.75rem;">Status</th>
+                <th style="padding: 0.75rem; text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                <td style="padding: 0.85rem 0.75rem; font-weight: 700; color: var(--text-main);"><i class="bi bi-file-earmark-pdf text-accent" style="margin-right: 0.4rem;"></i> October 2026</td>
+                <td>P&L, Cash Flow, KPI Dashboard & Runway Forecast</td>
+                <td>Oct 08, 2026</td>
+                <td>Elena Chen, MBA</td>
+                <td><span class="badge badge-accent">Ready for Review</span></td>
+                <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('export-pdf-btn').click();"><i class="bi bi-download"></i> View PDF</button></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                <td style="padding: 0.85rem 0.75rem; font-weight: 700; color: var(--text-main);"><i class="bi bi-file-earmark-pdf text-accent" style="margin-right: 0.4rem;"></i> September 2026</td>
+                <td>Q3 Close: Balance Sheet, EBITDA & Variance Model</td>
+                <td>Sep 30, 2026</td>
+                <td>Marcus Vance, CPA</td>
+                <td><span class="badge badge-accent">Approved & Finalized</span></td>
+                <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Downloading September 2026 Q3 Close Financial Package...');"><i class="bi bi-download"></i> View PDF</button></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                <td style="padding: 0.85rem 0.75rem; font-weight: 700; color: var(--text-main);"><i class="bi bi-file-earmark-pdf text-accent" style="margin-right: 0.4rem;"></i> August 2026</td>
+                <td>Executive Financial Deck & Working Capital Audit</td>
+                <td>Aug 31, 2026</td>
+                <td>Elena Chen, MBA</td>
+                <td><span class="badge badge-accent">Approved & Finalized</span></td>
+                <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Downloading August 2026 Executive Financial Deck...');"><i class="bi bi-download"></i> View PDF</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- INVOICE & BILLS TABLE WITH STATUS FILTER -->
+      <div class="card" style="margin-bottom: 2.5rem;" id="invoices">
+        <div class="flex justify-between items-center" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Recent Invoices & Accounts Receivable</h3>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Track customer payment statuses and automated reminders</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <label for="invoice-status-filter" style="font-size: 0.85rem; font-weight: 600;">Status:</label>
+            <select id="invoice-status-filter" class="form-control" style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+              <option value="all">All Invoices</option>
+              <option value="paid">Paid</option>
+              <option value="pending">Pending</option>
+              <option value="overdue">Overdue</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-responsive-container">
+
+          <table style="width: 100%; min-width: 620px; border-collapse: collapse; font-size: 0.9rem;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color); text-align: left; color: var(--text-muted); white-space: nowrap;">
+                <th style="padding: 0.75rem;">Invoice #</th>
+                <th style="padding: 0.75rem;">Client / Customer</th>
+                <th style="padding: 0.75rem;">Issue Date</th>
+                <th style="padding: 0.75rem;">Amount</th>
+                <th style="padding: 0.75rem;">Status</th>
+                <th style="padding: 0.75rem; text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="invoice-row" data-status="paid" style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                <td style="padding: 0.85rem 0.75rem; font-family: var(--font-mono); font-weight: 600;">INV-2026-089</td>
+                <td>Stripe Payments Inc.</td>
+                <td>Oct 01, 2026</td>
+                <td style="font-weight: 700; color: var(--text-main);">$14,200.00</td>
+                <td><span class="badge badge-accent">Paid</span></td>
+                <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Viewing official transaction receipt for INV-2026-089.');"><i class="bi bi-receipt"></i> Receipt</button></td>
+              </tr>
+              <tr class="invoice-row" data-status="pending" style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                <td style="padding: 0.85rem 0.75rem; font-family: var(--font-mono); font-weight: 600;">INV-2026-090</td>
+                <td>Horizon Media Group</td>
+                <td>Oct 05, 2026</td>
+                <td style="font-weight: 700; color: var(--text-main);">$8,750.00</td>
+                <td><span class="badge badge-warning">Pending (Net 15)</span></td>
+                <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Automated payment reminder dispatched to billing@horizonmedia.com.');"><i class="bi bi-envelope"></i> Send Reminder</button></td>
+              </tr>
+              <tr class="invoice-row" data-status="overdue" style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                <td style="padding: 0.85rem 0.75rem; font-family: var(--font-mono); font-weight: 600;">INV-2026-085</td>
+                <td>Vanguard Consulting</td>
+                <td>Sep 15, 2026</td>
+                <td style="font-weight: 700; color: var(--text-main);">$12,400.00</td>
+                <td><span class="badge badge-danger">Overdue 8 Days</span></td>
+                <td style="text-align: right;"><button type="button" class="btn btn-accent btn-sm" onclick="alert('Escalated CFO follow-up queued for Vanguard Consulting account.');"><i class="bi bi-lightning-charge"></i> Auto-Followup</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- LIVE CFO MESSAGING SANDBOX -->
+      <div class="card" id="messages">
+        <div class="flex justify-between items-center" style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+          <div class="flex items-center gap-2">
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-color);"></div>
+            <h3 style="font-size: 1.15rem; margin: 0;">Fractional CFO Advisory Workspace</h3>
+          </div>
+          <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="bi bi-shield-check"></i> Encrypted Communication</span>
+        </div>
+
+        <!-- Chat Container -->
+        <div id="dashboard-chat-messages" style="height: 200px; overflow-y: auto; display: flex; flex-direction: column; padding: 0.5rem; border-radius: var(--radius-md); background: var(--bg-body); margin-bottom: 1rem; border: 1px solid var(--border-color);">
+          <div style="align-self: flex-start; background: var(--bg-surface-elevated); color: var(--text-main); padding: 0.75rem 1rem; border-radius: 12px 12px 12px 0; max-width: 80%; margin-bottom: 0.75rem; font-size: 0.9rem; border: 1px solid var(--border-color);">
+            <div><strong>Elena Chen (CFO):</strong> Hi John, October financials are fully reconciled. Your gross margins improved 4.8% after restructuring contractor billing. Let me know if you have questions on the forecast model.</div>
+            <span style="font-size: 0.7rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Today at 9:15 AM</span>
+          </div>
+        </div>
+
+        <!-- Chat Input Form -->
+        <form id="dashboard-chat-form" class="flex gap-2">
+          <input type="text" id="dashboard-chat-input" class="form-control" placeholder="Ask your CFO or bookkeeper a question..." required>
+          <button type="submit" class="btn btn-secondary"><i class="bi bi-send-fill"></i> Send</button>
+        </form>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- DASHBOARD FOOTER -->
+  <footer style="padding: 1.25rem 0; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-muted); background: var(--bg-surface);">
+    <div class="container-fluid flex justify-between items-center flex-wrap gap-2" style="padding-left: 1.5rem; padding-right: 1.5rem;">
+      <div>&copy; 2026 Finora Advisory LLC. Encrypted Client Financial Session.</div>
+      <div class="footer-bottom-links">
+        <span>Privacy Policy</span>
+        <span>Terms of Service</span>
+        <span>Client Portal</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/dashboard.js" defer></script>
+</body>
+</html>

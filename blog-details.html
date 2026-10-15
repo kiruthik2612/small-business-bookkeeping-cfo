@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 13-Week Cash Flow Model: Essential Guide — Finora</title>
+  <meta name="description" content="Learn how an institutional 13-week rolling cash forecast protects business liquidity, eliminates surprise payroll deficits, and accelerates growth.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="logo-text">
+            <span class="logo-name">Finora</span>
+            <span class="logo-sub">Bookkeeping & CFO</span>
+          </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down dropdown-icon"></i></a>
+              <div class="dropdown-menu">
+                <a href="index.html" class="dropdown-item"><i class="bi bi-calculator"></i> Home 1 - Bookkeeping Focus</a>
+                <a href="home-2.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Home 2 - Fractional CFO Focus</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html" class="btn btn-outline btn-sm"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL"><span
+              style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+          <a href="contact.html" class="btn btn-accent btn-sm">Book a Consultation</a>
+          <button class="hamburger-btn" aria-label="Toggle Mobile Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo"><div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div><div class="logo-text"><span class="logo-name">Finora</span></div></div>
+      <button class="mobile-drawer-close btn-icon" aria-label="Close Navigation"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item" style="margin-bottom: 0.5rem;">
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn" aria-label="Toggle Theme" style="flex: 1;"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL" style="flex: 1;"><span style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home 1</a></li>
+      <li class="mobile-nav-item"><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li class="mobile-nav-item"><a href="blog.html" class="mobile-nav-link active">Blog</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content">
+    <!-- ARTICLE HERO & BREADCRUMB -->
+    <section class="page-hero bg-surface-elevated">
+      <div class="container" style="max-width: 900px;">
+        <div class="flex items-center gap-2 flex-wrap" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+          <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i>
+          <a href="blog.html">Blog</a> <i class="bi bi-chevron-right"></i>
+          <span id="breadcrumb-category" style="color: var(--text-muted);">Category</span> <i class="bi bi-chevron-right"></i>
+          <span id="breadcrumb-title" style="color: var(--text-main); font-weight: 600;">Article Details</span>
+        </div>
+        
+        <div class="flex items-center gap-2 flex-wrap" style="margin-bottom: 1rem;">
+          <span id="article-badge" class="badge badge-accent">Category</span>
+          <span id="article-date" style="font-size: 0.85rem; color: var(--text-muted);"><i class="bi bi-calendar3"></i> Date</span>
+          <span id="article-readtime" style="font-size: 0.85rem; color: var(--text-muted);"><i class="bi bi-clock"></i> Read Time</span>
+        </div>
+
+        <h1 id="article-title" style="font-size: 2.8rem; line-height: 1.25; margin-bottom: 1.5rem;">Article Title</h1>
+
+        <!-- Author Byline -->
+        <div class="flex items-center gap-3">
+          <div id="author-avatar" style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--secondary-color); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700;">EC</div>
+          <div>
+            <h4 id="author-name" style="margin: 0; font-size: 1rem;">Author Name</h4>
+            <span id="author-role" style="font-size: 0.8rem; color: var(--text-muted);">Author Role</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY & SIDEBAR -->
+    <section class="section bg-surface">
+      <div class="container" style="max-width: 1100px;">
+        <div class="grid grid-12 gap-4">
+          
+          <!-- Article Content (8 cols) -->
+          <article style="grid-column: span 8; font-size: 1.05rem; line-height: 1.8; color: var(--text-main);">
+            
+            <!-- Featured Hero Image -->
+            <div id="article-image-container" style="margin-bottom: 2.5rem; border-radius: var(--radius-lg); overflow: hidden; max-height: 420px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color);">
+              <img id="article-featured-img" src="assets/images/blog/cashflow-model.jpg" alt="Article Cover" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+
+            <!-- Dynamic Body Content -->
+            <div id="article-body-content">
+              <!-- Rendered via JavaScript -->
+            </div>
+
+            <!-- Social Share & Tags -->
+            <div class="flex justify-between items-center flex-wrap gap-2" style="border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 2.5rem;">
+              <div class="flex items-center gap-2 flex-wrap" id="article-tags-container">
+                <span style="font-weight: 600; font-size: 0.9rem;">Tags:</span>
+                <span class="badge badge-secondary">Finance</span>
+                <span class="badge badge-accent">Strategy</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span style="font-weight: 600; font-size: 0.9rem;">Share:</span>
+                <a href="#" class="social-link" style="background: var(--bg-surface-elevated); color: var(--text-main);" aria-label="Share on LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="social-link" style="background: var(--bg-surface-elevated); color: var(--text-main);" aria-label="Share on Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="social-link" style="background: var(--bg-surface-elevated); color: var(--text-main);" aria-label="Share via Email"><i class="bi bi-envelope-fill"></i></a>
+              </div>
+            </div>
+
+            <!-- Author Bio Box -->
+            <div class="card" style="padding: 2rem; margin-top: 2.5rem; background: var(--bg-surface-elevated); border-left: 4px solid var(--secondary-color);">
+              <div class="flex items-center gap-3" style="margin-bottom: 1rem;">
+                <div id="bio-avatar" style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: var(--secondary-color); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;">EC</div>
+                <div>
+                  <h4 id="bio-name" style="margin: 0; font-size: 1.15rem;">Elena Chen, MBA</h4>
+                  <span id="bio-role" style="font-size: 0.85rem; color: var(--text-muted);">Head of Fractional CFO Advisory</span>
+                </div>
+              </div>
+              <p style="font-size: 0.9rem; line-height: 1.6; margin: 0;">Specializes in cash runway optimization, capital restructuring, and SaaS unit economics for middle-market and high-growth ventures.</p>
+            </div>
+          </article>
+
+          <!-- Sidebar (4 cols) -->
+          <aside style="grid-column: span 4;">
+            <!-- Free Consultation CTA -->
+            <div class="card" style="padding: 2rem; background: var(--bg-hero); color: #fff; margin-bottom: 2rem; box-shadow: var(--shadow-md);">
+              <span class="badge badge-accent" style="margin-bottom: 0.75rem;"><i class="bi bi-shield-check"></i> Free Assessment</span>
+              <h3 style="color: #fff; font-size: 1.35rem; margin-bottom: 0.75rem; line-height: 1.3;">Need High-Impact CFO Guidance?</h3>
+              <p style="color: var(--text-inverse-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.5rem;">Let our fractional CFOs review your financials and implement institutional cash controls.</p>
+              <a href="contact.html" class="btn btn-accent btn-sm" style="width: 100%; justify-content: center;"><i class="bi bi-calendar-check"></i> Book Consultation</a>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="card" style="padding: 1.75rem; margin-bottom: 2rem;">
+              <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Categories</h4>
+              <div style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+                <a href="blog.html?category=cfo" class="flex justify-between items-center" style="color: var(--text-main); font-weight: 500;">
+                  <span><i class="bi bi-pie-chart text-secondary"></i> Fractional CFO</span>
+                  <span class="badge badge-secondary" style="font-size: 0.75rem;">3</span>
+                </a>
+                <a href="blog.html?category=cashflow" class="flex justify-between items-center" style="color: var(--text-main); font-weight: 500;">
+                  <span><i class="bi bi-graph-up-arrow text-accent"></i> Cash Flow</span>
+                  <span class="badge badge-accent" style="font-size: 0.75rem;">2</span>
+                </a>
+                <a href="blog.html?category=bookkeeping" class="flex justify-between items-center" style="color: var(--text-main); font-weight: 500;">
+                  <span><i class="bi bi-calculator text-primary"></i> Bookkeeping</span>
+                  <span class="badge badge-primary" style="font-size: 0.75rem;">2</span>
+                </a>
+                <a href="blog.html?category=planning" class="flex justify-between items-center" style="color: var(--text-main); font-weight: 500;">
+                  <span><i class="bi bi-bar-chart-line text-warning"></i> Financial Planning</span>
+                  <span class="badge badge-warning" style="font-size: 0.75rem;">2</span>
+                </a>
+                <a href="blog.html?category=taxes" class="flex justify-between items-center" style="color: var(--text-main); font-weight: 500;">
+                  <span><i class="bi bi-file-earmark-ruled text-info"></i> Taxes & Compliance</span>
+                  <span class="badge badge-info" style="font-size: 0.75rem;">2</span>
+                </a>
+                <a href="blog.html?category=growth" class="flex justify-between items-center" style="color: var(--text-main); font-weight: 500;">
+                  <span><i class="bi bi-rocket-takeoff text-accent"></i> Business Growth</span>
+                  <span class="badge badge-accent" style="font-size: 0.75rem;">1</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Related Insights Widget -->
+            <div class="card" style="padding: 1.75rem;">
+              <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Related Insights</h4>
+              <div id="related-articles-list" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="grid grid-4">
+        <div>
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="logo-text"><span class="logo-name">Finora</span><span class="logo-sub" style="color: var(--secondary-light);">Bookkeeping & CFO</span></div>
+          </a>
+          <p class="footer-about">Reliable, modern financial intelligence for founders and small business owners.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html?category=cfo">CFO Strategy</a></li>
+            <li><a href="blog.html?category=cashflow">Cash Flow Planning</a></li>
+            <li><a href="blog.html?category=bookkeeping">Bookkeeping Tips</a></li>
+            <li><a href="blog.html?category=planning">Financial Modeling</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <p style="font-size: 0.9rem;">(800) 555-0199<br>advisory@finora.io</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex justify-between items-center">
+        <div>&copy; 2026 Finora Advisory LLC. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+          <span>Client Portal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/blog-data.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/validation.js" defer></script>
+
+  <!-- Dynamic Blog Details Renderer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const articleId = urlParams.get('id') || 'cashflow-model';
+      const article = (typeof getArticleById === 'function' ? getArticleById(articleId) : null) || FINORA_ARTICLES[0];
+
+      if (article) {
+        // Page title & metadata
+        document.title = `${article.title} — Finora`;
+
+        // Breadcrumbs & Badges
+        const bcCategory = document.getElementById('breadcrumb-category');
+        const bcTitle = document.getElementById('breadcrumb-title');
+        const badge = document.getElementById('article-badge');
+        const dateEl = document.getElementById('article-date');
+        const readTimeEl = document.getElementById('article-readtime');
+        const titleEl = document.getElementById('article-title');
+        const imgEl = document.getElementById('article-featured-img');
+        const bodyContent = document.getElementById('article-body-content');
+
+        if (bcCategory) {
+          bcCategory.innerHTML = `<a href="blog.html?category=${article.category}">${article.categoryLabel}</a>`;
+        }
+        if (bcTitle) {
+          bcTitle.textContent = article.title.length > 35 ? article.title.substring(0, 35) + '...' : article.title;
+        }
+        if (badge) {
+          badge.className = `badge ${article.badgeClass}`;
+          badge.textContent = article.categoryLabel;
+        }
+        if (dateEl) dateEl.innerHTML = `<i class="bi bi-calendar3"></i> ${article.date}`;
+        if (readTimeEl) readTimeEl.innerHTML = `<i class="bi bi-clock"></i> ${article.readTime}`;
+        if (titleEl) titleEl.textContent = article.title;
+        if (imgEl) {
+          imgEl.src = article.image;
+          imgEl.alt = article.title;
+        }
+
+        // Author elements
+        const authorAvatar = document.getElementById('author-avatar');
+        const authorName = document.getElementById('author-name');
+        const authorRole = document.getElementById('author-role');
+        const bioAvatar = document.getElementById('bio-avatar');
+        const bioName = document.getElementById('bio-name');
+        const bioRole = document.getElementById('bio-role');
+
+        if (authorAvatar) {
+          authorAvatar.textContent = article.author.avatar;
+          authorAvatar.style.background = article.author.avatarBg;
+        }
+        if (authorName) authorName.textContent = article.author.name;
+        if (authorRole) authorRole.textContent = article.author.role;
+
+        if (bioAvatar) {
+          bioAvatar.textContent = article.author.avatar;
+          bioAvatar.style.background = article.author.avatarBg;
+        }
+        if (bioName) bioName.textContent = article.author.name;
+        if (bioRole) bioRole.textContent = article.author.role;
+
+        // Render HTML Content
+        if (bodyContent) {
+          bodyContent.innerHTML = article.content;
+        }
+
+        // Tags
+        const tagsContainer = document.getElementById('article-tags-container');
+        if (tagsContainer) {
+          tagsContainer.innerHTML = `
+            <span style="font-weight: 600; font-size: 0.9rem;">Tags:</span>
+            <span class="badge ${article.badgeClass}">${article.categoryLabel}</span>
+            <span class="badge badge-secondary">Finance Strategy</span>
+            <span class="badge badge-primary">Growth</span>
+          `;
+        }
+
+        // Related Articles in Sidebar
+        const relatedList = document.getElementById('related-articles-list');
+        if (relatedList) {
+          const related = FINORA_ARTICLES.filter(a => a.id !== article.id).slice(0, 4);
+          relatedList.innerHTML = related.map(rel => `
+            <div class="clickable-card" data-card-href="blog-details.html?id=${rel.id}" role="link" tabindex="0" aria-label="Read ${rel.title}" style="display: flex; gap: 0.85rem; align-items: flex-start; padding: 0.4rem; border-radius: var(--radius-sm); transition: transform 0.2s, background 0.2s;">
+              <img src="${rel.image}" alt="${rel.title}" style="width: 64px; height: 64px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0;">
+              <div>
+                <a href="blog-details.html?id=${rel.id}" class="blog-title-link" style="font-size: 0.875rem; font-weight: 600; line-height: 1.35; color: var(--text-main); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                  ${rel.title}
+                </a>
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.35rem; font-size: 0.75rem; color: var(--text-muted);">
+                  <span class="badge ${rel.badgeClass}" style="font-size: 0.65rem; padding: 0.15rem 0.4rem;">${rel.categoryLabel}</span>
+                  <span>${rel.readTime}</span>
+                </div>
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
