@@ -144,6 +144,12 @@
   margin-right: 0;
   margin-left: 0.35rem;
 }
+[dir="rtl"] .blog-read-btn:hover {
+  gap: 0.6rem;
+}
+[dir="rtl"] .blog-read-btn i {
+  transform: rotate(180deg);
+}
 
 @media (max-width: 425px) {
   [dir="rtl"] .blog-search-wrap .form-control {

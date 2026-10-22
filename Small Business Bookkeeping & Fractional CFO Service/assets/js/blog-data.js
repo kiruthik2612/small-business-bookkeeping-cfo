@@ -18,7 +18,8 @@ const FINORA_ARTICLES = [
     excerpt: "Discover why static yearly budgets fail during rapid growth cycles and how an institutional 13-week rolling forecast provides true liquidity control and prevents payroll emergencies.",
     author: {
       name: "Elena Chen, MBA",
-      role: "Head of Fractional CFO Advisory",
+      role: "Head of CFO Advisory",
+      image: "assets/images/team/elena.jpg",
       avatar: "EC",
       avatarBg: "var(--secondary-color)"
     },
@@ -64,7 +65,8 @@ const FINORA_ARTICLES = [
     excerpt: "How scaling businesses obtain boardroom-grade capital allocation, financial architecture, and debt negotiation without taking on a $350k annual executive salary overhead.",
     author: {
       name: "Alexander Knight, CPA",
-      role: "Senior Partner, Advisory",
+      role: "Managing Partner",
+      image: "assets/images/team/alexander.jpg",
       avatar: "AK",
       avatarBg: "var(--primary-color)"
     },
@@ -98,6 +100,7 @@ const FINORA_ARTICLES = [
     author: {
       name: "Sarah Jenkins, CPA",
       role: "Lead Controller",
+      image: "assets/images/testimonials/sarah.jpg",
       avatar: "SJ",
       avatarBg: "var(--accent-color)"
     },
@@ -128,7 +131,8 @@ const FINORA_ARTICLES = [
     excerpt: "Maximize your Section 179 depreciation deductions, audit 1099 contractor filings, and structure owner distributions to legally minimize tax liabilities before December 31st.",
     author: {
       name: "David Sterling, CPA",
-      role: "Tax & Compliance Director",
+      role: "Head of Bookkeeping",
+      image: "assets/images/team/david.jpg",
       avatar: "DS",
       avatarBg: "var(--info-color)"
     },
@@ -156,7 +160,8 @@ const FINORA_ARTICLES = [
     excerpt: "A tactical guide to vendor renegotiation, direct labor allocation, and tiered pricing restructuring that transforms revenue into real cash flow.",
     author: {
       name: "Sophia O'Connor",
-      role: "Strategic Growth Consultant",
+      role: "Senior Financial Analyst",
+      image: "assets/images/team/sophia.jpg",
       avatar: "SO",
       avatarBg: "var(--warning-color)"
     },
@@ -185,7 +190,8 @@ const FINORA_ARTICLES = [
     excerpt: "How dynamically connecting your Income Statement, Balance Sheet, and Cash Flow Statement unlocks credible bank debt and confident investor backing.",
     author: {
       name: "Elena Chen, MBA",
-      role: "Head of Fractional CFO Advisory",
+      role: "Head of CFO Advisory",
+      image: "assets/images/team/elena.jpg",
       avatar: "EC",
       avatarBg: "var(--secondary-color)"
     },
@@ -208,9 +214,10 @@ const FINORA_ARTICLES = [
     image: "assets/images/blog/dso-invoicing.jpg",
     excerpt: "Reduce unpaid accounts receivable bottlenecks by establishing milestone billing, credit card auto-charge, and automated collection workflows.",
     author: {
-      name: "Julian Martinez",
-      role: "Accounts Receivable Lead",
-      avatar: "JM",
+      name: "Marcus Vance, CPA",
+      role: "Lead Controller",
+      image: "assets/images/testimonials/marcus.jpg",
+      avatar: "MV",
       avatarBg: "var(--accent-color)"
     },
     featured: false,
@@ -237,7 +244,8 @@ const FINORA_ARTICLES = [
     excerpt: "A complete step-by-step checklist of historical ledgers, cap table models, and revenue recognition schedules required to ace investor audits.",
     author: {
       name: "Alexander Knight, CPA",
-      role: "Senior Partner, Advisory",
+      role: "Managing Partner",
+      image: "assets/images/team/alexander.jpg",
       avatar: "AK",
       avatarBg: "var(--primary-color)"
     },
@@ -267,6 +275,7 @@ const FINORA_ARTICLES = [
     author: {
       name: "Sarah Jenkins, CPA",
       role: "Lead Controller",
+      image: "assets/images/testimonials/sarah.jpg",
       avatar: "SJ",
       avatarBg: "var(--accent-color)"
     },
@@ -290,7 +299,8 @@ const FINORA_ARTICLES = [
     excerpt: "Learn how fractional CFOs calculate blended Customer Acquisition Cost (CAC), payback periods, and Lifetime Value (LTV) to guide aggressive yet sustainable hiring.",
     author: {
       name: "Elena Chen, MBA",
-      role: "Head of Fractional CFO Advisory",
+      role: "Head of CFO Advisory",
+      image: "assets/images/team/elena.jpg",
       avatar: "EC",
       avatarBg: "var(--secondary-color)"
     },
@@ -317,7 +327,8 @@ const FINORA_ARTICLES = [
     excerpt: "Why selling company equity to fund working capital is a costly mistake, and how to structure non-dilutive bank revolvers and SBA 7(a) facilities instead.",
     author: {
       name: "Sophia O'Connor",
-      role: "Strategic Growth Consultant",
+      role: "Senior Financial Analyst",
+      image: "assets/images/team/sophia.jpg",
       avatar: "SO",
       avatarBg: "var(--warning-color)"
     },
@@ -345,7 +356,8 @@ const FINORA_ARTICLES = [
     excerpt: "Avoid bloated ledgers with hundreds of redundant sub-accounts. Build a standard, hierarchical Chart of Accounts that makes executive reporting effortless.",
     author: {
       name: "David Sterling, CPA",
-      role: "Tax & Compliance Director",
+      role: "Head of Bookkeeping",
+      image: "assets/images/team/david.jpg",
       avatar: "DS",
       avatarBg: "var(--info-color)"
     },

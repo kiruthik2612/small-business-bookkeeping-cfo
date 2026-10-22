@@ -1564,10 +1564,30 @@ button {
   border-right-color: #60a5fa;
 }
 
-/* Dashboard content sections smooth scroll targeting */
+/* Dashboard content sections smooth scroll targeting and single-section tab view */
 #overview, #financials, #reports, #invoices, #messages,
 #practice-overview, #client-management, #close-pipeline, #billing-arr, #team-settings {
   scroll-margin-top: 5.5rem;
+}
+
+.dashboard-section {
+  display: block;
+  animation: fadeInDashboard 0.2s ease-in-out;
+}
+
+.dashboard-section[hidden] {
+  display: none !important;
+}
+
+@keyframes fadeInDashboard {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .dashboard-main {

@@ -112,7 +112,9 @@
 
         <!-- Author Byline -->
         <div class="flex items-center gap-3">
-          <div id="author-avatar" style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--secondary-color); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700;">EC</div>
+          <div id="author-avatar" class="avatar-photo-wrap" style="width: 3rem; height: 3rem;">
+            <img src="assets/images/team/elena.jpg" alt="Elena Chen" class="avatar-photo" id="author-avatar-img">
+          </div>
           <div>
             <h4 id="author-name" style="margin: 0; font-size: 1rem;">Author Name</h4>
             <span id="author-role" style="font-size: 0.8rem; color: var(--text-muted);">Author Role</span>
@@ -157,7 +159,9 @@
             <!-- Author Bio Box -->
             <div class="card" style="padding: 2rem; margin-top: 2.5rem; background: var(--bg-surface-elevated); border-left: 4px solid var(--secondary-color);">
               <div class="flex items-center gap-3" style="margin-bottom: 1rem;">
-                <div id="bio-avatar" style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: var(--secondary-color); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;">EC</div>
+                <div id="bio-avatar" class="avatar-photo-wrap" style="width: 3.5rem; height: 3.5rem;">
+                  <img src="assets/images/team/elena.jpg" alt="Elena Chen" class="avatar-photo" id="bio-avatar-img">
+                </div>
                 <div>
                   <h4 id="bio-name" style="margin: 0; font-size: 1.15rem;">Elena Chen, MBA</h4>
                   <span id="bio-role" style="font-size: 0.85rem; color: var(--text-muted);">Head of Fractional CFO Advisory</span>
@@ -342,23 +346,23 @@
         }
 
         // Author elements
-        const authorAvatar = document.getElementById('author-avatar');
+        const authorAvatarImg = document.getElementById('author-avatar-img');
         const authorName = document.getElementById('author-name');
         const authorRole = document.getElementById('author-role');
-        const bioAvatar = document.getElementById('bio-avatar');
+        const bioAvatarImg = document.getElementById('bio-avatar-img');
         const bioName = document.getElementById('bio-name');
         const bioRole = document.getElementById('bio-role');
 
-        if (authorAvatar) {
-          authorAvatar.textContent = article.author.avatar;
-          authorAvatar.style.background = article.author.avatarBg;
+        if (authorAvatarImg && article.author.image) {
+          authorAvatarImg.src = article.author.image;
+          authorAvatarImg.alt = article.author.name;
         }
         if (authorName) authorName.textContent = article.author.name;
         if (authorRole) authorRole.textContent = article.author.role;
 
-        if (bioAvatar) {
-          bioAvatar.textContent = article.author.avatar;
-          bioAvatar.style.background = article.author.avatarBg;
+        if (bioAvatarImg && article.author.image) {
+          bioAvatarImg.src = article.author.image;
+          bioAvatarImg.alt = article.author.name;
         }
         if (bioName) bioName.textContent = article.author.name;
         if (bioRole) bioRole.textContent = article.author.role;

@@ -73,11 +73,11 @@
 
       <ul style="display: flex; flex-direction: column; gap: 0.25rem;">
         <li><a href="#overview" class="nav-link active"><i class="bi bi-speedometer2"></i> Overview</a></li>
-        <li><a href="#financials" class="nav-link"><i class="bi bi-cash-stack"></i> Cash Flow & Runway</a></li>
+        <li><a href="#cashflow" class="nav-link"><i class="bi bi-cash-stack"></i> Cash Flow & Runway</a></li>
         <li><a href="#reports" class="nav-link"><i class="bi bi-file-earmark-bar-graph"></i> Monthly Reports</a></li>
         <li><a href="#invoices" class="nav-link"><i class="bi bi-receipt"></i> Invoices & Bills</a></li>
-        <li><a href="#messages" class="nav-link"><i class="bi bi-chat-left-dots"></i> CFO Advisory Chat</a></li>
-        <li><a href="admin-dashboard.html" class="nav-link" style="color: var(--secondary-color); font-weight: 700;"><i class="bi bi-shield-shaded"></i> Admin Portal</a></li>
+        <li><a href="#chat" class="nav-link"><i class="bi bi-chat-left-dots"></i> CFO Advisory Chat</a></li>
+        <li><a href="#admin" class="nav-link" style="color: var(--secondary-color); font-weight: 700;"><i class="bi bi-shield-shaded"></i> Admin Portal</a></li>
         <li style="margin-top: 2rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">
           <a href="index.html" class="nav-link"><i class="bi bi-arrow-left"></i> Return to Site</a>
         </li>
@@ -87,221 +87,430 @@
     <!-- DASHBOARD VIEWPORT -->
     <main class="dashboard-main" id="dashboard-main">
       
-      <!-- Top Overview Welcome Banner -->
-      <div id="overview" class="flex justify-between items-center dashboard-title-banner" style="margin-bottom: 2rem;">
-        <div>
-          <h1 style="font-size: 1.75rem; margin-bottom: 0.25rem;">Financial Overview: Acme Corp LLC</h1>
-          <span style="font-size: 0.875rem; color: var(--text-muted);">Reconciled through October 8, 2026 • Lead CFO: Elena Chen, MBA</span>
-        </div>
-        <div class="flex gap-2 dashboard-action-btns">
-          <button type="button" id="export-pdf-btn" class="btn btn-outline btn-sm"><i class="bi bi-file-earmark-pdf-fill"></i> Export P&L (PDF)</button>
-          <a href="#messages" class="btn btn-accent btn-sm"><i class="bi bi-chat-dots-fill"></i> Message CFO</a>
-        </div>
-      </div>
-
-      <!-- 4 KEY FINANCIAL METRICS -->
-      <div class="grid grid-4 gap-3" style="margin-bottom: 2rem;">
-        <div class="stat-card">
-          <div class="stat-header">
-            <span class="stat-title">Cash in Bank</span>
-            <div class="stat-icon primary"><i class="bi bi-bank"></i></div>
-          </div>
-          <div class="stat-value">$342,800</div>
-          <div class="stat-footer"><i class="bi bi-check-circle-fill text-accent"></i> 8.5 Months Runway</div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-header">
-            <span class="stat-title">Oct Revenue</span>
-            <div class="stat-icon accent"><i class="bi bi-graph-up"></i></div>
-          </div>
-          <div class="stat-value">$128,450</div>
-          <div class="stat-footer"><i class="bi bi-arrow-up-right text-accent"></i> +14.2% vs. Sep</div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-header">
-            <span class="stat-title">Oct Expenses</span>
-            <div class="stat-icon secondary"><i class="bi bi-receipt-cutoff"></i></div>
-          </div>
-          <div class="stat-value">$74,200</div>
-          <div class="stat-footer"><i class="bi bi-shield-check text-secondary"></i> On Budget</div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-header">
-            <span class="stat-title">Net Operating Profit</span>
-            <div class="stat-icon warning"><i class="bi bi-trophy"></i></div>
-          </div>
-          <div class="stat-value">$54,250</div>
-          <div class="stat-footer"><i class="bi bi-arrow-up text-accent"></i> 42.2% Net Margin</div>
-        </div>
-      </div>
-
-      <!-- REVENUE VS EXPENSES CHART & EXPENSE BREAKDOWN -->
-      <div class="grid grid-12 gap-3" style="margin-bottom: 2.5rem;" id="financials">
-        <!-- Area Chart (8 cols) -->
-        <div class="card chart-card" style="grid-column: span 8;">
-          <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
-            <h3 style="font-size: 1.15rem; margin: 0;">Revenue vs Operating Expenses (Last 6 Months)</h3>
-            <span class="badge badge-accent"><i class="bi bi-lightning-charge"></i> Live Sync</span>
-          </div>
-          <div class="chart-wrapper">
-            <canvas id="clientRevenueChart"></canvas>
-          </div>
-        </div>
-
-        <!-- Doughnut Breakdown (4 cols) -->
-        <div class="card chart-card" style="grid-column: span 4;">
-          <h3 style="font-size: 1.15rem; margin-bottom: 1rem;">October Expense Breakdown</h3>
-          <div class="chart-wrapper">
-            <canvas id="clientExpenseDoughnut"></canvas>
-          </div>
-        </div>
-      </div>
-
-      <!-- MONTHLY FINANCIAL REPORTS & STATEMENTS PACKAGE -->
-      <div class="card" style="margin-bottom: 2.5rem;" id="reports">
-        <div class="flex justify-between items-center" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+      <!-- 1. OVERVIEW SECTION -->
+      <section id="overview" class="dashboard-section" data-section="overview">
+        <!-- Top Overview Welcome Banner -->
+        <div class="flex justify-between items-center dashboard-title-banner" style="margin-bottom: 2rem;">
           <div>
-            <div class="flex items-center gap-2" style="margin-bottom: 0.25rem;">
-              <h3 style="font-size: 1.25rem; margin: 0;">Monthly Financial Packages & Workpapers</h3>
-              <span class="badge badge-accent"><i class="bi bi-shield-check"></i> CPA Reviewed</span>
-            </div>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">Verified GAAP financial statements, balance sheets, and tax workpapers prepared by your dedicated CFO team</span>
+            <h1 style="font-size: 1.75rem; margin-bottom: 0.25rem;">Financial Overview: Acme Corp LLC</h1>
+            <span style="font-size: 0.875rem; color: var(--text-muted);">Reconciled through October 8, 2026 • Lead CFO: Elena Chen, MBA</span>
           </div>
-          <div class="flex items-center gap-2">
+          <div class="flex gap-2 dashboard-action-btns">
+            <button type="button" id="export-pdf-btn" class="btn btn-outline btn-sm"><i class="bi bi-file-earmark-pdf-fill"></i> Export P&L (PDF)</button>
+            <a href="#chat" class="btn btn-accent btn-sm"><i class="bi bi-chat-dots-fill"></i> Message CFO</a>
+          </div>
+        </div>
+
+        <!-- 4 KEY FINANCIAL METRICS -->
+        <div class="grid grid-4 gap-3" style="margin-bottom: 2rem;">
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Cash in Bank</span>
+              <div class="stat-icon primary"><i class="bi bi-bank"></i></div>
+            </div>
+            <div class="stat-value">$342,800</div>
+            <div class="stat-footer"><i class="bi bi-check-circle-fill text-accent"></i> 8.5 Months Runway</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Oct Revenue</span>
+              <div class="stat-icon accent"><i class="bi bi-graph-up"></i></div>
+            </div>
+            <div class="stat-value">$128,450</div>
+            <div class="stat-footer"><i class="bi bi-arrow-up-right text-accent"></i> +14.2% vs. Sep</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Oct Expenses</span>
+              <div class="stat-icon secondary"><i class="bi bi-receipt-cutoff"></i></div>
+            </div>
+            <div class="stat-value">$74,200</div>
+            <div class="stat-footer"><i class="bi bi-shield-check text-secondary"></i> On Budget</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Net Operating Profit</span>
+              <div class="stat-icon warning"><i class="bi bi-trophy"></i></div>
+            </div>
+            <div class="stat-value">$54,250</div>
+            <div class="stat-footer"><i class="bi bi-arrow-up text-accent"></i> 42.2% Net Margin</div>
+          </div>
+        </div>
+
+        <!-- REVENUE VS EXPENSES CHART & EXPENSE BREAKDOWN -->
+        <div class="grid grid-12 gap-3" style="margin-bottom: 2rem;">
+          <!-- Area Chart (8 cols) -->
+          <div class="card chart-card" style="grid-column: span 8;">
+            <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
+              <h3 style="font-size: 1.15rem; margin: 0;">Revenue vs Operating Expenses (Last 6 Months)</h3>
+              <span class="badge badge-accent"><i class="bi bi-lightning-charge"></i> Live Sync</span>
+            </div>
+            <div class="chart-wrapper">
+              <canvas id="clientRevenueChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Doughnut Breakdown (4 cols) -->
+          <div class="card chart-card" style="grid-column: span 4;">
+            <h3 style="font-size: 1.15rem; margin-bottom: 1rem;">October Expense Breakdown</h3>
+            <div class="chart-wrapper">
+              <canvas id="clientExpenseDoughnut"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. CASH FLOW & RUNWAY SECTION -->
+      <section id="cashflow" class="dashboard-section" data-section="cashflow" hidden>
+        <div class="flex justify-between items-center dashboard-title-banner" style="margin-bottom: 2rem;">
+          <div>
+            <h1 style="font-size: 1.75rem; margin-bottom: 0.25rem;">Cash Flow & Runway Analysis</h1>
+            <span style="font-size: 0.875rem; color: var(--text-muted);">Dynamic 13-week rolling liquidity model & burn rate tracking</span>
+          </div>
+          <div class="flex gap-2 dashboard-action-btns">
+            <button type="button" class="btn btn-outline btn-sm" onclick="alert('Running real-time cash sensitivity stress test...');"><i class="bi bi-arrow-repeat"></i> Refresh Sensitivity</button>
+            <a href="#chat" class="btn btn-accent btn-sm"><i class="bi bi-chat-dots-fill"></i> Discuss Runway</a>
+          </div>
+        </div>
+
+        <!-- Cash Flow & Runway Metrics -->
+        <div class="grid grid-4 gap-3" style="margin-bottom: 2rem;">
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Cash Position</span>
+              <div class="stat-icon primary"><i class="bi bi-wallet2"></i></div>
+            </div>
+            <div class="stat-value">$342,800</div>
+            <div class="stat-footer"><i class="bi bi-check-circle-fill text-accent"></i> Reconciled Oct 08</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Monthly Net Burn</span>
+              <div class="stat-icon secondary"><i class="bi bi-fire"></i></div>
+            </div>
+            <div class="stat-value">$40,300</div>
+            <div class="stat-footer"><i class="bi bi-arrow-down-right text-accent"></i> 11.4% Burn Reduction</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Zero-Cash Date Runway</span>
+              <div class="stat-icon accent"><i class="bi bi-calendar-check"></i></div>
+            </div>
+            <div class="stat-value">8.5 Months</div>
+            <div class="stat-footer"><i class="bi bi-shield-check text-accent"></i> Safe Target (>6 Mo)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Working Capital Ratio</span>
+              <div class="stat-icon warning"><i class="bi bi-graph-up-arrow"></i></div>
+            </div>
+            <div class="stat-value">2.41x</div>
+            <div class="stat-footer"><i class="bi bi-arrow-up text-accent"></i> Optimal Liquidity</div>
+          </div>
+        </div>
+
+        <!-- Cash Flow Forecast Chart & 13-Week Summary -->
+        <div class="grid grid-12 gap-3" style="margin-bottom: 2rem;">
+          <div class="card chart-card" style="grid-column: span 8;">
+            <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
+              <div>
+                <h3 style="font-size: 1.15rem; margin: 0;">13-Week Cash Flow Forecast</h3>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Modeled based on contracted receivables & budgeted payables</span>
+              </div>
+              <span class="badge badge-accent"><i class="bi bi-check2-circle"></i> Base Scenario</span>
+            </div>
+            <div class="chart-wrapper">
+              <canvas id="clientCashflowChart"></canvas>
+            </div>
+          </div>
+
+          <div class="card" style="grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="flex items-center justify-between" style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                <h3 style="font-size: 1.1rem; margin: 0;">Runway Stress Scenarios</h3>
+                <span class="badge badge-outline">Q4 2026</span>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="background: var(--bg-surface-elevated); padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                  <div class="flex justify-between items-center" style="margin-bottom: 0.25rem;">
+                    <strong style="font-size: 0.9rem;">Base Case (Current)</strong>
+                    <span style="color: var(--accent-color); font-weight: 700;">8.5 Months</span>
+                  </div>
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Expected revenue growth with planned team headcount</span>
+                </div>
+
+                <div style="background: var(--bg-surface-elevated); padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                  <div class="flex justify-between items-center" style="margin-bottom: 0.25rem;">
+                    <strong style="font-size: 0.9rem;">Conservative Case (-20% Rev)</strong>
+                    <span style="color: var(--secondary-color); font-weight: 700;">6.2 Months</span>
+                  </div>
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Delayed client contract execution; maintains safe operating threshold</span>
+                </div>
+
+                <div style="background: var(--bg-surface-elevated); padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                  <div class="flex justify-between items-center" style="margin-bottom: 0.25rem;">
+                    <strong style="font-size: 0.9rem;">Accelerated Growth (+25% Rev)</strong>
+                    <span style="color: #10b981; font-weight: 700;">12.8 Months</span>
+                  </div>
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Reinvestment in engineering & customer acquisition pods</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+              <a href="#reports" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;"><i class="bi bi-file-earmark-spreadsheet"></i> View Detailed Liquidity Model</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. MONTHLY REPORTS SECTION -->
+      <section id="reports" class="dashboard-section" data-section="reports" hidden>
+        <div class="flex justify-between items-center dashboard-title-banner" style="margin-bottom: 2rem;">
+          <div>
+            <h1 style="font-size: 1.75rem; margin-bottom: 0.25rem;">Monthly Reports & Financial Packages</h1>
+            <span style="font-size: 0.875rem; color: var(--text-muted);">Verified GAAP balance sheets, profit & loss, and audit packages</span>
+          </div>
+          <div class="flex items-center gap-2 dashboard-action-btns">
+            <button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('export-pdf-btn').click();"><i class="bi bi-download"></i> Download Latest P&L</button>
             <button type="button" class="btn btn-outline btn-sm" onclick="alert('All 2026 packages archived and synced with your cloud vault.');"><i class="bi bi-cloud-arrow-down"></i> Download All (ZIP)</button>
           </div>
         </div>
 
-        <div class="table-responsive-container">
-          <table style="width: 100%; min-width: 640px; border-collapse: collapse; font-size: 0.9rem;">
-            <thead>
-              <tr style="border-bottom: 2px solid var(--border-color); text-align: left; color: var(--text-muted); white-space: nowrap;">
-                <th style="padding: 0.75rem;">Reporting Period</th>
-                <th style="padding: 0.75rem;">Package Description</th>
-                <th style="padding: 0.75rem;">Close Date</th>
-                <th style="padding: 0.75rem;">CFO Sign-off</th>
-                <th style="padding: 0.75rem;">Status</th>
-                <th style="padding: 0.75rem; text-align: right;">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
-                <td style="padding: 0.85rem 0.75rem; font-weight: 700; color: var(--text-main);"><i class="bi bi-file-earmark-pdf text-accent" style="margin-right: 0.4rem;"></i> October 2026</td>
-                <td>P&L, Cash Flow, KPI Dashboard & Runway Forecast</td>
-                <td>Oct 08, 2026</td>
-                <td>Elena Chen, MBA</td>
-                <td><span class="badge badge-accent">Ready for Review</span></td>
-                <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('export-pdf-btn').click();"><i class="bi bi-download"></i> View PDF</button></td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
-                <td style="padding: 0.85rem 0.75rem; font-weight: 700; color: var(--text-main);"><i class="bi bi-file-earmark-pdf text-accent" style="margin-right: 0.4rem;"></i> September 2026</td>
-                <td>Q3 Close: Balance Sheet, EBITDA & Variance Model</td>
-                <td>Sep 30, 2026</td>
-                <td>Marcus Vance, CPA</td>
-                <td><span class="badge badge-accent">Approved & Finalized</span></td>
-                <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Downloading September 2026 Q3 Close Financial Package...');"><i class="bi bi-download"></i> View PDF</button></td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
-                <td style="padding: 0.85rem 0.75rem; font-weight: 700; color: var(--text-main);"><i class="bi bi-file-earmark-pdf text-accent" style="margin-right: 0.4rem;"></i> August 2026</td>
-                <td>Executive Financial Deck & Working Capital Audit</td>
-                <td>Aug 31, 2026</td>
-                <td>Elena Chen, MBA</td>
-                <td><span class="badge badge-accent">Approved & Finalized</span></td>
-                <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Downloading August 2026 Executive Financial Deck...');"><i class="bi bi-download"></i> View PDF</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+        <div class="card" style="margin-bottom: 2rem;">
+          <div class="flex justify-between items-center" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <div class="flex items-center gap-2" style="margin-bottom: 0.25rem;">
+                <h3 style="font-size: 1.25rem; margin: 0;">Monthly Financial Packages & Workpapers</h3>
+                <span class="badge badge-accent"><i class="bi bi-shield-check"></i> CPA Reviewed</span>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified GAAP financial statements, balance sheets, and tax workpapers prepared by your dedicated CFO team</span>
+            </div>
+          </div>
 
-      <!-- INVOICE & BILLS TABLE WITH STATUS FILTER -->
-      <div class="card" style="margin-bottom: 2.5rem;" id="invoices">
-        <div class="flex justify-between items-center" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div class="table-responsive-container">
+            <table style="width: 100%; min-width: 640px; border-collapse: collapse; font-size: 0.9rem;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--border-color); text-align: left; color: var(--text-muted); white-space: nowrap;">
+                  <th style="padding: 0.75rem;">Reporting Period</th>
+                  <th style="padding: 0.75rem;">Package Description</th>
+                  <th style="padding: 0.75rem;">Close Date</th>
+                  <th style="padding: 0.75rem;">CFO Sign-off</th>
+                  <th style="padding: 0.75rem;">Status</th>
+                  <th style="padding: 0.75rem; text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                  <td style="padding: 0.85rem 0.75rem; font-weight: 700; color: var(--text-main);"><i class="bi bi-file-earmark-pdf text-accent" style="margin-right: 0.4rem;"></i> October 2026</td>
+                  <td>P&L, Cash Flow, KPI Dashboard & Runway Forecast</td>
+                  <td>Oct 08, 2026</td>
+                  <td>Elena Chen, MBA</td>
+                  <td><span class="badge badge-accent">Ready for Review</span></td>
+                  <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('export-pdf-btn').click();"><i class="bi bi-download"></i> View PDF</button></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                  <td style="padding: 0.85rem 0.75rem; font-weight: 700; color: var(--text-main);"><i class="bi bi-file-earmark-pdf text-accent" style="margin-right: 0.4rem;"></i> September 2026</td>
+                  <td>Q3 Close: Balance Sheet, EBITDA & Variance Model</td>
+                  <td>Sep 30, 2026</td>
+                  <td>Marcus Vance, CPA</td>
+                  <td><span class="badge badge-accent">Approved & Finalized</span></td>
+                  <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Downloading September 2026 Q3 Close Financial Package...');"><i class="bi bi-download"></i> View PDF</button></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                  <td style="padding: 0.85rem 0.75rem; font-weight: 700; color: var(--text-main);"><i class="bi bi-file-earmark-pdf text-accent" style="margin-right: 0.4rem;"></i> August 2026</td>
+                  <td>Executive Financial Deck & Working Capital Audit</td>
+                  <td>Aug 31, 2026</td>
+                  <td>Elena Chen, MBA</td>
+                  <td><span class="badge badge-accent">Approved & Finalized</span></td>
+                  <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Downloading August 2026 Executive Financial Deck...');"><i class="bi bi-download"></i> View PDF</button></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                  <td style="padding: 0.85rem 0.75rem; font-weight: 700; color: var(--text-main);"><i class="bi bi-file-earmark-pdf text-accent" style="margin-right: 0.4rem;"></i> July 2026</td>
+                  <td>Mid-Year Financial Audit & R&D Tax Credit Workpapers</td>
+                  <td>Jul 31, 2026</td>
+                  <td>Elena Chen, MBA</td>
+                  <td><span class="badge badge-accent">Approved & Finalized</span></td>
+                  <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Downloading July 2026 Mid-Year Audit Package...');"><i class="bi bi-download"></i> View PDF</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. INVOICES & BILLS SECTION -->
+      <section id="invoices" class="dashboard-section" data-section="invoices" hidden>
+        <div class="flex justify-between items-center dashboard-title-banner" style="margin-bottom: 2rem;">
           <div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Recent Invoices & Accounts Receivable</h3>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">Track customer payment statuses and automated reminders</span>
+            <h1 style="font-size: 1.75rem; margin-bottom: 0.25rem;">Invoices & Accounts Receivable</h1>
+            <span style="font-size: 0.875rem; color: var(--text-muted);">Track customer payments, billing statuses, and dispatch automated reminders</span>
+          </div>
+          <div class="flex gap-2 dashboard-action-btns">
+            <button type="button" class="btn btn-primary btn-sm" onclick="alert('Opening New Invoice creation modal...');"><i class="bi bi-plus-circle"></i> Create New Invoice</button>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 2rem;">
+          <div class="flex justify-between items-center" style="margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Recent Invoices & Accounts Receivable</h3>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Track customer payment statuses and automated reminders</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <label for="invoice-status-filter" style="font-size: 0.85rem; font-weight: 600;">Status:</label>
+              <select id="invoice-status-filter" class="form-control" style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+                <option value="all">All Invoices</option>
+                <option value="paid">Paid</option>
+                <option value="pending">Pending</option>
+                <option value="overdue">Overdue</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-responsive-container">
+            <table style="width: 100%; min-width: 620px; border-collapse: collapse; font-size: 0.9rem;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--border-color); text-align: left; color: var(--text-muted); white-space: nowrap;">
+                  <th style="padding: 0.75rem;">Invoice #</th>
+                  <th style="padding: 0.75rem;">Client / Customer</th>
+                  <th style="padding: 0.75rem;">Issue Date</th>
+                  <th style="padding: 0.75rem;">Amount</th>
+                  <th style="padding: 0.75rem;">Status</th>
+                  <th style="padding: 0.75rem; text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="invoice-row" data-status="paid" style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                  <td style="padding: 0.85rem 0.75rem; font-family: var(--font-mono); font-weight: 600;">INV-2026-089</td>
+                  <td>Stripe Payments Inc.</td>
+                  <td>Oct 01, 2026</td>
+                  <td style="font-weight: 700; color: var(--text-main);">$14,200.00</td>
+                  <td><span class="badge badge-accent">Paid</span></td>
+                  <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Viewing official transaction receipt for INV-2026-089.');"><i class="bi bi-receipt"></i> Receipt</button></td>
+                </tr>
+                <tr class="invoice-row" data-status="pending" style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                  <td style="padding: 0.85rem 0.75rem; font-family: var(--font-mono); font-weight: 600;">INV-2026-090</td>
+                  <td>Horizon Media Group</td>
+                  <td>Oct 05, 2026</td>
+                  <td style="font-weight: 700; color: var(--text-main);">$8,750.00</td>
+                  <td><span class="badge badge-warning">Pending (Net 15)</span></td>
+                  <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Automated payment reminder dispatched to billing@horizonmedia.com.');"><i class="bi bi-envelope"></i> Send Reminder</button></td>
+                </tr>
+                <tr class="invoice-row" data-status="overdue" style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
+                  <td style="padding: 0.85rem 0.75rem; font-family: var(--font-mono); font-weight: 600;">INV-2026-085</td>
+                  <td>Vanguard Consulting</td>
+                  <td>Sep 15, 2026</td>
+                  <td style="font-weight: 700; color: var(--text-main);">$12,400.00</td>
+                  <td><span class="badge badge-danger">Overdue 8 Days</span></td>
+                  <td style="text-align: right;"><button type="button" class="btn btn-accent btn-sm" onclick="alert('Escalated CFO follow-up queued for Vanguard Consulting account.');"><i class="bi bi-lightning-charge"></i> Auto-Followup</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. CFO ADVISORY CHAT SECTION -->
+      <section id="chat" class="dashboard-section" data-section="chat" hidden>
+        <div class="flex justify-between items-center dashboard-title-banner" style="margin-bottom: 2rem;">
+          <div>
+            <h1 style="font-size: 1.75rem; margin-bottom: 0.25rem;">CFO Advisory Workspace & Direct Chat</h1>
+            <span style="font-size: 0.875rem; color: var(--text-muted);">Direct secure communication channel with your assigned Fractional CFO</span>
           </div>
           <div class="flex items-center gap-2">
-            <label for="invoice-status-filter" style="font-size: 0.85rem; font-weight: 600;">Status:</label>
-            <select id="invoice-status-filter" class="form-control" style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.85rem;">
-              <option value="all">All Invoices</option>
-              <option value="paid">Paid</option>
-              <option value="pending">Pending</option>
-              <option value="overdue">Overdue</option>
-            </select>
+            <span class="badge badge-accent"><i class="bi bi-shield-check"></i> Encrypted 256-Bit</span>
           </div>
         </div>
 
-        <div class="table-responsive-container">
-
-          <table style="width: 100%; min-width: 620px; border-collapse: collapse; font-size: 0.9rem;">
-            <thead>
-              <tr style="border-bottom: 2px solid var(--border-color); text-align: left; color: var(--text-muted); white-space: nowrap;">
-                <th style="padding: 0.75rem;">Invoice #</th>
-                <th style="padding: 0.75rem;">Client / Customer</th>
-                <th style="padding: 0.75rem;">Issue Date</th>
-                <th style="padding: 0.75rem;">Amount</th>
-                <th style="padding: 0.75rem;">Status</th>
-                <th style="padding: 0.75rem; text-align: right;">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="invoice-row" data-status="paid" style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
-                <td style="padding: 0.85rem 0.75rem; font-family: var(--font-mono); font-weight: 600;">INV-2026-089</td>
-                <td>Stripe Payments Inc.</td>
-                <td>Oct 01, 2026</td>
-                <td style="font-weight: 700; color: var(--text-main);">$14,200.00</td>
-                <td><span class="badge badge-accent">Paid</span></td>
-                <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Viewing official transaction receipt for INV-2026-089.');"><i class="bi bi-receipt"></i> Receipt</button></td>
-              </tr>
-              <tr class="invoice-row" data-status="pending" style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
-                <td style="padding: 0.85rem 0.75rem; font-family: var(--font-mono); font-weight: 600;">INV-2026-090</td>
-                <td>Horizon Media Group</td>
-                <td>Oct 05, 2026</td>
-                <td style="font-weight: 700; color: var(--text-main);">$8,750.00</td>
-                <td><span class="badge badge-warning">Pending (Net 15)</span></td>
-                <td style="text-align: right;"><button type="button" class="btn btn-outline btn-sm" onclick="alert('Automated payment reminder dispatched to billing@horizonmedia.com.');"><i class="bi bi-envelope"></i> Send Reminder</button></td>
-              </tr>
-              <tr class="invoice-row" data-status="overdue" style="border-bottom: 1px solid var(--border-color); white-space: nowrap;">
-                <td style="padding: 0.85rem 0.75rem; font-family: var(--font-mono); font-weight: 600;">INV-2026-085</td>
-                <td>Vanguard Consulting</td>
-                <td>Sep 15, 2026</td>
-                <td style="font-weight: 700; color: var(--text-main);">$12,400.00</td>
-                <td><span class="badge badge-danger">Overdue 8 Days</span></td>
-                <td style="text-align: right;"><button type="button" class="btn btn-accent btn-sm" onclick="alert('Escalated CFO follow-up queued for Vanguard Consulting account.');"><i class="bi bi-lightning-charge"></i> Auto-Followup</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- LIVE CFO MESSAGING SANDBOX -->
-      <div class="card" id="messages">
-        <div class="flex justify-between items-center" style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
-          <div class="flex items-center gap-2">
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-color);"></div>
-            <h3 style="font-size: 1.15rem; margin: 0;">Fractional CFO Advisory Workspace</h3>
+        <div class="card" style="margin-bottom: 2rem;">
+          <div class="flex justify-between items-center" style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+            <div class="flex items-center gap-2">
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-color);"></div>
+              <h3 style="font-size: 1.15rem; margin: 0;">Fractional CFO Advisory Workspace</h3>
+            </div>
+            <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="bi bi-clock-history"></i> Elena Chen is currently active</span>
           </div>
-          <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="bi bi-shield-check"></i> Encrypted Communication</span>
-        </div>
 
-        <!-- Chat Container -->
-        <div id="dashboard-chat-messages" style="height: 200px; overflow-y: auto; display: flex; flex-direction: column; padding: 0.5rem; border-radius: var(--radius-md); background: var(--bg-body); margin-bottom: 1rem; border: 1px solid var(--border-color);">
-          <div style="align-self: flex-start; background: var(--bg-surface-elevated); color: var(--text-main); padding: 0.75rem 1rem; border-radius: 12px 12px 12px 0; max-width: 80%; margin-bottom: 0.75rem; font-size: 0.9rem; border: 1px solid var(--border-color);">
-            <div><strong>Elena Chen (CFO):</strong> Hi John, October financials are fully reconciled. Your gross margins improved 4.8% after restructuring contractor billing. Let me know if you have questions on the forecast model.</div>
-            <span style="font-size: 0.7rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Today at 9:15 AM</span>
+          <!-- Chat Container -->
+          <div id="dashboard-chat-messages" style="height: 320px; overflow-y: auto; display: flex; flex-direction: column; padding: 0.75rem; border-radius: var(--radius-md); background: var(--bg-body); margin-bottom: 1rem; border: 1px solid var(--border-color);">
+            <div style="align-self: flex-start; background: var(--bg-surface-elevated); color: var(--text-main); padding: 0.75rem 1rem; border-radius: 12px 12px 12px 0; max-width: 80%; margin-bottom: 0.75rem; font-size: 0.9rem; border: 1px solid var(--border-color);">
+              <div><strong>Elena Chen (CFO):</strong> Hi John, October financials are fully reconciled. Your gross margins improved 4.8% after restructuring contractor billing. Let me know if you have questions on the forecast model.</div>
+              <span style="font-size: 0.7rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Today at 9:15 AM</span>
+            </div>
+          </div>
+
+          <!-- Chat Input Form -->
+          <form id="dashboard-chat-form" class="flex gap-2">
+            <input type="text" id="dashboard-chat-input" class="form-control" placeholder="Ask your CFO or bookkeeper a question..." required>
+            <button type="submit" class="btn btn-secondary"><i class="bi bi-send-fill"></i> Send</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- 6. ADMIN PORTAL SECTION -->
+      <section id="admin" class="dashboard-section" data-section="admin" hidden>
+        <div class="flex justify-between items-center dashboard-title-banner" style="margin-bottom: 2rem;">
+          <div>
+            <h1 style="font-size: 1.75rem; margin-bottom: 0.25rem;">Practice Admin Portal</h1>
+            <span style="font-size: 0.875rem; color: var(--text-muted);">Manage firm-wide client pods, staff capacity, and multi-entity accounts</span>
+          </div>
+          <div class="flex gap-2 dashboard-action-btns">
+            <a href="admin-dashboard.html" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Open Full Admin Dashboard</a>
           </div>
         </div>
 
-        <!-- Chat Input Form -->
-        <form id="dashboard-chat-form" class="flex gap-2">
-          <input type="text" id="dashboard-chat-input" class="form-control" placeholder="Ask your CFO or bookkeeper a question..." required>
-          <button type="submit" class="btn btn-secondary"><i class="bi bi-send-fill"></i> Send</button>
-        </form>
-      </div>
+        <div class="grid grid-3 gap-3" style="margin-bottom: 2rem;">
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Active Firm Clients</span>
+              <div class="stat-icon primary"><i class="bi bi-buildings"></i></div>
+            </div>
+            <div class="stat-value">550</div>
+            <div class="stat-footer"><i class="bi bi-arrow-up-right text-accent"></i> +18 this month</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Monthly Rec. Revenue</span>
+              <div class="stat-icon accent"><i class="bi bi-currency-dollar"></i></div>
+            </div>
+            <div class="stat-value">$284.5K</div>
+            <div class="stat-footer"><i class="bi bi-arrow-up-right text-accent"></i> +8.4% MoM</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">CFO Pod Capacity</span>
+              <div class="stat-icon warning"><i class="bi bi-speedometer2"></i></div>
+            </div>
+            <div class="stat-value">84%</div>
+            <div class="stat-footer"><i class="bi bi-shield-check text-accent"></i> Optimal Utilization</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 2rem;">
+          <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
+            <h3 style="font-size: 1.15rem; margin: 0;">Practice Management Shortcuts</h3>
+            <span class="badge badge-accent"><i class="bi bi-shield-lock-fill"></i> CPA Partner Access</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
+            You have administrator-level permissions across all Finora practice pods. Launch the dedicated practice management console to audit close pipelines, onboard clients, or configure billing.
+          </p>
+          <div class="flex gap-2" style="flex-wrap: wrap;">
+            <a href="admin-dashboard.html" class="btn btn-secondary btn-sm"><i class="bi bi-shield-shaded"></i> Launch Full Admin Portal</a>
+            <a href="admin-dashboard.html#client-management" class="btn btn-outline btn-sm"><i class="bi bi-people-fill"></i> Client Management (550)</a>
+            <a href="admin-dashboard.html#close-pipeline" class="btn btn-outline btn-sm"><i class="bi bi-check2-all"></i> Monthly Close Pipeline</a>
+          </div>
+        </div>
+      </section>
 
     </main>
   </div>

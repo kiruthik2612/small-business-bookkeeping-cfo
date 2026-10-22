@@ -91,6 +91,86 @@
     });
   }
 
+  // Cash Flow & Runway Forecast Chart (13-Week Projection)
+  const cashflowChartCtx = document.getElementById('clientCashflowChart');
+  let clientCashflowChartInstance = null;
+  if (cashflowChartCtx && typeof Chart !== 'undefined') {
+    clientCashflowChartInstance = new Chart(cashflowChartCtx, {
+      type: 'bar',
+      data: {
+        labels: ['W1 (Oct 10)', 'W2 (Oct 17)', 'W3 (Oct 24)', 'W4 (Oct 31)', 'W5 (Nov 07)', 'W6 (Nov 14)', 'W7 (Nov 21)', 'W8 (Nov 28)', 'W9 (Dec 05)', 'W10 (Dec 12)', 'W11 (Dec 19)', 'W12 (Dec 26)', 'W13 (Jan 02)'],
+        datasets: [
+          {
+            type: 'line',
+            label: 'Projected Cash Balance ($)',
+            data: [342800, 338500, 351200, 345000, 362400, 358900, 372100, 369400, 381000, 376200, 394500, 389000, 408500],
+            borderColor: '#0284c7',
+            backgroundColor: 'rgba(2, 132, 199, 0.1)',
+            borderWidth: 3,
+            fill: false,
+            tension: 0.3,
+            yAxisID: 'y'
+          },
+          {
+            type: 'bar',
+            label: 'Net Weekly Cash Inflow / (Outflow)',
+            data: [-4300, 12700, -6200, 17400, -3500, 13200, -2700, 11600, -4800, 18300, -5500, 19500, 21200],
+            backgroundColor: function(context) {
+              const val = context.raw;
+              return val >= 0 ? 'rgba(16, 185, 129, 0.8)' : 'rgba(239, 68, 68, 0.75)';
+            },
+            borderRadius: 4,
+            yAxisID: 'y1'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {
+          mode: 'index',
+          intersect: false
+        },
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: { color: textColor, font: { family: 'Plus Jakarta Sans', weight: '600' } }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.dataset.label}: $${context.raw.toLocaleString()}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: { grid: { color: gridColor }, ticks: { color: textColor } },
+          y: {
+            type: 'linear',
+            display: true,
+            position: 'left',
+            grid: { color: gridColor },
+            ticks: {
+              color: textColor,
+              callback: function (val) { return '$' + (val / 1000) + 'k'; }
+            }
+          },
+          y1: {
+            type: 'linear',
+            display: true,
+            position: 'right',
+            grid: { drawOnChartArea: false },
+            ticks: {
+              color: textColor,
+              callback: function (val) { return '$' + (val / 1000) + 'k'; }
+            }
+          }
+        }
+      }
+    });
+  }
+
   // Admin Monthly MRR & Client Acquisition Chart
   const adminGrowthCtx = document.getElementById('adminGrowthChart');
   if (adminGrowthCtx && typeof Chart !== 'undefined') {
@@ -194,25 +274,94 @@
 
   // --- 4. Sidebar Navigation & Section Routing (Client & Admin Portals) ---
   const navLinks = dashboardSidebar ? dashboardSidebar.querySelectorAll('.nav-link') : [];
-  
-  // Extract all section IDs targeted by hash links in the sidebar
-  const sectionIds = Array.from(navLinks)
-    .map(link => {
-      const href = link.getAttribute('href');
-      return (href && href.startsWith('#')) ? href.substring(1) : null;
-    })
-    .filter(Boolean);
+  const clientDashboardSections = document.querySelectorAll('.dashboard-section');
+  const isSingleSectionView = clientDashboardSections.length > 0;
+
+  // Aliases for friendly or legacy hashes
+  const sectionAliases = {
+    'financials': 'cashflow',
+    'cash-flow': 'cashflow',
+    'messages': 'chat',
+    'message': 'chat'
+  };
+
+  function normalizeSectionId(id) {
+    if (!id) return '';
+    const clean = id.replace(/^#/, '').toLowerCase().trim();
+    return sectionAliases[clean] || clean;
+  }
 
   function setActiveNavLink(targetId) {
     if (!dashboardSidebar) return;
+    const normalizedTarget = normalizeSectionId(targetId);
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
-      if (href === `#${targetId}`) {
-        link.classList.add('active');
-      } else if (href && href.startsWith('#')) {
-        link.classList.remove('active');
+      if (href && href.startsWith('#')) {
+        const linkId = normalizeSectionId(href);
+        if (linkId === normalizedTarget) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
       }
     });
+  }
+
+  // Switch visible dashboard section for Client Dashboard
+  function showDashboardSection(targetId, updateHistory) {
+    const normalized = normalizeSectionId(targetId) || 'overview';
+    const targetSection = document.getElementById(normalized);
+
+    // If target section exists as a dashboard section, switch to it exclusively
+    if (targetSection && targetSection.classList.contains('dashboard-section')) {
+      clientDashboardSections.forEach(sec => {
+        if (sec.id === normalized) {
+          sec.hidden = false;
+          sec.removeAttribute('hidden');
+          sec.style.display = 'block';
+        } else {
+          sec.hidden = true;
+          sec.setAttribute('hidden', '');
+          sec.style.display = 'none';
+        }
+      });
+
+      setActiveNavLink(normalized);
+
+      if (updateHistory) {
+        history.pushState(null, '', `#${normalized}`);
+      }
+
+      // Scroll viewport back to top of dashboard content smoothly
+      const dashboardMain = document.getElementById('dashboard-main') || document.querySelector('.dashboard-main');
+      if (dashboardMain) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Re-trigger Chart.js resize/update for newly visible charts
+      setTimeout(() => {
+        if (typeof Chart !== 'undefined') {
+          if (normalized === 'overview') {
+            if (window.Chart.getChart) {
+              const rChart = window.Chart.getChart('clientRevenueChart');
+              const dChart = window.Chart.getChart('clientExpenseDoughnut');
+              if (rChart) rChart.resize();
+              if (dChart) dChart.resize();
+            }
+          } else if (normalized === 'cashflow') {
+            if (window.Chart.getChart) {
+              const cChart = window.Chart.getChart('clientCashflowChart');
+              if (cChart) cChart.resize();
+            } else if (clientCashflowChartInstance) {
+              clientCashflowChartInstance.resize();
+            }
+          }
+        }
+      }, 50);
+
+      return true;
+    }
+    return false;
   }
 
   // Handle click on sidebar links
@@ -225,12 +374,17 @@
         if (href && href.startsWith('#')) {
           e.preventDefault();
           const targetId = href.substring(1);
-          const targetElement = document.getElementById(targetId);
 
-          if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.replaceState(null, '', href);
-            setActiveNavLink(targetId);
+          if (isSingleSectionView) {
+            showDashboardSection(targetId, true);
+          } else {
+            // Admin portal anchor scrolling
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              history.pushState(null, '', href);
+              setActiveNavLink(targetId);
+            }
           }
         }
 
@@ -242,8 +396,53 @@
     });
   }
 
-  // ScrollSpy using IntersectionObserver to automatically highlight active menu item on scroll
-  if ('IntersectionObserver' in window) {
+  // Handle document internal hash links (e.g. "Message CFO" buttons, links to #chat, #reports, etc.)
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor || anchor.closest('.dashboard-sidebar')) return;
+
+    const href = anchor.getAttribute('href');
+    if (href && href.length > 1) {
+      const targetId = href.substring(1);
+      if (isSingleSectionView && showDashboardSection(targetId, true)) {
+        e.preventDefault();
+      }
+    }
+  });
+
+  // Handle URL hash changes (back/forward browser navigation)
+  window.addEventListener('hashchange', () => {
+    const rawHash = window.location.hash;
+    if (rawHash) {
+      const targetId = rawHash.substring(1);
+      if (isSingleSectionView) {
+        showDashboardSection(targetId, false);
+      } else {
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setActiveNavLink(targetId);
+        }
+      }
+    } else if (isSingleSectionView) {
+      showDashboardSection('overview', false);
+    }
+  });
+
+  // Initial load navigation: support direct links with hash
+  if (isSingleSectionView) {
+    const initialHash = window.location.hash ? window.location.hash.substring(1) : 'overview';
+    const initialTarget = normalizeSectionId(initialHash) || 'overview';
+    showDashboardSection(initialTarget, false);
+  } else if ('IntersectionObserver' in window) {
+    // Admin dashboard ScrollSpy
+    const sectionIds = Array.from(navLinks)
+      .map(link => {
+        const href = link.getAttribute('href');
+        return (href && href.startsWith('#')) ? href.substring(1) : null;
+      })
+      .filter(Boolean);
+
     const sectionElements = sectionIds
       .map(id => document.getElementById(id))
       .filter(el => el !== null);

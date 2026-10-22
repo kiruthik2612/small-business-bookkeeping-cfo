@@ -263,10 +263,14 @@
                 <p class="blog-excerpt featured-article-excerpt">${featuredArticle.excerpt}</p>
                 <div class="featured-article-footer">
                   <div class="blog-footer-author">
-                    <div class="blog-author-avatar" style="background: ${featuredArticle.author.avatarBg};">${featuredArticle.author.avatar}</div>
-                    <div class="featured-author-text">
-                      <span class="featured-author-name">${featuredArticle.author.name}</span>
-                      <span class="featured-author-role">${featuredArticle.author.role}</span>
+                    <div class="blog-author-meta">
+                      <div class="avatar-photo-wrap" style="width: 2.25rem; height: 2.25rem;">
+                        <img src="${featuredArticle.author.image}" alt="${featuredArticle.author.name}" class="avatar-photo" loading="lazy">
+                      </div>
+                      <div class="featured-author-text">
+                        <span class="featured-author-name">${featuredArticle.author.name}</span>
+                        <span class="featured-author-role">${featuredArticle.author.role}</span>
+                      </div>
                     </div>
                   </div>
                   <a href="blog-details.html?id=${featuredArticle.id}" class="btn btn-secondary btn-sm featured-read-btn">Read Article <i class="bi bi-arrow-right"></i></a>
@@ -347,19 +351,26 @@
                 <span class="badge ${article.badgeClass}">${article.categoryLabel}</span>
               </div>
             </div>
-            <div class="blog-card-body">
-              <div class="blog-meta-top">
-                <span><i class="bi bi-calendar3"></i> ${article.date}</span>
-                <span><i class="bi bi-clock"></i> ${article.readTime}</span>
+            <div class="blog-content-body">
+              <div>
+                <div class="blog-meta-top">
+                  <span><i class="bi bi-calendar3"></i> ${article.date}</span>
+                  <span><i class="bi bi-clock"></i> ${article.readTime}</span>
+                </div>
+                <h3 class="blog-title" style="font-size: 1.18rem; line-height: 1.35; margin-bottom: 0.75rem;">
+                  <a href="blog-details.html?id=${article.id}" class="blog-title-link">${article.title}</a>
+                </h3>
+                <p class="blog-excerpt">${article.excerpt}</p>
               </div>
-              <h3 class="blog-title" style="font-size: 1.18rem; line-height: 1.35; margin-bottom: 0.75rem;">
-                <a href="blog-details.html?id=${article.id}" class="blog-title-link">${article.title}</a>
-              </h3>
-              <p class="blog-excerpt">${article.excerpt}</p>
-              <div class="blog-card-footer">
-                <div class="blog-footer-author">
-                  <div class="blog-author-avatar" style="background: ${article.author.avatarBg};">${article.author.avatar}</div>
-                  <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-main);">${article.author.name}</span>
+              <div class="blog-footer-author">
+                <div class="blog-author-meta">
+                  <div class="avatar-photo-wrap" style="width: 2.25rem; height: 2.25rem;">
+                    <img src="${article.author.image}" alt="${article.author.name}" class="avatar-photo" loading="lazy">
+                  </div>
+                  <div>
+                    <div class="blog-author-name">${article.author.name}</div>
+                    <div class="blog-author-role">${article.author.role}</div>
+                  </div>
                 </div>
                 <a href="blog-details.html?id=${article.id}" class="blog-read-btn" aria-label="Read ${article.title}">Read <i class="bi bi-arrow-right"></i></a>
               </div>
