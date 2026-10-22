@@ -37,8 +37,8 @@
             <li class="nav-item">
               <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down dropdown-icon"></i></a>
               <div class="dropdown-menu">
-                <a href="index.html" class="dropdown-item"><i class="bi bi-calculator"></i> Home 1 - Bookkeeping Focus</a>
-                <a href="home-2.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Home 2 - Fractional CFO Focus</a>
+                <a href="index.html" class="dropdown-item"><i class="bi bi-calculator"></i> Bookkeeping Focus</a>
+                <a href="home-2.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Fractional CFO Service</a>
               </div>
             </li>
             <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
@@ -83,8 +83,8 @@
           <button class="rtl-toggle-btn" aria-label="Toggle RTL" style="flex: 1;"><span style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
         </div>
       </li>
-      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home 1</a></li>
-      <li class="mobile-nav-item"><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Bookkeeping Focus</a></li>
+      <li class="mobile-nav-item"><a href="home-2.html" class="mobile-nav-link">Fractional CFO Service</a></li>
       <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></li>
       <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link active">Services</a></li>
       <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
@@ -110,29 +110,33 @@
         <div class="grid grid-3 gap-3">
           
           <!-- 1. Monthly Bookkeeping -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=bookkeeping" role="link" tabindex="0" aria-label="View Details & Pricing for Monthly Bookkeeping" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=bookkeeping" role="link" tabindex="0" aria-label="View Details & Pricing for Monthly Bookkeeping" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-bookkeeping.jpg" alt="Monthly Bookkeeping and General Ledger Close" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon accent" style="margin-bottom: 1rem;"><i class="bi bi-journal-bookmark-fill"></i></div>
-              <h3 style="font-size: 1.25rem;">Monthly Bookkeeping</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--accent-color);"><i class="bi bi-journal-bookmark-fill"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Monthly Bookkeeping</h3>
+              </div>
               <p style="font-size: 0.9rem;">Full transaction categorization, reconciliations, and closed books delivered by the 10th of every month.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent-color); margin-bottom: 1rem;">Starting at $299/mo</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=bookkeeping" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=bookkeeping" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
 
           <!-- 2. Fractional CFO Advisory -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=cfo" role="link" tabindex="0" aria-label="View Details & Pricing for Fractional CFO Advisory" style="border-color: var(--secondary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=cfo" role="link" tabindex="0" aria-label="View Details & Pricing for Fractional CFO Advisory" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-fractional-cfo.jpg" alt="Fractional CFO Strategic Advisory and Financial Modeling" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon secondary" style="margin-bottom: 1rem;"><i class="bi bi-person-workspace"></i></div>
-              <h3 style="font-size: 1.25rem;">Fractional CFO Advisory</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--secondary-color);"><i class="bi bi-person-workspace"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Fractional CFO Advisory</h3>
+              </div>
               <p style="font-size: 0.9rem;">Strategic financial leadership, cash runway extension, board meetings, and 3-statement models.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem;">Custom Executive Tiers</div>
               <div style="margin-top: auto;">
@@ -142,161 +146,181 @@
           </div>
 
           <!-- 3. Financial Reporting & Statements -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=reporting" role="link" tabindex="0" aria-label="View Details & Pricing for Financial Reporting" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=reporting" role="link" tabindex="0" aria-label="View Details & Pricing for Financial Reporting" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-financial-reporting.jpg" alt="GAAP Financial Statements and Balance Sheet Reporting" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon primary" style="margin-bottom: 1rem;"><i class="bi bi-file-earmark-bar-graph"></i></div>
-              <h3 style="font-size: 1.25rem;">Financial Reporting</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--primary-color);"><i class="bi bi-file-earmark-bar-graph"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Financial Reporting</h3>
+              </div>
               <p style="font-size: 0.9rem;">GAAP-compliant Income Statements, Balance Sheets, Cash Flow statements, and executive summaries.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">Included in All Plans</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=reporting" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=reporting" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
 
           <!-- 4. Cash Flow Management & Forecasting -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=cashflow" role="link" tabindex="0" aria-label="View Details & Pricing for Cash Flow Forecasting" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=cashflow" role="link" tabindex="0" aria-label="View Details & Pricing for Cash Flow Forecasting" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-cash-flow.jpg" alt="13-Week Cash Flow Forecasts and Liquidity Management" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon warning" style="margin-bottom: 1rem;"><i class="bi bi-cash-stack"></i></div>
-              <h3 style="font-size: 1.25rem;">Cash Flow Forecasting</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--warning-color);"><i class="bi bi-cash-stack"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Cash Flow Forecasting</h3>
+              </div>
               <p style="font-size: 0.9rem;">13-week rolling cash forecasts to manage burn rates, payroll buffers, and eliminate surprises.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--warning-color); margin-bottom: 1rem;">Starting at $499/mo</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=cashflow" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=cashflow" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
 
           <!-- 5. Accounts Payable (AP) -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=ap" role="link" tabindex="0" aria-label="View Details & Pricing for Accounts Payable" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=ap" role="link" tabindex="0" aria-label="View Details & Pricing for Accounts Payable" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-accounts-payable.jpg" alt="Vendor Bill Approvals and Accounts Payable Management" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon secondary" style="margin-bottom: 1rem;"><i class="bi bi-credit-card"></i></div>
-              <h3 style="font-size: 1.25rem;">Accounts Payable (AP)</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--secondary-color);"><i class="bi bi-credit-card"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Accounts Payable (AP)</h3>
+              </div>
               <p style="font-size: 0.9rem;">Vendor bill approvals, 1099 tracking, Bill.com workflow management, and payment scheduling.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">Starting at $199/mo</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=ap" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=ap" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
 
           <!-- 6. Accounts Receivable (AR) -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=ar" role="link" tabindex="0" aria-label="View Details & Pricing for Accounts Receivable" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=ar" role="link" tabindex="0" aria-label="View Details & Pricing for Accounts Receivable" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-accounts-receivable.jpg" alt="Accounts Receivable Invoicing and Automated Collections" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon accent" style="margin-bottom: 1rem;"><i class="bi bi-receipt-cutoff"></i></div>
-              <h3 style="font-size: 1.25rem;">Accounts Receivable (AR)</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--accent-color);"><i class="bi bi-receipt-cutoff"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Accounts Receivable (AR)</h3>
+              </div>
               <p style="font-size: 0.9rem;">Customer invoicing, recurring billing, automated payment reminders, and DSO reduction.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent-color); margin-bottom: 1rem;">Starting at $199/mo</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=ar" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=ar" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
 
           <!-- 7. Bank & Credit Reconciliation -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=reconciliation" role="link" tabindex="0" aria-label="View Details & Pricing for Bank & Credit Reconciliation" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=reconciliation" role="link" tabindex="0" aria-label="View Details & Pricing for Bank & Credit Reconciliation" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-bank-reconciliation.jpg" alt="Bank Feeds and Payment Gateway Reconciliations" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon primary" style="margin-bottom: 1rem;"><i class="bi bi-bank"></i></div>
-              <h3 style="font-size: 1.25rem;">Bank & Credit Reconciliation</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--primary-color);"><i class="bi bi-bank"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Bank & Credit Reconciliation</h3>
+              </div>
               <p style="font-size: 0.9rem;">Multi-account matching, PayPal/Stripe processor fees balancing, and zero-leakage assurance.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">Included in All Plans</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=reconciliation" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=reconciliation" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
 
           <!-- 8. Budgeting & Scenario Modeling -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=budgeting" role="link" tabindex="0" aria-label="View Details & Pricing for Budgeting & Scenario Modeling" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=budgeting" role="link" tabindex="0" aria-label="View Details & Pricing for Budgeting & Scenario Modeling" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-budgeting-modeling.jpg" alt="Corporate Budgeting and Scenario Stress Testing" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon warning" style="margin-bottom: 1rem;"><i class="bi bi-sliders"></i></div>
-              <h3 style="font-size: 1.25rem;">Budgeting & Scenario Modeling</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--warning-color);"><i class="bi bi-sliders"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Budgeting & Scenario Modeling</h3>
+              </div>
               <p style="font-size: 0.9rem;">Departmental budgeting, hiring plan cost analysis, and best/worst case scenario stress tests.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--warning-color); margin-bottom: 1rem;">Starting at $599/mo</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=budgeting" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=budgeting" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
 
           <!-- 9. Business Advisory & M&A Support -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=advisory" role="link" tabindex="0" aria-label="View Details & Pricing for Strategic Business Advisory" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=advisory" role="link" tabindex="0" aria-label="View Details & Pricing for Strategic Business Advisory" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-business-advisory.jpg" alt="Strategic Business Advisory and M&A Due Diligence" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon secondary" style="margin-bottom: 1rem;"><i class="bi bi-briefcase"></i></div>
-              <h3 style="font-size: 1.25rem;">Strategic Business Advisory</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--secondary-color);"><i class="bi bi-briefcase"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Strategic Business Advisory</h3>
+              </div>
               <p style="font-size: 0.9rem;">Entity structuring, M&A due diligence prep, bank loan application support, and debt restructuring.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1rem;">Custom Project Basis</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=advisory" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=advisory" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
 
           <!-- 10. Tax Preparation Support -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=tax" role="link" tabindex="0" aria-label="View Details & Pricing for Tax Readiness & CPA Package" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=tax" role="link" tabindex="0" aria-label="View Details & Pricing for Tax Readiness & CPA Package" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-tax-readiness.jpg" alt="Tax Readiness and Year-End CPA Package Prep" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon accent" style="margin-bottom: 1rem;"><i class="bi bi-file-earmark-check"></i></div>
-              <h3 style="font-size: 1.25rem;">Tax Readiness & CPA Package</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--accent-color);"><i class="bi bi-file-earmark-check"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Tax Readiness & CPA Package</h3>
+              </div>
               <p style="font-size: 0.9rem;">Clean year-end workpapers, 1099 filings, sales tax reporting, and direct collaboration with your CPA.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent-color); margin-bottom: 1rem;">Year-End Included</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=tax" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=tax" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
 
           <!-- 11. KPI & Executive Dashboard -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=kpi" role="link" tabindex="0" aria-label="View Details & Pricing for KPI & Financial Dashboard" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=kpi" role="link" tabindex="0" aria-label="View Details & Pricing for KPI & Financial Dashboard" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-kpi-dashboard.jpg" alt="Executive KPI Dashboard and Real-Time Financial Intelligence" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon primary" style="margin-bottom: 1rem;"><i class="bi bi-speedometer"></i></div>
-              <h3 style="font-size: 1.25rem;">KPI & Financial Dashboard</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--primary-color);"><i class="bi bi-speedometer"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">KPI & Financial Dashboard</h3>
+              </div>
               <p style="font-size: 0.9rem;">Custom cloud dashboard displaying CAC, LTV, Gross Margins, and Net Operating Profit in real time.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">Setup + $199/mo</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=kpi" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=kpi" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
 
           <!-- 12. Historical Bookkeeping Cleanup -->
-          <div class="card clickable-card" data-card-href="service-details.html?service=cleanup" role="link" tabindex="0" aria-label="View Details & Pricing for Historical Financial Cleanup" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <div class="card clickable-card" data-card-href="service-details.html?service=cleanup" role="link" tabindex="0" aria-label="View Details & Pricing for Historical Financial Cleanup" style="border: 2px solid var(--primary-color); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div class="card-media-wrap" style="height: 190px;">
               <img src="assets/images/services/service-cleanup.jpg" alt="Historical Financial Cleanup and Backlog Reconciliation" class="card-media-img" loading="lazy">
             </div>
             <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column;">
-              <div class="stat-icon warning" style="margin-bottom: 1rem;"><i class="bi bi-wrench-adjustable"></i></div>
-              <h3 style="font-size: 1.25rem;">Historical Financial Cleanup</h3>
+              <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem; line-height: 1; color: var(--warning-color);"><i class="bi bi-wrench-adjustable"></i></span>
+                <h3 style="margin: 0; font-size: 1.25rem;">Historical Financial Cleanup</h3>
+              </div>
               <p style="font-size: 0.9rem;">Behind on your books? We untangle months or years of un-reconciled transactions and make you audit-ready.</p>
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--warning-color); margin-bottom: 1rem;">Custom Diagnostic</div>
               <div style="margin-top: auto;">
-                <a href="service-details.html?service=cleanup" class="btn btn-outline btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
+                <a href="service-details.html?service=cleanup" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">View Details & Pricing <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -315,50 +339,80 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="grid grid-4">
+        <!-- Col 1: Brand Info -->
         <div>
           <a href="index.html" class="brand-logo footer-logo">
             <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
-            <div class="logo-text"><span class="logo-name">Finora</span><span class="logo-sub" style="color: var(--secondary-light);">Bookkeeping & CFO</span></div>
+            <div class="logo-text">
+              <span class="logo-name">Finora</span>
+              <span class="logo-sub" style="color: var(--secondary-light);">Bookkeeping & CFO</span>
+            </div>
           </a>
-          <p class="footer-about">Reliable, modern financial infrastructure for fast-growing small businesses and startups.</p>
+          <p class="footer-about">Empowering small businesses, founders, and startups with audit-ready bookkeeping and
+            executive fractional CFO guidance.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
+
+        <!-- Col 2: Quick Links -->
         <div>
-          <h4 class="footer-title">Company</h4>
+          <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Bookkeeping Focus</a></li>
+            <li><a href="home-2.html"><i class="bi bi-chevron-right"></i> Fractional CFO Service</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Our Team</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing Packages</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Financial Insights Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact & Consult</a></li>
           </ul>
         </div>
+
+        <!-- Col 3: Services Directory -->
         <div>
-          <h4 class="footer-title">Top Services</h4>
+          <h4 class="footer-title">Core Services</h4>
           <ul class="footer-links">
-            <li><a href="service-details.html?service=bookkeeping">Monthly Bookkeeping</a></li>
-            <li><a href="service-details.html?service=cfo">Fractional CFO</a></li>
-            <li><a href="service-details.html?service=cashflow">Cash Flow Forecasting</a></li>
+            <li><a href="service-details.html?service=bookkeeping"><i class="bi bi-chevron-right"></i> Monthly
+                Bookkeeping</a></li>
+            <li><a href="service-details.html?service=cfo"><i class="bi bi-chevron-right"></i> Fractional CFO
+                Advisory</a></li>
+            <li><a href="service-details.html?service=cashflow"><i class="bi bi-chevron-right"></i> Cash Flow
+                Forecasting</a></li>
+            <li><a href="service-details.html?service=cleanup"><i class="bi bi-chevron-right"></i> Catch-Up &
+                Cleanups</a></li>
+            <li><a href="service-details.html?service=reporting"><i class="bi bi-chevron-right"></i> KPI & Board
+                Reporting</a></li>
+            <li><a href="service-details.html?service=tax"><i class="bi bi-chevron-right"></i> Tax Readiness Support</a>
+            </li>
           </ul>
         </div>
+
+        <!-- Col 4: Newsletter -->
         <div>
-          <h4 class="footer-title">Get In Touch</h4>
-          <p style="font-size: 0.9rem;">(800) 555-0199<br>advisory@finora.io<br>350 5th Ave, New York, NY</p>
+          <h4 class="footer-title">Financial Intelligence</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to our bi-weekly CFO newsletter for cash flow
+            strategies, tax readiness tips, and financial KPIs.</p>
+          <form id="newsletter-form" class="newsletter-form flex flex-col gap-2" action="javascript:void(0);"
+            method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Newsletter Subscription">
+            <div class="form-group" style="margin-bottom: 0;">
+              <input type="email" id="newsletter-email" name="email" class="form-control"
+                placeholder="Enter your business email" required style="padding: 0.65rem 1rem;">
+            </div>
+            <button type="submit" id="newsletter-submit-btn" class="btn btn-accent btn-sm"
+              style="width: 100%;">Subscribe Free</button>
+          </form>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container flex justify-between items-center">
-        <div>&copy; 2026 Finora Advisory LLC.</div>
-        <div class="footer-bottom-links">
-          <span>Privacy Policy</span>
-          <span>Terms of Service</span>
-          <span>Client Portal</span>
-        </div>
-      </div>
-    </div>
+
   </footer>
 
   <script src="assets/js/main.js" defer></script>

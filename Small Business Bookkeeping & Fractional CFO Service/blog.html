@@ -37,8 +37,8 @@
             <li class="nav-item">
               <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down dropdown-icon"></i></a>
               <div class="dropdown-menu">
-                <a href="index.html" class="dropdown-item"><i class="bi bi-calculator"></i> Home 1 - Bookkeeping Focus</a>
-                <a href="home-2.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Home 2 - Fractional CFO Focus</a>
+                <a href="index.html" class="dropdown-item"><i class="bi bi-calculator"></i> Bookkeeping Focus</a>
+                <a href="home-2.html" class="dropdown-item"><i class="bi bi-pie-chart"></i> Fractional CFO Service</a>
               </div>
             </li>
             <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
@@ -80,8 +80,8 @@
           <button class="rtl-toggle-btn" aria-label="Toggle RTL" style="flex: 1;"><span style="font-weight:700; font-size: 0.8rem;">RTL</span></button>
         </div>
       </li>
-      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home 1</a></li>
-      <li class="mobile-nav-item"><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
+      <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Bookkeeping Focus</a></li>
+      <li class="mobile-nav-item"><a href="home-2.html" class="mobile-nav-link">Fractional CFO Service</a></li>
       <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></li>
       <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
       <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
@@ -94,15 +94,15 @@
   <main id="main-content">
     <!-- PAGE HERO -->
     <section class="page-hero bg-surface-elevated text-center">
-      <div class="container" style="max-width: 800px;">
+      <div class="container blog-hero-container" style="max-width: 800px;">
         <div class="section-subtitle"><i class="bi bi-newspaper"></i> The Finora Ledger</div>
-        <h1 style="font-size: 3rem; margin-bottom: 1.25rem;">Financial Insights & Executive CFO Playbooks</h1>
+        <h1 class="blog-hero-title">Financial Insights & Executive CFO Playbooks</h1>
         <p class="section-desc">Actionable accounting tactics, cash runway frameworks, and CFO perspectives designed for small business leaders.</p>
         
         <!-- Live Instant Search Bar -->
-        <div style="margin-top: 2rem; max-width: 540px; margin-left: auto; margin-right: auto; position: relative;">
-          <input type="text" id="blog-search-input" class="form-control" placeholder="Search topics (e.g., cash flow, runway, taxes, margins)..." style="padding: 1rem 1.25rem 1rem 3rem; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);">
-          <i class="bi bi-search" style="position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1.1rem;"></i>
+        <div class="blog-search-wrap">
+          <input type="text" id="blog-search-input" class="form-control" placeholder="Search topics (e.g., cash flow, runway, taxes, margins)...">
+          <i class="bi bi-search blog-search-icon"></i>
         </div>
       </div>
     </section>
@@ -138,55 +138,80 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="grid grid-4">
+        <!-- Col 1: Brand Info -->
         <div>
           <a href="index.html" class="brand-logo footer-logo">
             <div class="logo-icon"><i class="bi bi-graph-up-arrow"></i></div>
-            <div class="logo-text"><span class="logo-name">Finora</span><span class="logo-sub" style="color: var(--secondary-light);">Bookkeeping & CFO</span></div>
+            <div class="logo-text">
+              <span class="logo-name">Finora</span>
+              <span class="logo-sub" style="color: var(--secondary-light);">Bookkeeping & CFO</span>
+            </div>
           </a>
-          <p class="footer-about">Reliable, modern financial intelligence for founders and small business owners.</p>
-        </div>
-        <div>
-          <h4 class="footer-title">Pages</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-title">Categories</h4>
-          <ul class="footer-links">
-            <li><a href="blog.html?category=cfo">CFO Strategy</a></li>
-            <li><a href="blog.html?category=cashflow">Cash Flow Planning</a></li>
-            <li><a href="blog.html?category=bookkeeping">Bookkeeping Tips</a></li>
-            <li><a href="blog.html?category=planning">Financial Modeling</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-title">Newsletter</h4>
-          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Join 12,000+ founders receiving bi-weekly finance tips.</p>
-          <div style="position: relative;">
-            <input type="email" class="form-control" placeholder="Your email address" style="padding-right: 2.5rem; font-size: 0.85rem;">
-            <button class="btn btn-accent btn-sm" style="position: absolute; right: 4px; top: 4px; bottom: 4px; padding: 0 0.75rem;"><i class="bi bi-send-fill"></i></button>
+          <p class="footer-about">Empowering small businesses, founders, and startups with audit-ready bookkeeping and
+            executive fractional CFO guidance.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container flex justify-between items-center">
-        <div>&copy; 2026 Finora Advisory LLC. All rights reserved.</div>
-        <div class="footer-bottom-links">
-          <span>Privacy Policy</span>
-          <span>Terms of Service</span>
-          <span>Client Portal</span>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Bookkeeping Focus</a></li>
+            <li><a href="home-2.html"><i class="bi bi-chevron-right"></i> Fractional CFO Service</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Our Team</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing Packages</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Financial Insights Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact & Consult</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services Directory -->
+        <div>
+          <h4 class="footer-title">Core Services</h4>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=bookkeeping"><i class="bi bi-chevron-right"></i> Monthly
+                Bookkeeping</a></li>
+            <li><a href="service-details.html?service=cfo"><i class="bi bi-chevron-right"></i> Fractional CFO
+                Advisory</a></li>
+            <li><a href="service-details.html?service=cashflow"><i class="bi bi-chevron-right"></i> Cash Flow
+                Forecasting</a></li>
+            <li><a href="service-details.html?service=cleanup"><i class="bi bi-chevron-right"></i> Catch-Up &
+                Cleanups</a></li>
+            <li><a href="service-details.html?service=reporting"><i class="bi bi-chevron-right"></i> KPI & Board
+                Reporting</a></li>
+            <li><a href="service-details.html?service=tax"><i class="bi bi-chevron-right"></i> Tax Readiness Support</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="footer-title">Financial Intelligence</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to our bi-weekly CFO newsletter for cash flow
+            strategies, tax readiness tips, and financial KPIs.</p>
+          <form id="newsletter-form" class="newsletter-form flex flex-col gap-2" action="javascript:void(0);"
+            method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Newsletter Subscription">
+            <div class="form-group" style="margin-bottom: 0;">
+              <input type="email" id="newsletter-email" name="email" class="form-control"
+                placeholder="Enter your business email" required style="padding: 0.65rem 1rem;">
+            </div>
+            <button type="submit" id="newsletter-submit-btn" class="btn btn-accent btn-sm"
+              style="width: 100%;">Subscribe Free</button>
+          </form>
         </div>
       </div>
     </div>
+
   </footer>
 
   <script src="assets/js/blog-data.js"></script>
@@ -224,33 +249,35 @@
       const featuredArticle = FINORA_ARTICLES.find(a => a.featured) || FINORA_ARTICLES[0];
       if (featuredContainer && featuredArticle) {
         featuredContainer.innerHTML = `
-          <div class="card blog-card-premium clickable-card" data-card-href="blog-details.html?id=${featuredArticle.id}" role="link" tabindex="0" aria-label="Read ${featuredArticle.title}" style="padding: 2.25rem; border-color: var(--secondary-color); box-shadow: var(--shadow-md);">
-            <div class="grid grid-2 items-center gap-4">
-              <div>
-                <div class="flex items-center gap-2" style="margin-bottom: 0.75rem;">
+          <div class="card blog-card-premium featured-article-card clickable-card" data-card-href="blog-details.html?id=${featuredArticle.id}" role="link" tabindex="0" aria-label="Read ${featuredArticle.title}">
+            <div class="featured-article-grid">
+              <div class="featured-article-content">
+                <div class="featured-article-tags">
                   <span class="badge badge-accent"><i class="bi bi-star-fill"></i> Featured Analysis</span>
                   <span class="badge ${featuredArticle.badgeClass}">${featuredArticle.categoryLabel}</span>
-                  <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="bi bi-clock"></i> ${featuredArticle.readTime}</span>
+                  <span class="featured-read-time"><i class="bi bi-clock"></i> ${featuredArticle.readTime}</span>
                 </div>
-                <h2 style="font-size: 2rem; line-height: 1.25; margin-bottom: 1rem;">
+                <h2 class="featured-article-title">
                   <a href="blog-details.html?id=${featuredArticle.id}" class="blog-title-link">${featuredArticle.title}</a>
                 </h2>
-                <p class="blog-excerpt" style="margin-bottom: 1.5rem; font-size: 0.95rem;">${featuredArticle.excerpt}</p>
-                <div class="flex items-center justify-between flex-wrap gap-2">
+                <p class="blog-excerpt featured-article-excerpt">${featuredArticle.excerpt}</p>
+                <div class="featured-article-footer">
                   <div class="blog-footer-author">
                     <div class="blog-author-avatar" style="background: ${featuredArticle.author.avatarBg};">${featuredArticle.author.avatar}</div>
-                    <div>
-                      <span style="font-size: 0.85rem; font-weight: 700; display: block; color: var(--text-main);">${featuredArticle.author.name}</span>
-                      <span style="font-size: 0.75rem; color: var(--text-muted);">${featuredArticle.author.role}</span>
+                    <div class="featured-author-text">
+                      <span class="featured-author-name">${featuredArticle.author.name}</span>
+                      <span class="featured-author-role">${featuredArticle.author.role}</span>
                     </div>
                   </div>
-                  <a href="blog-details.html?id=${featuredArticle.id}" class="btn btn-secondary btn-sm">Read Article <i class="bi bi-arrow-right"></i></a>
+                  <a href="blog-details.html?id=${featuredArticle.id}" class="btn btn-secondary btn-sm featured-read-btn">Read Article <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
-              <div class="blog-thumb-wrap" style="height: 280px;">
-                <img src="${featuredArticle.image}" alt="${featuredArticle.title}" class="blog-thumb-img" loading="lazy">
-                <div class="blog-badge-overlay">
-                  <span class="badge badge-accent"><i class="bi bi-lightning-charge-fill"></i> Trending</span>
+              <div class="featured-article-media">
+                <div class="blog-thumb-wrap featured-thumb-wrap">
+                  <img src="${featuredArticle.image}" alt="${featuredArticle.title}" class="blog-thumb-img" loading="lazy">
+                  <div class="blog-badge-overlay">
+                    <span class="badge badge-accent"><i class="bi bi-lightning-charge-fill"></i> Trending</span>
+                  </div>
                 </div>
               </div>
             </div>

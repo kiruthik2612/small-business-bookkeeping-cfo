@@ -127,3 +127,47 @@
   }
 }
 
+/* Blog RTL Support */
+[dir="rtl"] .blog-search-wrap .form-control {
+  padding-left: 1.25rem;
+  padding-right: 3.1rem;
+}
+[dir="rtl"] .blog-search-icon {
+  left: auto;
+  right: 1.25rem;
+}
+[dir="rtl"] .blog-badge-overlay {
+  left: auto;
+  right: 0.85rem;
+}
+[dir="rtl"] .blog-badge-overlay .badge i {
+  margin-right: 0;
+  margin-left: 0.35rem;
+}
+
+@media (max-width: 425px) {
+  [dir="rtl"] .blog-search-wrap .form-control {
+    padding-left: 1rem !important;
+    padding-right: 2.5rem !important;
+  }
+  [dir="rtl"] .blog-search-icon {
+    right: 0.85rem !important;
+  }
+  [dir="rtl"] .blog-badge-overlay {
+    right: 0.65rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  [dir="rtl"] .blog-search-wrap .form-control {
+    padding-left: 0.75rem !important;
+    padding-right: 2.15rem !important;
+  }
+  [dir="rtl"] .blog-search-icon {
+    right: 0.65rem !important;
+  }
+  [dir="rtl"] .blog-badge-overlay {
+    right: 0.5rem !important;
+  }
+}
+
